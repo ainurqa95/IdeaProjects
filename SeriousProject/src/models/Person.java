@@ -7,26 +7,33 @@ import javafx.beans.property.SimpleStringProperty;
  */
 public class Person {
 
-    private SimpleStringProperty FIO;
-    private String Phone;
+    private SimpleStringProperty FIO = new SimpleStringProperty(""); // класс позоляет при изменении объекта персон сразу менять значения в таблице без update
+    private SimpleStringProperty Phone = new SimpleStringProperty("");
 
     public Person ( String FIO, String Phone){
 
-        this.FIO = FIO;
-        this.Phone = Phone;
+        this.FIO =  new SimpleStringProperty(FIO);
+        this.Phone = new SimpleStringProperty(Phone);
     }
     public void setFIO(String FIO){
-        this.FIO = FIO;
+        this.FIO.set(FIO);
     }
     public void setPhone (String Phone){
-        this.Phone = Phone;
+        this.Phone.set(Phone);
     }
     public String getFIO ( ){
 
-      return  this.FIO;
+      return  this.FIO.get();
     }
     public String getPhone ( ){
 
+        return  this.Phone.get();
+
+    }
+    public SimpleStringProperty getFioProperty (){
+        return  this.FIO;
+    }
+    public SimpleStringProperty getPhoneProperty (){
         return  this.Phone;
     }
 
