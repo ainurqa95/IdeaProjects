@@ -10,7 +10,7 @@
          <children>
             <Label layoutX="39.0" layoutY="42.0" text="Имя" />
             <Label layoutX="39.0" layoutY="74.0" text="Телефон" />
-            <Button fx:id="btnAdd" defaultButton="true" layoutX="295.0" layoutY="38.0" mnemonicParsing="false"  prefHeight="25.0" prefWidth="81.0" text="OK" AnchorPane.rightAnchor="103.0" />
+            <Button fx:id="btnAdd" defaultButton="true" layoutX="295.0" layoutY="38.0" mnemonicParsing="false" onAction="" prefHeight="25.0" prefWidth="81.0" text="OK" AnchorPane.rightAnchor="103.0" />
             <Button fx:id="btnCancel" cancelButton="true" layoutX="295.0" layoutY="69.0" mnemonicParsing="false" onAction="#actionClose" prefHeight="25.0" prefWidth="81.0" text="Отмена" AnchorPane.rightAnchor="103.0" />
             <TextField fx:id="txtFdName" layoutX="116.0" layoutY="38.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="214.0" />
             <TextField fx:id="txtFdPhone" layoutX="116.0" layoutY="70.0" AnchorPane.leftAnchor="116.0" AnchorPane.rightAnchor="214.0" />

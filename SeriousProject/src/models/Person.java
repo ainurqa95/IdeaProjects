@@ -1,11 +1,13 @@
 package models;
 
+import javafx.beans.property.SimpleStringProperty;
+
 /**
  * Created by Айнур on 03.10.2016.
  */
 public class Person {
 
-    private  String FIO;
+    private SimpleStringProperty FIO;
     private String Phone;
 
     public Person ( String FIO, String Phone){
