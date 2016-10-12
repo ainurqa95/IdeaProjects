@@ -10,12 +10,14 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import models.AddressBookCollection;
 import models.Person;
 
 /**
  * Created by Айнур on 24.09.2016.
  */
 public class EditDialogController {
+
 
     @FXML
     private Button btnAdd;
@@ -26,8 +28,11 @@ public class EditDialogController {
     @FXML
     private TextField txtFdPhone;
     @FXML
-    private Person personToEdit;
+    private TextField txtFdId;
 
+
+    private Person personToEdit;
+    private AddressBookCollection mybook;
 
 
     public void setPerson ( Person selectedPerson){ // в текстове поля заносим информацию о выбранном польователе
@@ -35,9 +40,14 @@ public class EditDialogController {
         this.personToEdit = selectedPerson; // перекидываем ссылку на объект который мы выбрали в таблице
         txtFdName.setText(selectedPerson.getFIO());
         txtFdPhone.setText(selectedPerson.getPhone());
-
+        txtFdId.setText(selectedPerson.getId());
 
     }
+
+    public Person getPersonToEdit() {
+        return personToEdit;
+    }
+
     public void actionClose(ActionEvent actionEvent) { // при нажатии на кнопку закрыть
         Node source =  (Node)   actionEvent.getSource();
         Stage stage = (Stage)source.getScene().getWindow();
@@ -47,6 +57,9 @@ public class EditDialogController {
         personToEdit.setFIO(txtFdName.getText()); // когда  мы меняем что-нибудь в этом объекте меняется меняется
         // объект который мы сейчас редактируем благодаря SimpleStringProperty
         personToEdit.setPhone(txtFdPhone.getText());
+
+         personToEdit.setId(txtFdId.getText());
+
         actionClose(actionEvent);// сохраняем и закрываем
 
 

@@ -35,6 +35,7 @@
          <children>
             <TableView fx:id="tableAddressBook" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="242.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="200.0">
               <columns>
+                  <TableColumn fx:id="tblColId" prefWidth="75.0" text="Id" />
                 <TableColumn fx:id="tblColFIO" prefWidth="96.0" text="ФИО" />
                 <TableColumn fx:id="tblColPhone" prefWidth="99.0" text="Телефон" />
               </columns>
