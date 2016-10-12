@@ -2,6 +2,7 @@ package controllers;
 
 import javafx.collections.ListChangeListener;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -61,14 +63,38 @@ public class MainController {
         mybook.addTestValues(); // заполняем наш observableList список людьми
         tableAddressBook.setItems(mybook.getHumanList()); // помещаем его в таблицу
         // tableView видит только observableList
+        initializeListeners(); // иниицализируем слушателя на обновлении коллекции
+        updateCountLabel();
+        initLoader();
+
+
+    }
+    private void initializeListeners (){
         mybook.getHumanList().addListener(new ListChangeListener<Person>() {// реагирует на всяческие изменения в коллекции
             @Override
             public void onChanged(Change<? extends Person> change) { // при изменении в коллекции сработате этот метод
                 updateCountLabel(); // и мы сразу перечитываем количесвто записей
             }
         });
-        updateCountLabel();
+        tableAddressBook.setOnMouseClicked(new EventHandler<MouseEvent>() { // обрабатываем событие на двойное нажатие
+            @Override
+            public void handle(MouseEvent event) {
+                if(event.getClickCount() == 2 ){ // если нажали два раза
+                   // selectedPerson = (Person)tableAddressBook.getSelectionModel().getSelectedItem(); // получеам выбранный обьект в
+                    editDialogController.setPerson((Person)tableAddressBook.getSelectionModel().getSelectedItem());
+                    showDialog(); // открываем окно для редактирования
 
+
+                }
+
+
+            }
+        });
+
+
+
+    }
+    private void initLoader (){ // инициализирует модальное окно
         try{
             fxmlLoader.setLocation(getClass().getResource("../fxml/edit.fxml"));
             fxmlEdit  = fxmlLoader.load();                // нашему root присваиваем ресурс xml edit
@@ -79,13 +105,14 @@ public class MainController {
             e.printStackTrace();
         }
 
+
     }
     private void updateCountLabel ( ){
         labelCount.setText("Количестов записей в адресной книге "+ mybook.getHumanList().size());
 
     }
 
-    private void showDialog() { // при нажатии на кнопку добавить откроется модальное окно
+    private void showDialog() { // при нажатии на кнопку добавить изменить откроется модальное окно
 
             // вызывается при редатироании
             if(editDialogStage==null){ // инициализируем диалог
@@ -134,7 +161,8 @@ public class MainController {
                  selectedPerson = (Person)tableAddressBook.getSelectionModel().getSelectedItem(); // получеам выбранный обьект в
                 editDialogController.setPerson(selectedPerson);
                 showDialog();
-                
+                Person personEdit = editDialogController.getPersonToEdit();
+                mybook.updateHuman(personEdit);
                 break;
 
         }
