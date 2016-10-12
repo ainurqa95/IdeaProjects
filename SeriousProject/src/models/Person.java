@@ -7,6 +7,7 @@ import javafx.beans.property.SimpleStringProperty;
  */
 public class Person {
 
+   
     private SimpleStringProperty FIO = new SimpleStringProperty(""); // класс позоляет при изменении объекта персон сразу менять значения в таблице без update
     private SimpleStringProperty Phone = new SimpleStringProperty("");
 

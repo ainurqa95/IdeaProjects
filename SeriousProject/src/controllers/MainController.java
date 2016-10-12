@@ -11,6 +11,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 import models.AddressBookCollection;
 import models.Person;
 
@@ -36,6 +37,11 @@ public class MainController {
     private TableColumn<Person,String> tblColFIO; // колонка фио таблицы
     @FXML
     private TableColumn<Person,String> tblColPhone;
+    @FXML
+    private Parent fxmlEdit;
+    private FXMLLoader fxmlLoader = new FXMLLoader();
+    private EditDialogController editDialogController;
+    private Stage editDialogStage;
 
     @FXML
     private void initialize(){ // инициализируем начальную взаимосвязь xml с
@@ -55,55 +61,69 @@ public class MainController {
         });
         updateCountLabel();
 
+        try{
+            fxmlLoader.setLocation(getClass().getResource("../fxml/edit.fxml"));
+            fxmlEdit  = fxmlLoader.load();                // нашему root присваиваем ресурс xml edit
+            editDialogController = fxmlLoader.getController();            // с помощью ссылки на этот контроллер можем манипулировать данными
+
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
     private void updateCountLabel ( ){
         labelCount.setText("Количестов записей в адресной книге "+ mybook.getHumanList().size());
 
     }
 
-    public void showDialog(ActionEvent actionEvent) { // при нажатии на кнопку добавить откроется модальное окно
+    private void showDialog(Window parentWindow) { // при нажатии на кнопку добавить откроется модальное окно
+
+            // вызывается при редатироании
+            if(editDialogStage==null){ // инициализируем диалог
+            editDialogStage = new Stage();
+            editDialogStage.setTitle("Редактирование записи");
+            editDialogStage.setMinHeight(150);
+            editDialogStage.setMinWidth(300);
+            editDialogStage.setResizable(false);
+            editDialogStage.setScene(new Scene(fxmlEdit));// берем из fxml
+            editDialogStage.initModality(Modality.WINDOW_MODAL); // говорим что окно модальное
+            editDialogStage.initOwner(parentWindow);// достаем информацию о родитеь=льском окне
+
+            }
+            editDialogStage.show();
+
+
+    }
+
+    public void buttonPressed(ActionEvent actionEvent) {
+// при нажатии на кнопку добавить откроется модальное окно
 
 
         Object source = actionEvent.getSource(); // определяем кто осуществил нажатие или действие button textfield и тд
-         if(!(source instanceof Button))// если это не кнопка выход
-             return;
+        if(!(source instanceof Button))// если это не кнопка выход
+            return;
 
         Person selectedPerson = (Person)tableAddressBook.getSelectionModel().getSelectedItem(); // получеам выбранный обьект в таблице
         Button clickedButton = (Button)source; // делаем источник кнопкой
-
+        Window parentWindow = ((Node)actionEvent.getSource()).getScene().getWindow(); // берем родительское окно
+        editDialogController.setPerson(selectedPerson);
         switch (clickedButton.getId()){ // смотри на какую же мы кнопку нажали
 
             case "buttonAdd":
-            System.out.println("add"+ selectedPerson.getFIO());
+                System.out.println("add"+ selectedPerson.getFIO());
                 break;
             case "buttonDelete":
                 System.out.println("delete"+ selectedPerson.getFIO());
                 break;
             case "buttonChange":
+                showDialog(parentWindow);
                 System.out.println("change"+ selectedPerson.getFIO());
                 break;
 
         }
-        try {
-            buttonAdd.setText("clicked");
-            labelCount.setText("clicked");
-            TableView x;
-            Label y;
-            Stage stage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("../fxml/edit.fxml"));
-            stage.setTitle("Редактирование записи");
-            stage.setMinHeight(150);
-            stage.setMinWidth(300);
-            stage.setResizable(false);
-            stage.setScene(new Scene(root));
-            stage.initModality(Modality.WINDOW_MODAL); // говорим что окно модальное
-            stage.initOwner(((Node) actionEvent.getSource()).getScene().getWindow());// достаем информацию о родитеь=льском окне
-            stage.show();
 
 
-        } catch (Exception e) {
-            e.printStackTrace();
 
-        }
     }
 }
