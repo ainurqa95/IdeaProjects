@@ -18,6 +18,11 @@ import models.Person;
 import java.io.IOException;
 
 public class MainController {
+    private Stage mainStage; //
+
+    public void setMainStage(Stage mainStage) {
+        this.mainStage = mainStage;
+    }
 
     private AddressBookCollection mybook = new AddressBookCollection();
     // fx id всех элементов вьюхи
@@ -34,6 +39,8 @@ public class MainController {
     @FXML
     private Label labelCount;
     @FXML
+    private TableColumn<Person, String> tblColId; // колонка фио таблицы
+    @FXML
     private TableColumn<Person,String> tblColFIO; // колонка фио таблицы
     @FXML
     private TableColumn<Person,String> tblColPhone;
@@ -47,6 +54,7 @@ public class MainController {
     private void initialize(){ // инициализируем начальную взаимосвязь xml с
         // tableAddressBook.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);// тогда можно будыт выбирать несколько записей в таблице
         // указываем какие поля из объекта персон будут хранятся в таблице
+        tblColId.setCellValueFactory(new PropertyValueFactory<Person, String>("id"));
         tblColFIO.setCellValueFactory(new PropertyValueFactory<Person, String>("FIO")); // ищет геттер в классе Person и вернет значение fio
         tblColPhone.setCellValueFactory(new PropertyValueFactory<Person, String>("Phone"));
 
@@ -77,48 +85,56 @@ public class MainController {
 
     }
 
-    private void showDialog(Window parentWindow) { // при нажатии на кнопку добавить откроется модальное окно
+    private void showDialog() { // при нажатии на кнопку добавить откроется модальное окно
 
             // вызывается при редатироании
             if(editDialogStage==null){ // инициализируем диалог
             editDialogStage = new Stage();
             editDialogStage.setTitle("Редактирование записи");
-            editDialogStage.setMinHeight(150);
+            editDialogStage.setMinHeight(300);
             editDialogStage.setMinWidth(300);
             editDialogStage.setResizable(false);
             editDialogStage.setScene(new Scene(fxmlEdit));// берем из fxml
             editDialogStage.initModality(Modality.WINDOW_MODAL); // говорим что окно модальное
-            editDialogStage.initOwner(parentWindow);// достаем информацию о родитеь=льском окне
+            editDialogStage.initOwner(mainStage);// достаем информацию о родитеь=льском окне
 
             }
-            editDialogStage.show();
+            //editDialogStage.show();
+            editDialogStage.showAndWait(); // ожидать закрытие окна
 
 
     }
 
     public void buttonPressed(ActionEvent actionEvent) {
 // при нажатии на кнопку добавить откроется модальное окно
-
+        Person selectedPerson;
 
         Object source = actionEvent.getSource(); // определяем кто осуществил нажатие или действие button textfield и тд
         if(!(source instanceof Button))// если это не кнопка выход
             return;
 
-        Person selectedPerson = (Person)tableAddressBook.getSelectionModel().getSelectedItem(); // получеам выбранный обьект в таблице
+
         Button clickedButton = (Button)source; // делаем источник кнопкой
-        Window parentWindow = ((Node)actionEvent.getSource()).getScene().getWindow(); // берем родительское окно
-        editDialogController.setPerson(selectedPerson);
+       //Window parentWindow = ((Node)actionEvent.getSource()).getScene().getWindow(); // берем родительское окно
+
         switch (clickedButton.getId()){ // смотри на какую же мы кнопку нажали
 
             case "buttonAdd":
-                System.out.println("add"+ selectedPerson.getFIO());
+                editDialogController.setPerson(new Person()); // заснули нового пользователя
+                showDialog();  // в форме edit что-то изменили
+                Person personAdd = editDialogController.getPersonToEdit(); // взяли добавленного
+                mybook.addPerson(personAdd); // закинули его в коллекцию
                 break;
             case "buttonDelete":
-                System.out.println("delete"+ selectedPerson.getFIO());
+                 selectedPerson = (Person)tableAddressBook.getSelectionModel().getSelectedItem(); // получеам выбранного нами
+                // человека в адресной книге
+                mybook.deletePerson(selectedPerson);
                 break;
             case "buttonChange":
-                showDialog(parentWindow);
-                System.out.println("change"+ selectedPerson.getFIO());
+                 selectedPerson = (Person)tableAddressBook.getSelectionModel().getSelectedItem(); // получеам выбранный обьект в
+                editDialogController.setPerson(selectedPerson);
+                showDialog();
+                
                 break;
 
         }

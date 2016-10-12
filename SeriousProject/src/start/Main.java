@@ -1,6 +1,7 @@
 package start;
 
 
+import controllers.MainController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +14,12 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-            Parent root = FXMLLoader.load(getClass().getResource("../fxml/maket.fxml"));
+            FXMLLoader fmxLoader = new FXMLLoader(); // создаем объект загрузчика fxmlLoader
+            fmxLoader.setLocation(getClass().getResource("../fxml/maket.fxml")); // привязываем его к xml
+          //  Parent root = FXMLLoader.load(getClass().getResource("../fxml/maket.fxml"));
+            Parent root = fmxLoader.load(); // загружаем его в root
+            MainController mainController = fmxLoader.getController(); // получаем контроллер нашей вьюхи xml
+            mainController.setMainStage(primaryStage); // засовываем его в главную сцену этот Stage мы можем использовать в контроллере
             primaryStage.setMinHeight(600);
             primaryStage.setMinWidth(300);
             primaryStage.setTitle("Hello World");

@@ -24,6 +24,16 @@ public class AddressBookCollection implements AddresBook {
     }
     public void updateHuman(Person human){
 
+        for (Person person : humanList
+             ) {
+                if (person.getId()== human.getId())
+                {
+                    person.setPhone(human.getPhone());
+                    person.setFIO(human.getFIO());
+                    break;
+                }
+        }
+
     }
 
     public ObservableList<Person> getHumanList() {
@@ -39,11 +49,12 @@ public class AddressBookCollection implements AddresBook {
         }
     }
     public void addTestValues (){
-        humanList.add(new Person("Айнур","89274269594"));
-        humanList.add(new Person("Динар","89274269594"));
-        humanList.add(new Person("Радмир","89274269594"));
-        humanList.add(new Person("Артур","89274269594"));
-        humanList.add(new Person("Матур","89274269594"));
+        humanList.add(new Person("Айнур","89274269594", "1"));
+
+        humanList.add(new Person("Динар","89274269594","2"));
+        humanList.add(new Person("Радмир","89274269594","3"));
+        humanList.add(new Person("Артур","89274269594","4"));
+        humanList.add(new Person("Матур","89274269594","5"));
 
     }
 }
