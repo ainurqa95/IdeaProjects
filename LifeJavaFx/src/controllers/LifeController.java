@@ -1,8 +1,10 @@
 package controllers;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -57,6 +59,13 @@ public class LifeController {
                 if ( life.Get_state(i,j)  )
                 c[i][j].setFill(Color.GREEN);
                  else    c[i][j].setFill(Color.GRAY);
+
+//                c[i][j].setOnMousePressed(new EventHandler<MouseEvent>() { // при нажатии на кружок
+//                    @Override
+//                    public void handle(MouseEvent mouseEvent) {
+//                        c[i][j].setFill(Color.GREEN);
+//                    }
+//                });
 
                 anchorMain.getChildren().add(c[i][j]);
                 x1 = x1 + 2 * radius;
