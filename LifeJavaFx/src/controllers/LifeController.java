@@ -33,24 +33,13 @@ public class LifeController {
         this.life = life; this.countLife = countLife;
         life.generatePole(this.countLife);
     }
-    @FXML
-    private void initialize(){ // инициализируем начальную взаимосвязь xml с
-    //    Circle c = new Circle();
-      //  c.setCenterX(50);
-      //  c.setCenterY(50);
-      //  c.setRadius(50);
-       // c.setFill(Color.AQUA);
-        //anchorMain.getChildren().add(c);
-    //    showPole();
 
-
-    }
 //    public void actionClose(ActionEvent actionEvent) { // при нажатии на кнопку закрыть
 //        Node source =  (Node)   actionEvent.getSource();
 //        Stage stage = (Stage)source.getScene().getWindow();
 //        stage.hide();//  т.е это окно всегда есть в памяти мметод hide его скрывает просто
 //    }
-    private void showPole(){
+    private void showPole() throws Exception {
         double oneCircleX = this.sizeXPole/life.Get_size();
         double radius = oneCircleX/4;
         double x1 = radius;
@@ -65,7 +54,10 @@ public class LifeController {
                 c[i][j].setCenterX(x1);
                 c[i][j].setCenterY(y1);
                 c[i][j].setRadius(radius);
-                c[i][j].setFill(Color.AQUA);
+                if ( life.Get_state(i,j)  )
+                c[i][j].setFill(Color.GREEN);
+                 else    c[i][j].setFill(Color.GRAY);
+
                 anchorMain.getChildren().add(c[i][j]);
                 x1 = x1 + 2 * radius;
             }
@@ -77,7 +69,8 @@ public class LifeController {
 
     }
 
-    public void actionGeneration(ActionEvent actionEvent) {
+    public void actionGeneration(ActionEvent actionEvent) throws Exception {
         showPole();
+        life.nextGeneration();
     }
 }
