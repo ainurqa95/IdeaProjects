@@ -33,10 +33,13 @@ public class MainController {
     private FXMLLoader fxmlLoader = new FXMLLoader();
     private LifeController lifeController;
     private Stage poleStage;
+    private double sizeXPole = 600;
+    private double sizeYPole = 600;
     @FXML
-    private void initialize(){ // инициализируем начальную взаимосвязь xml с
+    private void initialize(){ // инициализируем начальную взаимосвязь xml и
 
         try{
+
             fxmlLoader.setLocation(getClass().getResource("../views/pole.fxml"));
             fxmlEdit  = fxmlLoader.load();                // нашему root присваиваем ресурс xml edit
             lifeController = fxmlLoader.getController();            // с помощью ссылки на этот контроллер можем манипулировать данными
@@ -57,13 +60,13 @@ public class MainController {
         int countLife = Integer.parseInt(txtColumns.getText());
         MyLife life = new MyLife(n,m);
         lifeController.setLife(life, countLife);
-
+        lifeController.setSizeWindow(sizeXPole,sizeYPole);
 
         if(poleStage==null){ // инициализируем диалог
             poleStage = new Stage();
             poleStage.setTitle("Поле");
-            poleStage.setMinHeight(600);
-            poleStage.setMinWidth(600);
+            poleStage.setMinHeight(sizeXPole);
+            poleStage.setMinWidth(sizeYPole);
             poleStage.setResizable(false);
             poleStage.setScene(new Scene(fxmlEdit));// берем из fxml
             //      poleStage.initModality(Modality.WINDOW_MODAL); // говорим что окно модальное
