@@ -52,17 +52,25 @@ public class LifeController {
 //    }
     private void showPole(){
         double oneCircleX = this.sizeXPole/life.Get_size();
-        double radius = oneCircleX/2;
+        double radius = oneCircleX/4;
         double x1 = radius;
         double y1 = radius + 20;
-        for (int i = 0; i <life.Get_size() ; i++) {
-            Circle c = new Circle();
-            c.setCenterX(x1);
-            c.setCenterY(y1);
-            c.setRadius(radius);
-            c.setFill(Color.AQUA);
-            anchorMain.getChildren().add(c);
-            x1 = x1 + 2*radius;
+        int size = life.Get_size();
+        Circle [][] c = new Circle[size][size];
+        for (int i = 0; i < size ; i++) {
+            for (int j = 0; j < size; j++) {
+
+
+                c[i][j] = new Circle();
+                c[i][j].setCenterX(x1);
+                c[i][j].setCenterY(y1);
+                c[i][j].setRadius(radius);
+                c[i][j].setFill(Color.AQUA);
+                anchorMain.getChildren().add(c[i][j]);
+                x1 = x1 + 2 * radius;
+            }
+            x1 = radius;
+            y1 = y1 + 2 * radius;
 
         }
 
