@@ -5,9 +5,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.TextFieldListCell;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import models.MyLife;
 
 import java.io.IOException;
 
@@ -18,6 +21,13 @@ public class MainController {
         this.mainStage = mainStage;
     } // setter Stage
 
+    @FXML
+    TextField txtCountLife;
+
+    @FXML
+    TextField txtRows;
+    @FXML
+    TextField txtColumns;
     @FXML
     private Parent fxmlEdit;
     private FXMLLoader fxmlLoader = new FXMLLoader();
@@ -40,13 +50,20 @@ public class MainController {
     }
 
 
-    public void actionButtonGo(ActionEvent actionEvent) {
+    public void actionButtonGo(ActionEvent actionEvent) throws Exception {
+
+        int n = Integer.parseInt(txtRows.getText());
+        int m = Integer.parseInt(txtColumns.getText());
+        int countLife = Integer.parseInt(txtColumns.getText());
+        MyLife life = new MyLife(n,m);
+        lifeController.setLife(life, countLife);
+
 
         if(poleStage==null){ // инициализируем диалог
             poleStage = new Stage();
             poleStage.setTitle("Поле");
-            poleStage.setMinHeight(300);
-            poleStage.setMinWidth(300);
+            poleStage.setMinHeight(600);
+            poleStage.setMinWidth(600);
             poleStage.setResizable(false);
             poleStage.setScene(new Scene(fxmlEdit));// берем из fxml
             //      poleStage.initModality(Modality.WINDOW_MODAL); // говорим что окно модальное
