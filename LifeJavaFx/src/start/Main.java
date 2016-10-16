@@ -19,7 +19,7 @@ public class Main extends Application {
         MainController mainController = fmxLoader.getController(); // получаем контроллер нашей вьюхи xml
         mainController.setMainStage(primaryStage); // засовываем его в главную сцену этот Stage мы можем использовать в контроллере
         primaryStage.setMinHeight(300);
-        primaryStage.setMinWidth(500);
+        primaryStage.setMinWidth(800);
         primaryStage.setTitle("Hello World");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
