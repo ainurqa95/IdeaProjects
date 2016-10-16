@@ -1,8 +1,27 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="controllers.MainController"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <AnchorPane prefHeight="219.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="140.0" layoutY="23.0" prefHeight="32.0" prefWidth="237.0" text="Введите количество жизней" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="223.0" />
+            <Label layoutX="165.0" layoutY="97.0" text="Число строк" AnchorPane.leftAnchor="165.0" AnchorPane.rightAnchor="351.0" />
+            <TextField fx:id="txtCountLife" layoutX="120.0" layoutY="62.0" prefHeight="26.0" prefWidth="247.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="233.0" />
+            <TextField fx:id="txtRows" layoutX="120.0" layoutY="120.0" prefHeight="15.0" prefWidth="247.0" AnchorPane.leftAnchor="120.0" AnchorPane.rightAnchor="233.0" />
+            <Label layoutX="153.0" layoutY="153.0" text="Число столбцов" AnchorPane.leftAnchor="153.0" AnchorPane.rightAnchor="338.0" />
+            <TextField fx:id="txtColumns" layoutX="119.0" layoutY="173.0" prefHeight="26.0" prefWidth="247.0" AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="234.0" />
+         </children></AnchorPane>
+      <AnchorPane prefHeight="105.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="btnGo" layoutX="119.0" layoutY="22.0" mnemonicParsing="false" onAction="#actionButtonGo" prefHeight="25.0" prefWidth="247.0" text="Поехали" AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="234.0" />
+         </children></AnchorPane>
+   </children>
+</VBox>
