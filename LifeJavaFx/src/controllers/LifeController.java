@@ -55,17 +55,22 @@ public class LifeController {
                 c[i][j] = new Circle();
                 c[i][j].setCenterX(x1);
                 c[i][j].setCenterY(y1);
+
+
                 c[i][j].setRadius(radius);
                 if ( life.Get_state(i,j)  )
                 c[i][j].setFill(Color.GREEN);
                  else    c[i][j].setFill(Color.GRAY);
 
-//                c[i][j].setOnMousePressed(new EventHandler<MouseEvent>() { // при нажатии на кружок
-//                    @Override
-//                    public void handle(MouseEvent mouseEvent) {
-//                        c[i][j].setFill(Color.GREEN);
-//                    }
-//                });
+
+                c[i][j].setOnMousePressed(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        int k1=(int)(event.getSceneX());
+                        int l1=(int)(event.getSceneY());
+
+                    }
+                });
 
                 anchorMain.getChildren().add(c[i][j]);
                 x1 = x1 + 2 * radius;
