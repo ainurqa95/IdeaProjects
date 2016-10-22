@@ -20,7 +20,7 @@ public class Main extends Application {
         mainController.setMainStage(primaryStage); // засовываем его в главную сцену этот Stage мы можем использовать в контроллере
         primaryStage.setMinHeight(300);
         primaryStage.setMinWidth(600);
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Такова жизнь вмкашников");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
 

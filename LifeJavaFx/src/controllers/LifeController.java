@@ -23,7 +23,7 @@ public class LifeController {
     private double sizeXPole;
     private double sizeYPole;
 
-    public void setSizeWindow(double sizeXPole, double sizeYPole) {
+    public void setSizeWindow(double sizeXPole, double sizeYPole) { // размеры окна
         this.sizeXPole = sizeXPole; this.sizeYPole = sizeYPole;
     }
 
@@ -32,10 +32,8 @@ public class LifeController {
     @FXML
     AnchorPane anchorMain;
 
-    @FXML
-    Label labelCoords;
 
-    public void setLife(MyLife life, int countLife ) {
+    public void setLife(MyLife life, int countLife ) { // создаем начальную популяцию
         this.life = life; this.countLife = countLife;
         life.generatePole(this.countLife);
     }
@@ -46,28 +44,26 @@ public class LifeController {
 //        stage.hide();//  т.е это окно всегда есть в памяти мметод hide его скрывает просто
 //    }
     private void showPole() throws Exception {
-        double oneCircleX = this.sizeXPole/life.Get_size();
-        double radius = oneCircleX/2;
+        double oneCircleX = this.sizeXPole/life.Get_size(); // делим размер окна на размер
+        double radius = oneCircleX/2; // получаем радиус кружочка
         double x1 = radius;
-        double y1 = radius; //+ 20;
+        double y1 = radius;
         int size = life.Get_size();
-        Circle [][] c = new Circle[size][size];
+        Circle [][] c = new Circle[size][size];  // матрица кружков
         for (int i = 0; i < size ; i++) {
             for (int j = 0; j < size; j++) {
 
 
                 c[i][j] = new Circle();
-                c[i][j].setCenterX(x1);
+                c[i][j].setCenterX(x1); // задаем размеры центра
                 c[i][j].setCenterY(y1);
+                c[i][j].setRadius(radius); // и радиус
+                if ( life.Get_state(i,j)  ) // если есть жизнь в нашей популяции
+                c[i][j].setFill(Color.GREEN); // отоброжаем зеленым
+                 else    c[i][j].setFill(Color.GRAY); // иначе серым
 
 
-                c[i][j].setRadius(radius);
-                if ( life.Get_state(i,j)  )
-                c[i][j].setFill(Color.GREEN);
-                 else    c[i][j].setFill(Color.GRAY);
-
-
-                c[i][j].setOnMousePressed(new EventHandler<MouseEvent>() {
+                c[i][j].setOnMousePressed(new EventHandler<MouseEvent>() { // событие на нажатие на какой-нибудь кружо
                     @Override
                     public void handle(MouseEvent event) {
 
@@ -75,13 +71,13 @@ public class LifeController {
                         int i1=(int)((event.getSceneY()-30)/(2*radius));
 
                         try {
-                            if(!life.Get_state(i1, j1)){
-                                life.Set_state(i1,j1, true);
-                                c[i1][j1].setFill(Color.GREEN);
+                            if(!life.Get_state(i1, j1)){ // если кружок был серым т.е жизни не было
+                                life.Set_state(i1,j1, true); // говорим, что там будет жизнь
+                                c[i1][j1].setFill(Color.GREEN); // говорим, что он будет зеленым
 
-                              }else {
-                                life.Set_state(i1,j1, false);
-                                c[i1][j1].setFill(Color.GRAY);
+                              }else { // если жизнь была
+                                life.Set_state(i1,j1, false); // то делаем ее невыносимой
+                                c[i1][j1].setFill(Color.GRAY); // и убиваем жизнь
 
                             }
                         } catch (Exception e) {
@@ -89,18 +85,14 @@ public class LifeController {
                         }
 
 
-                        String coords = String.valueOf(i1);
-                        coords += " " + String.valueOf(j1);
-                        labelCoords.setText(coords);
-
                     }
                 });
 
-                anchorMain.getChildren().add(c[i][j]);
-                x1 = x1 + 2 * radius;
+                anchorMain.getChildren().add(c[i][j]); // добавляем наш кружок в панельку
+                x1 = x1 + 2 * radius; // передвигаем центр по радиусу вправо
             }
             x1 = radius;
-            y1 = y1 + 2 * radius;
+            y1 = y1 + 2 * radius; // передвигаемся вниз
 
         }
 
@@ -108,7 +100,7 @@ public class LifeController {
     }
 
     public void actionGeneration(ActionEvent actionEvent) throws Exception {
-        showPole();
-        life.nextGeneration();
+        showPole(); // показываем поле
+        life.nextGeneration(); // следующее поколение
     }
 }

@@ -21,7 +21,7 @@ public class MainController {
         this.mainStage = mainStage;
     } // setter Stage
 
-    @FXML
+    @FXML// объявляем переменные  соответствующие fx id в fxml
     TextField txtCountLife;
 
     @FXML
@@ -33,14 +33,14 @@ public class MainController {
     private FXMLLoader fxmlLoader = new FXMLLoader();
     private LifeController lifeController;
     private Stage poleStage;
-    private double sizeXPole = 600;
+    private double sizeXPole = 600; // размеры поля
     private double sizeYPole = 600;
     @FXML
     private void initialize(){ // инициализируем начальную взаимосвязь xml и
 
         try{
 
-            fxmlLoader.setLocation(getClass().getResource("../views/pole.fxml"));
+            fxmlLoader.setLocation(getClass().getResource("../views/pole.fxml")); //
             fxmlEdit  = fxmlLoader.load();                // нашему root присваиваем ресурс xml edit
             lifeController = fxmlLoader.getController();            // с помощью ссылки на этот контроллер можем манипулировать данными
 
@@ -55,14 +55,14 @@ public class MainController {
 
     public void actionButtonGo(ActionEvent actionEvent) throws Exception {
 
-        int n = Integer.parseInt(txtRows.getText());
+        int n = Integer.parseInt(txtRows.getText()); // берем размеры из формы
         int m = Integer.parseInt(txtColumns.getText());
         int countLife = Integer.parseInt(txtColumns.getText());
         MyLife life = new MyLife(n,m);
-        lifeController.setLife(life, countLife);
-        lifeController.setSizeWindow(sizeXPole,sizeYPole);
+        lifeController.setLife(life, countLife); // создаем начальную популяцию
+        lifeController.setSizeWindow(sizeXPole,sizeYPole); // задаем размеры сцены в контроллер
 
-        if(poleStage==null){ // инициализируем диалог
+        if(poleStage==null){ //
             poleStage = new Stage();
             poleStage.setTitle("Поле");
             poleStage.setMinHeight(sizeXPole+30);
