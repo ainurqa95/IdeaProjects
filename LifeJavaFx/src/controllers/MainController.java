@@ -65,9 +65,9 @@ public class MainController {
         if(poleStage==null){ // инициализируем диалог
             poleStage = new Stage();
             poleStage.setTitle("Поле");
-            poleStage.setMinHeight(sizeXPole);
+            poleStage.setMinHeight(sizeXPole+30);
             poleStage.setMinWidth(sizeYPole);
-            poleStage.setResizable(false);
+            poleStage.setResizable(true);
             poleStage.setScene(new Scene(fxmlEdit));// берем из fxml
             //      poleStage.initModality(Modality.WINDOW_MODAL); // говорим что окно модальное
             // poleStage.initOwner(mainStage);// достаем информацию о родитеь=льском окне

@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -31,6 +32,9 @@ public class LifeController {
     @FXML
     AnchorPane anchorMain;
 
+    @FXML
+    Label labelCoords;
+
     public void setLife(MyLife life, int countLife ) {
         this.life = life; this.countLife = countLife;
         life.generatePole(this.countLife);
@@ -43,9 +47,9 @@ public class LifeController {
 //    }
     private void showPole() throws Exception {
         double oneCircleX = this.sizeXPole/life.Get_size();
-        double radius = oneCircleX/4;
+        double radius = oneCircleX/2;
         double x1 = radius;
-        double y1 = radius + 20;
+        double y1 = radius; //+ 20;
         int size = life.Get_size();
         Circle [][] c = new Circle[size][size];
         for (int i = 0; i < size ; i++) {
@@ -66,8 +70,15 @@ public class LifeController {
                 c[i][j].setOnMousePressed(new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent event) {
-                        int k1=(int)(event.getSceneX());
-                        int l1=(int)(event.getSceneY());
+                        //c[i][j].setFill(Color.GRAY);
+                        //int x1=(int)(event.getSceneX());
+
+                       // int y1=(int)(event.getSceneY()-30);
+                        int x1=(int)(event.getSceneX()/(2*radius));
+                        int y1=(int)((event.getSceneY()-30)/(2*radius));
+                        String coords = String.valueOf(x1);
+                        coords += " " + String.valueOf(y1);
+                        labelCoords.setText(coords);
 
                     }
                 });
