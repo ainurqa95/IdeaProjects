@@ -70,14 +70,27 @@ public class LifeController {
                 c[i][j].setOnMousePressed(new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent event) {
-                        //c[i][j].setFill(Color.GRAY);
-                        //int x1=(int)(event.getSceneX());
 
-                       // int y1=(int)(event.getSceneY()-30);
-                        int x1=(int)(event.getSceneX()/(2*radius));
-                        int y1=(int)((event.getSceneY()-30)/(2*radius));
-                        String coords = String.valueOf(x1);
-                        coords += " " + String.valueOf(y1);
+                        int j1=(int)(event.getSceneX()/(2*radius)); //индексы наших кружков
+                        int i1=(int)((event.getSceneY()-30)/(2*radius));
+
+                        try {
+                            if(!life.Get_state(i1, j1)){
+                                life.Set_state(i1,j1, true);
+                                c[i1][j1].setFill(Color.GREEN);
+
+                              }else {
+                                life.Set_state(i1,j1, false);
+                                c[i1][j1].setFill(Color.GRAY);
+
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+
+
+                        String coords = String.valueOf(i1);
+                        coords += " " + String.valueOf(j1);
                         labelCoords.setText(coords);
 
                     }
