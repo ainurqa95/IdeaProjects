@@ -115,4 +115,30 @@ public class LifeController {
      //   showPole(); // показываем поле
         //life.nextGeneration(); // следующее поколение
     }
+
+    public void actionSave(ActionEvent actionEvent) throws Exception { // делаем слепок поля
+        LifeTableDriver lifes = new LifeTableDriver();
+        if(lifes.getTableLifes().size()==0) { // если ничего в бд нет
+            for (int i = 0; i < this.life.Get_size(); i++) {
+                for (int j = 0; j < this.life.Get_size(); j++) {
+                    if (life.Get_state(i, j)) // добавляем индексы где есть жизнь
+                        lifes.insert(i, j, 1);
+                }
+            }
+        } // если есть обновляем бд
+        else{
+            for (int i = 0; i < this.life.Get_size(); i++) {
+                for (int j = 0; j < this.life.Get_size(); j++) {
+                    if (life.Get_state(i, j))//елси жизни в бд не было то мы ее добавили
+                        lifes.insert(i, j, 1);
+                    else { // там где жизни в нашем экземпляре нет, мы должны удалить из бд
+                            lifes.delete(i,j);
+                    }
+                }
+            }
+
+
+        }
+
+    }
 }

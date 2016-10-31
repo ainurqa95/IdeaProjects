@@ -80,5 +80,7 @@ public class LifeTableDriver {
     }
 
 
+    public void delete(int i, int j) {
 
+    }
 }
