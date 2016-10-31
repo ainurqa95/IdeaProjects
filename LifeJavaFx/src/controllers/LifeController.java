@@ -10,6 +10,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import models.LifeTable;
+import models.LifeTableDriver;
 import models.MyLife;
 
 import java.io.IOException;
@@ -100,7 +102,15 @@ public class LifeController {
     }
 
     public void actionGeneration(ActionEvent actionEvent) throws Exception {
-        showPole(); // показываем поле
-        life.nextGeneration(); // следующее поколение
+
+        LifeTableDriver lifes = new LifeTableDriver();
+
+        for (LifeTable life : lifes.getTableLifes()
+             ) {
+            System.out.println("coord_i = "+ life.getCord_i()+ "coord_j = " + life.getCord_j());
+
+        }
+     //   showPole(); // показываем поле
+        //life.nextGeneration(); // следующее поколение
     }
 }
