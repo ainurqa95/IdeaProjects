@@ -105,7 +105,8 @@ public class LifeController {
 
 
         LifeTableDriver lifes = new LifeTableDriver();
-        lifes.insert(2,3,1);
+       // lifes.insert(2,3,1);
+        lifes.update(2,2,2,2);
         for (LifeTable life : lifes.getTableLifes()
              ) {
             System.out.println("coord_i = "+ life.getCord_i()+ "coord_j = " + life.getCord_j());
