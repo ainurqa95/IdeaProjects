@@ -103,8 +103,9 @@ public class LifeController {
 
     public void actionGeneration(ActionEvent actionEvent) throws Exception {
 
-        LifeTableDriver lifes = new LifeTableDriver();
 
+        LifeTableDriver lifes = new LifeTableDriver();
+        lifes.insert(2,3,1);
         for (LifeTable life : lifes.getTableLifes()
              ) {
             System.out.println("coord_i = "+ life.getCord_i()+ "coord_j = " + life.getCord_j());

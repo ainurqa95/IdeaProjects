@@ -40,15 +40,16 @@ public class LifeTableDriver {
 
 
     }
-    public void insert (int cord_i, cord_j, cord){
-        News st = new News(id_news, title, author, short_content );
-        LifeTable life_insert =new ()
-        news.add(st);
+    public void insert (int coord_i, int coord_j, int generation_new){
+        LifeTable st = new LifeTable(coord_i, coord_j, generation_new );
+
+        tableLifes.add(st);
 
         try {
-            com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/news", "root", "root");
+            com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", "root", "root");
             Statement command = (Statement) con.createStatement();
-            command.executeUpdate("update news set title='asdf' where id_news=3");
+           // command.executeUpdate("update news set title='asdf' where id_news=3");
+            command.execute("insert into mylife (cord_i, cord_j, generation)  values ("+coord_j+",+"+coord_j+","+generation_new+")");
             con.close();
         } catch (SQLException e) {
             e.printStackTrace();
