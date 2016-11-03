@@ -15,6 +15,7 @@ import models.LifeTableDriver;
 import models.MyLife;
 
 import java.io.IOException;
+import java.util.Iterator;
 
 /**
  * Created by ainur on 16.10.16.
@@ -106,15 +107,6 @@ public class LifeController {
 
     public void actionGeneration(ActionEvent actionEvent) throws Exception {
 
-/*
-        LifeTableDriver lifes = new LifeTableDriver();
-       // lifes.insert(2,2,1);
-        lifes.delete(2,2,1);
-        for (LifeTable life : lifes.getTableLifes()
-             ) {
-            System.out.println("coord_i = "+ life.getCord_i()+ "coord_j = " + life.getCord_j());
-
-        }  */
 
         life.nextGeneration(); // следующее поколение
         showPole(); // показываем поле
@@ -126,11 +118,19 @@ public class LifeController {
             insertLifesToDB();
         } // если есть обновляем бд
         else { // если есть удаляем все
-            for (LifeTable item : this.lifesInTable.getTableLifes()
-                    ) {
-                this.lifesInTable.delete(item.getCord_i(), item.getCord_j(), 1);
+//            for (LifeTable item : this.lifesInTable.getTableLifes()
+//                    ) {
+//                this.lifesInTable.delete(item.getCord_i(), item.getCord_j(), 1);
+//            }
+            Iterator<LifeTable> iter = this.lifesInTable.getTableLifes().iterator();
+            while (iter.hasNext()) { // удаляем элемент из списка
+                LifeTable item = iter.next();
 
-            }
+              //  if (item.getCord_j() == i && item.getCord_j()==j && item.getGeneration() == generation) {
+                     this.lifesInTable.delete(item.getCord_i(), item.getCord_j(), 1);
+                    iter.remove();
+
+                }
 
             insertLifesToDB(); // снова вставляем
         }

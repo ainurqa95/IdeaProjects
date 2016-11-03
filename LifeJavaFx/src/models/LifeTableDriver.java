@@ -26,13 +26,12 @@ public class LifeTableDriver {
             com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", "root", "root");
             Statement command = (Statement) con.createStatement();
             ResultSet res = command.executeQuery("select * from mylife");
-            while (res.next()) {
+            while (res.next()) { // берем все элементы из таблицы
 
                 LifeTable st = new LifeTable(res.getInt("id"), res.getInt("cord_i"),res.getInt("cord_j"), res.getInt("generation"));
                 tableLifes.add(st);
             }
 
-          //  command.executeUpdate("update news set title='asdf' where id_news=3");
             res.close();
             con.close();
         }catch (SQLException e){
@@ -41,6 +40,7 @@ public class LifeTableDriver {
 
 
     }
+
     public void insert (int coord_i, int coord_j, int generation_new){
         LifeTable st = new LifeTable(coord_i, coord_j, generation_new );
         tableLifes.add(st);
@@ -55,9 +55,13 @@ public class LifeTableDriver {
 
         }
     }
+
+    /**
+     * обновление таблицы жизни
+
+     */
     public void update (int id,int coord_i, int coord_j, int generation_new){
-       // LifeTable st = new LifeTable(coord_i, coord_j, generation_new );
-        //tableLifes.add(st);
+
         for (LifeTable item: tableLifes
              ) {
             if(item.getId()==id){
@@ -70,8 +74,6 @@ public class LifeTableDriver {
         try {
             com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", "root", "root");
             Statement command = (Statement) con.createStatement();
-        //    command.executeUpdate("update news set title='asdf' where id_news=3");
-            //command.executeUpdate("update mylife set cord_i="+coord_i+" cord_j="+coord_j+" generation="+generation_new+" where id="+id+"");
            command.executeUpdate("update mylife set cord_i="+coord_i+" , cord_j ="+coord_j+", generation="+generation_new+" where id="+id+"");
             con.close();
         } catch (SQLException e) {
@@ -80,32 +82,22 @@ public class LifeTableDriver {
         }
     }
 
-
+    /**
+     * удаляем элемент из списка и из таблицы
+     * @param i
+     * @param j
+     * @param generation
+     */
     public void delete(int i, int j, int generation) {
-
-
-//        //tableLifes.remove()
-        Iterator<LifeTable> iter = this.tableLifes.iterator();
-        while (iter.hasNext()) { // удаляем элемент из списка
-            LifeTable item = iter.next();
-
-            if (item.getCord_j() == i && item.getCord_j()==j && item.getGeneration() == generation) {
-                iter.remove();
-            }
-        }
-
 
         try {
             com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", "root", "root");
             Statement command = (Statement) con.createStatement();
-            //    command.executeUpdate("update news set title='asdf' where id_news=3");
-            //command.executeUpdate("update mylife set cord_i="+coord_i+" cord_j="+coord_j+" generation="+generation_new+" where id="+id+"");
             command.execute("DELETE from mylife  WHERE cord_i="+i+" and cord_j ="+j+" and generation ="+generation+"");
             con.close();
         } catch (SQLException e) {
             e.printStackTrace();
 
         }
-
     }
 }

@@ -57,7 +57,7 @@ public class MainController {
 
         int n = Integer.parseInt(txtRows.getText()); // берем размеры из формы
         int m = Integer.parseInt(txtColumns.getText());
-        int countLife = Integer.parseInt(txtColumns.getText());
+        int countLife = Integer.parseInt(txtCountLife.getText());
         MyLife life = new MyLife(n,m);
         lifeController.setLife(life, countLife); // создаем начальную популяцию
         lifeController.setSizeWindow(sizeXPole,sizeYPole); // задаем размеры сцены в контроллер
