@@ -25,6 +25,8 @@ public class LifeController {
     private double sizeXPole;
     private double sizeYPole;
 
+    private LifeTableDriver lifesInTable;
+
     public void setSizeWindow(double sizeXPole, double sizeYPole) { // размеры окна
         this.sizeXPole = sizeXPole; this.sizeYPole = sizeYPole;
     }
@@ -35,9 +37,10 @@ public class LifeController {
     AnchorPane anchorMain;
 
 
-    public void setLife(MyLife life, int countLife ) { // создаем начальную популяцию
+    public void setLife(MyLife life, int countLife ) throws Exception { // создаем начальную популяцию
         this.life = life; this.countLife = countLife;
         life.generatePole(this.countLife);
+         // показываем поле
     }
 
 //    public void actionClose(ActionEvent actionEvent) { // при нажатии на кнопку закрыть
@@ -45,7 +48,7 @@ public class LifeController {
 //        Stage stage = (Stage)source.getScene().getWindow();
 //        stage.hide();//  т.е это окно всегда есть в памяти мметод hide его скрывает просто
 //    }
-    private void showPole() throws Exception {
+    public void showPole() throws Exception {
         double oneCircleX = this.sizeXPole/life.Get_size(); // делим размер окна на размер
         double radius = oneCircleX/2; // получаем радиус кружочка
         double x1 = radius;
@@ -103,42 +106,54 @@ public class LifeController {
 
     public void actionGeneration(ActionEvent actionEvent) throws Exception {
 
-
+/*
         LifeTableDriver lifes = new LifeTableDriver();
-       // lifes.insert(2,3,1);
-        lifes.update(2,2,2,2);
+       // lifes.insert(2,2,1);
+        lifes.delete(2,2,1);
         for (LifeTable life : lifes.getTableLifes()
              ) {
             System.out.println("coord_i = "+ life.getCord_i()+ "coord_j = " + life.getCord_j());
 
-        }
-     //   showPole(); // показываем поле
-        //life.nextGeneration(); // следующее поколение
+        }  */
+
+        life.nextGeneration(); // следующее поколение
+        showPole(); // показываем поле
     }
 
     public void actionSave(ActionEvent actionEvent) throws Exception { // делаем слепок поля
-        LifeTableDriver lifes = new LifeTableDriver();
-        if(lifes.getTableLifes().size()==0) { // если ничего в бд нет
-            for (int i = 0; i < this.life.Get_size(); i++) {
-                for (int j = 0; j < this.life.Get_size(); j++) {
-                    if (life.Get_state(i, j)) // добавляем индексы где есть жизнь
-                        lifes.insert(i, j, 1);
-                }
-            }
+        this.lifesInTable = new LifeTableDriver();
+        if(this.lifesInTable.getTableLifes().size()==0) { // если ничего в бд нет
+            insertLifesToDB();
         } // если есть обновляем бд
-        else{
-            for (int i = 0; i < this.life.Get_size(); i++) {
-                for (int j = 0; j < this.life.Get_size(); j++) {
-                    if (life.Get_state(i, j))//елси жизни в бд не было то мы ее добавили
-                        lifes.insert(i, j, 1);
-                    else { // там где жизни в нашем экземпляре нет, мы должны удалить из бд
-                            lifes.delete(i,j);
-                    }
-                }
+        else { // если есть удаляем все
+            for (LifeTable item : this.lifesInTable.getTableLifes()
+                    ) {
+                this.lifesInTable.delete(item.getCord_i(), item.getCord_j(), 1);
+
             }
 
-
+            insertLifesToDB(); // снова вставляем
         }
+    }
+    private void insertLifesToDB() throws Exception {
 
+            for (int i = 0; i < this.life.Get_size(); i++) {
+                for (int j = 0; j < this.life.Get_size(); j++) {
+                    if (this.life.Get_state(i, j)) // добавляем индексы где есть жизнь
+                        this.lifesInTable.insert(i, j, 1);
+                }
+            }
+    }
+
+    public void actionLoad(ActionEvent actionEvent) throws Exception {
+
+
+        LifeTableDriver lifes = new LifeTableDriver();
+        this.life.clear();
+        for (LifeTable item : lifes.getTableLifes()
+             ) {
+            this.life.Set_state(item.getCord_i(), item.getCord_j(), true);
+        }
+        showPole();
     }
 }

@@ -28,6 +28,13 @@ public class MyLife implements MyLifeModel {
                 a[i][j] = false;
             }
     }
+    public void clear (){ // очистка поля
+        for (int i =0; i < this.n; i++)
+            for (int j =0 ; j < this.n; j++)
+            {
+                pole[i][j] = false;
+            }
+    }
     public boolean compare (boolean [][] a, boolean [][] b)// сравнение двух матриц равны = тру
     {
         for (int i =0; i < this.n; i++)

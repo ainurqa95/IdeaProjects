@@ -6,6 +6,7 @@ import com.sun.corba.se.pept.transport.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
@@ -47,7 +48,7 @@ public class LifeTableDriver {
             com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", "root", "root");
             Statement command = (Statement) con.createStatement();
            // command.executeUpdate("update news set title='asdf' where id_news=3");
-            command.execute("insert into mylife (cord_i, cord_j, generation)  values ("+coord_j+",+"+coord_j+","+generation_new+")");
+            command.execute("insert into mylife (cord_i, cord_j, generation)  values ("+coord_i+",+"+coord_j+","+generation_new+")");
             con.close();
         } catch (SQLException e) {
             e.printStackTrace();
@@ -80,7 +81,31 @@ public class LifeTableDriver {
     }
 
 
-    public void delete(int i, int j) {
+    public void delete(int i, int j, int generation) {
+
+
+//        //tableLifes.remove()
+        Iterator<LifeTable> iter = this.tableLifes.iterator();
+        while (iter.hasNext()) { // удаляем элемент из списка
+            LifeTable item = iter.next();
+
+            if (item.getCord_j() == i && item.getCord_j()==j && item.getGeneration() == generation) {
+                iter.remove();
+            }
+        }
+
+
+        try {
+            com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", "root", "root");
+            Statement command = (Statement) con.createStatement();
+            //    command.executeUpdate("update news set title='asdf' where id_news=3");
+            //command.executeUpdate("update mylife set cord_i="+coord_i+" cord_j="+coord_j+" generation="+generation_new+" where id="+id+"");
+            command.execute("DELETE from mylife  WHERE cord_i="+i+" and cord_j ="+j+" and generation ="+generation+"");
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
 
     }
 }

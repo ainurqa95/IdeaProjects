@@ -73,8 +73,9 @@ public class MainController {
             // poleStage.initOwner(mainStage);// достаем информацию о родитеь=льском окне
 
         }
-        //poleStage.show();
+        lifeController.showPole(); // показываем начальную популяцию
         poleStage.showAndWait(); // ожидать закрытие окна
+
 
     }
 }
