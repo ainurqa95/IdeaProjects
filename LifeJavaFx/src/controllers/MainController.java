@@ -59,22 +59,22 @@ public class MainController {
         int m = Integer.parseInt(txtColumns.getText());
         int countLife = Integer.parseInt(txtCountLife.getText());
         MyLife life = new MyLife(n,m);
-        lifeController.setLife(life, countLife); // создаем начальную популяцию
-        lifeController.setSizeWindow(sizeXPole,sizeYPole); // задаем размеры сцены в контроллер
+        this.lifeController.setLife(life, countLife); // создаем начальную популяцию
+        this.lifeController.setSizeWindow(sizeXPole,sizeYPole); // задаем размеры сцены в контроллер
 
-        if(poleStage==null){ //
-            poleStage = new Stage();
-            poleStage.setTitle("Поле");
-            poleStage.setMinHeight(sizeXPole+30);
-            poleStage.setMinWidth(sizeYPole);
-            poleStage.setResizable(true);
-            poleStage.setScene(new Scene(fxmlEdit));// берем из fxml
+        if( this.poleStage==null){ //
+            this.poleStage = new Stage();
+            this.poleStage.setTitle("Поле");
+            this.poleStage.setMinHeight(sizeXPole+30);
+            this.poleStage.setMinWidth(sizeYPole);
+            this.poleStage.setResizable(true);
+            this.poleStage.setScene(new Scene(fxmlEdit));// берем из fxml
             //      poleStage.initModality(Modality.WINDOW_MODAL); // говорим что окно модальное
             // poleStage.initOwner(mainStage);// достаем информацию о родитеь=льском окне
 
         }
-        lifeController.showPole(); // показываем начальную популяцию
-        poleStage.showAndWait(); // ожидать закрытие окна
+        this.lifeController.showPole(); // показываем начальную популяцию
+        this.poleStage.showAndWait(); // ожидать закрытие окна
 
 
     }
