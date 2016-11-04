@@ -44,11 +44,18 @@ public class UsersTable {
             // DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", "root", "root");
             Statement command = (Statement) con.createStatement();
-            ResultSet res = command.executeQuery("select * from users where login ="+ login +"");
-            Users user = new Users(res.getInt("id"), res.getString("fio"),res.getString("login"));
+            ResultSet res = command.executeQuery("select * from users where login ='"+login+"'");
+            Users user;
+            while (res.next()) { // берем все элементы из таблицы
+
+                user = new Users(res.getInt("id"), res.getString("fio"),res.getString("login"));
+
+                 return user;
+              //  tableUsers.add(user);
+            }
             res.close();
             con.close();
-            return user;
+            //return user;
         }catch (SQLException e){
             e.printStackTrace();
         }
@@ -60,8 +67,7 @@ public class UsersTable {
         try {
             com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", "root", "root");
             com.mysql.jdbc.Statement command = (com.mysql.jdbc.Statement) con.createStatement();
-            // command.executeUpdate("update news set title='asdf' where id_news=3");
-            command.execute("insert into users (fio, login)  values ("+fio+",+"+login+")");
+            command.execute("insert into users (fio, login)  values ('"+fio+"','"+login+"')");
             con.close();
         } catch (SQLException e) {
             e.printStackTrace();
