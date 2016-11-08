@@ -20,16 +20,25 @@
         <td>Логин</td>
 
     </tr>
+    <%--<c:forEach items="users" var="item" varStatus="status">--%>
+       <%--<tr>--%>
+        <%--<td>${user.id}</td>--%>
+        <%--<td>${user.fio}</td>--%>
+        <%--<td>${user.login}</td>--%>
+       <%--</tr>--%>
 
-    <%--<c:forEach items="${users}" var="user" varStatus="status">--%>
-        <%--<tr valign="top">--%>
-            <%--<td>${user.login} ${user.email}</td>--%>
-            <%--<td>--%>
+    <%--</c:forEach>--%>
+
+    <c:forEach items="${users}" var="user" varStatus="status">
+        <tr valign="top">
+            <td> ${user.fio}</td>
+            <td>
+                    ${user.login}
                 <%--<a href="${pageContext.servletContext.contextPath}/user/edit?id=${user.id}">Редактировать</a>--%>
                 <%--<a href="${pageContext.servletContext.contextPath}/user/delete?id=${user.id}">Удалить</a>--%>
-            <%--</td>--%>
-        <%--</tr>--%>
-    <%--</c:forEach>--%>
+            </td>
+        </tr>
+    </c:forEach>
 </table>
 
 </body>

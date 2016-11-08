@@ -1,22 +1,22 @@
 package ru.mysite.web.store;
 
-import jdk.nashorn.internal.runtime.arrays.IteratorAction;
 import ru.mysite.web.interfaces.Storage;
 import ru.mysite.web.models.Users;
 
 import java.util.Collection;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * Created by ainur on 08.11.16.
+ * Created by ainur on 09.11.16.
  */
-public class MemoryStorage implements Storage {
-
-    private final AtomicInteger ids = new AtomicInteger();
+public class CacheUser implements Storage {
+    private static final CacheUser INSTANCE = new CacheUser();
 
     private final ConcurrentHashMap<Integer, Users> users = new ConcurrentHashMap<Integer, Users>();
 
+    public static CacheUser getInstance() {
+        return INSTANCE;
+    }
     @Override
     public Collection<Users> values() {
         return this.users.values();
@@ -24,7 +24,7 @@ public class MemoryStorage implements Storage {
 
     @Override
     public int add(Users user) { // добавляем в коллекцию и получаем id
-         this.users.put(user.getId(), user);
+        this.users.put(user.getId(), user);
         return user.getId();
     }
 
@@ -55,7 +55,7 @@ public class MemoryStorage implements Storage {
     }
     @Override
     public int generateId() {
-            return this.ids.incrementAndGet();
+        return 1; //this.ids.incrementAndGet();
 
     }
 

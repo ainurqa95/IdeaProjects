@@ -545,3 +545,33 @@ INFO: Reloading Context with name [] is completed
 INFO: Reloading Context with name [] has started
 ноя 08, 2016 11:32:53 PM org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] is completed
+ноя 08, 2016 11:33:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 08, 2016 11:33:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 08, 2016 11:36:13 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 08, 2016 11:36:13 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 08, 2016 11:38:33 PM org.apache.catalina.loader.WebappClassLoaderBase modified
+SEVERE:     Resource '/WEB-INF/classes//ru/mysite/web/interfaces/Pet.class' is missing
+ноя 08, 2016 11:38:33 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 08, 2016 11:38:33 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 08, 2016 11:42:23 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 08, 2016 11:42:24 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 08, 2016 11:42:44 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 08, 2016 11:42:44 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 08, 2016 11:43:14 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 08, 2016 11:43:14 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 08, 2016 11:43:24 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 08, 2016 11:43:24 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
