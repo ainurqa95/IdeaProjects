@@ -16,6 +16,7 @@ import java.util.Properties;
  * Created by ainur on 04.11.16.
  */
 public class UsersTable {
+    /*
     LinkedList<Users> tableUsers = new LinkedList<Users>();
     Connection connection;
 
@@ -104,4 +105,5 @@ public class UsersTable {
         }
         return null;
     }
+    */
 }
