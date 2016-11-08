@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegController">
+   <children>
+      <AnchorPane prefHeight="227.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="txtFIO" layoutX="72.0" layoutY="46.0" prefHeight="26.0" prefWidth="251.0" />
+            <TextField fx:id="txtLogin" layoutX="72.0" layoutY="90.0" prefHeight="26.0" prefWidth="251.0" />
+            <Label layoutX="33.0" layoutY="51.0" text="ФИО" />
+            <Label layoutX="33.0" layoutY="95.0" text="login" />
+            <Button fx:id="btnReg" layoutX="73.0" layoutY="165.0" mnemonicParsing="false" onAction="#actionReg" text="Зарегистрироваться" />
+            <Label fx:id="idLabel" layoutX="153.0" layoutY="20.0" text="id" />
+            <PasswordField fx:id="password" layoutX="72.0" layoutY="127.0" prefHeight="26.0" prefWidth="251.0" />
+            <Label fx:id="labelPass" layoutX="8.0" layoutY="132.0" text="Пароль" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

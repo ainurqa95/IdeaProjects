@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Clinic-pet-web:war exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/Clinic_pet_web_war_exploded2</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Clinic-pet-web" />
+          <element id="module-output" name="webProject" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: commons-lang:commons-lang:2.1" />
+          <element id="library" level="project" name="Maven: org.codehaus.plexus:plexus-utils:1.1" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Clinic-pet-web/web/Web" />
+    </root>
+  </artifact>
+</component>

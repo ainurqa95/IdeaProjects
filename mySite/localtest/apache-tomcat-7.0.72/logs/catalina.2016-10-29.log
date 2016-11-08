@@ -1,0 +1,14 @@
+окт 29, 2016 12:39:50 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+окт 29, 2016 12:39:50 AM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+окт 29, 2016 12:39:50 AM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+окт 29, 2016 12:39:50 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+окт 29, 2016 12:39:50 AM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+окт 29, 2016 12:39:50 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+окт 29, 2016 12:39:50 AM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]

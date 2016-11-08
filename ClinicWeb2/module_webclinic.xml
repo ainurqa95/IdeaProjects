@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_webclinic" default="compile.module.webclinic">
+  <dirname property="module.webclinic.basedir" file="${ant.file.module_webclinic}"/>
+  
+  <property name="module.jdk.home.webclinic" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.webclinic" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.webclinic" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.webclinic" value="-encoding UTF-8 -source 1.5 -target 1.5 ${compiler.args}"/>
+  
+  <property name="webclinic.output.dir" value="${module.webclinic.basedir}/target/classes"/>
+  <property name="webclinic.testoutput.dir" value="${module.webclinic.basedir}/target/test-classes"/>
+  
+  <path id="webclinic.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="webclinic.module.production.classpath">
+    <path refid="${module.jdk.classpath.webclinic}"/>
+  </path>
+  
+  <path id="webclinic.runtime.production.module.classpath">
+    <pathelement location="${webclinic.output.dir}"/>
+  </path>
+  
+  <path id="webclinic.module.classpath">
+    <path refid="${module.jdk.classpath.webclinic}"/>
+    <pathelement location="${webclinic.output.dir}"/>
+  </path>
+  
+  <path id="webclinic.runtime.module.classpath">
+    <pathelement location="${webclinic.testoutput.dir}"/>
+    <pathelement location="${webclinic.output.dir}"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.webclinic">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.webclinic">
+    <patternset refid="excluded.from.module.webclinic"/>
+  </patternset>
+  
+  
+  <target name="compile.module.webclinic" depends="compile.module.webclinic.production,compile.module.webclinic.tests" description="Compile module WebClinic"/>
+  
+  <target name="compile.module.webclinic.production" depends="register.custom.compilers" description="Compile module WebClinic; production classes"/>
+  
+  <target name="compile.module.webclinic.tests" depends="register.custom.compilers,compile.module.webclinic.production" description="compile module WebClinic; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.webclinic" description="cleanup module">
+    <delete dir="${webclinic.output.dir}"/>
+    <delete dir="${webclinic.testoutput.dir}"/>
+  </target>
+</project>

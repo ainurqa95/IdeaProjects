@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Clinic-pet-web/Clinic-pet-web.iml" filepath="$PROJECT_DIR$/Clinic-pet-web/Clinic-pet-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebClinic.iml" filepath="$PROJECT_DIR$/WebClinic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebJava/webProject.iml" filepath="$PROJECT_DIR$/WebJava/webProject.iml" />
+    </modules>
+  </component>
+</project>

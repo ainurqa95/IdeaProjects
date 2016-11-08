@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="antbuild" >
+  <path id="common_library">
+    <pathelement location="/home/ainur/Tomcat/apache-tomcat-7.0.72/lib/servlet-api.jar"></pathelement>
+
+  </path>
+
+  <property file="build.properties"/>
+  <target name = "compile">
+    <javac srcdir="src" destdir="web/WEB-INF/classes" failonerror="true" fork="true">
+      <classpath refid="common_library"/>
+    </javac>
+
+  </target>
+
+</project>

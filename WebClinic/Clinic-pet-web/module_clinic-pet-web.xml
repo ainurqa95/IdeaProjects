@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_clinic-pet-web" default="compile.module.clinic-pet-web">
+  <dirname property="module.clinic-pet-web.basedir" file="${ant.file.module_clinic-pet-web}"/>
+  
+  <property name="module.jdk.home.clinic-pet-web" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.clinic-pet-web" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.clinic-pet-web" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.clinic-pet-web" value="-encoding UTF-8 -source 1.5 -target 1.5 ${compiler.args}"/>
+  
+  <property name="clinic-pet-web.output.dir" value="${module.clinic-pet-web.basedir}/target/classes"/>
+  <property name="clinic-pet-web.testoutput.dir" value="${module.clinic-pet-web.basedir}/target/test-classes"/>
+  
+  <path id="clinic-pet-web.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="clinic-pet-web.module.production.classpath">
+    <path refid="${module.jdk.classpath.clinic-pet-web}"/>
+    <pathelement location="${webproject.output.dir}"/>
+    <path refid="library.maven:_javax.servlet:servlet-api:2.5.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.plexus:plexus-utils:1.1.classpath"/>
+  </path>
+  
+  <path id="clinic-pet-web.runtime.production.module.classpath">
+    <pathelement location="${clinic-pet-web.output.dir}"/>
+    <path refid="webproject.runtime.production.module.classpath"/>
+    <path refid="library.maven:_javax.servlet:servlet-api:2.5.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.plexus:plexus-utils:1.1.classpath"/>
+  </path>
+  
+  <path id="clinic-pet-web.module.classpath">
+    <path refid="${module.jdk.classpath.clinic-pet-web}"/>
+    <pathelement location="${clinic-pet-web.output.dir}"/>
+    <pathelement location="${webproject.testoutput.dir}"/>
+    <pathelement location="${webproject.output.dir}"/>
+    <path refid="library.maven:_javax.servlet:servlet-api:2.5.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.plexus:plexus-utils:1.1.classpath"/>
+    <path refid="library.maven:_junit:junit:4.8.2.classpath"/>
+  </path>
+  
+  <path id="clinic-pet-web.runtime.module.classpath">
+    <pathelement location="${clinic-pet-web.testoutput.dir}"/>
+    <pathelement location="${clinic-pet-web.output.dir}"/>
+    <path refid="webproject.runtime.module.classpath"/>
+    <path refid="library.maven:_javax.servlet:servlet-api:2.5.classpath"/>
+    <path refid="library.maven:_commons-lang:commons-lang:2.1.classpath"/>
+    <path refid="library.maven:_org.codehaus.plexus:plexus-utils:1.1.classpath"/>
+    <path refid="library.maven:_junit:junit:4.8.2.classpath"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.clinic-pet-web">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.clinic-pet-web">
+    <patternset refid="excluded.from.module.clinic-pet-web"/>
+  </patternset>
+  
+  <path id="clinic-pet-web.module.sourcepath">
+    <dirset dir="${module.clinic-pet-web.basedir}">
+      <include name="src/main/java"/>
+    </dirset>
+  </path>
+  
+  <path id="clinic-pet-web.module.test.sourcepath">
+    <dirset dir="${module.clinic-pet-web.basedir}">
+      <include name="src/test/java"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.clinic-pet-web" depends="compile.module.clinic-pet-web.production,compile.module.clinic-pet-web.tests" description="Compile module Clinic-pet-web"/>
+  
+  <target name="compile.module.clinic-pet-web.production" depends="compile.module.webproject" description="Compile module Clinic-pet-web; production classes">
+    <mkdir dir="${clinic-pet-web.output.dir}"/>
+    <javac destdir="${clinic-pet-web.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.clinic-pet-web}/javac">
+      <compilerarg line="${compiler.args.clinic-pet-web}"/>
+      <bootclasspath refid="clinic-pet-web.module.bootclasspath"/>
+      <classpath refid="clinic-pet-web.module.production.classpath"/>
+      <src refid="clinic-pet-web.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.clinic-pet-web"/>
+    </javac>
+    
+    <copy todir="${clinic-pet-web.output.dir}">
+      <fileset dir="${module.clinic-pet-web.basedir}/src/main/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.clinic-pet-web.tests" depends="compile.module.clinic-pet-web.production" description="compile module Clinic-pet-web; test classes" unless="skip.tests">
+    <mkdir dir="${clinic-pet-web.testoutput.dir}"/>
+    <javac destdir="${clinic-pet-web.testoutput.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.clinic-pet-web}/javac">
+      <compilerarg line="${compiler.args.clinic-pet-web}"/>
+      <bootclasspath refid="clinic-pet-web.module.bootclasspath"/>
+      <classpath refid="clinic-pet-web.module.classpath"/>
+      <src refid="clinic-pet-web.module.test.sourcepath"/>
+      <patternset refid="excluded.from.compilation.clinic-pet-web"/>
+    </javac>
+    
+    <copy todir="${clinic-pet-web.testoutput.dir}">
+      <fileset dir="${module.clinic-pet-web.basedir}/src/test/java">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="clean.module.clinic-pet-web" description="cleanup module">
+    <delete dir="${clinic-pet-web.output.dir}"/>
+    <delete dir="${clinic-pet-web.testoutput.dir}"/>
+  </target>
+</project>
