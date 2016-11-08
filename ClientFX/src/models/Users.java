@@ -7,16 +7,26 @@ public class Users {
     private int id;
     private String fio;
     private String login;
-
-    public Users(int id, String fio, String login) {
+    private String password;
+    public Users(int id, String fio, String login, String password) {
         this.id = id;
         this.fio = fio;
         this.login = login;
+        this.password = password;
     }
 
-    public Users(String fio, String login) {
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Users(String fio, String login, String password) {
         this.fio = fio;
         this.login = login;
+        this.password = password;
     }
 
     public void setId(int id) {
