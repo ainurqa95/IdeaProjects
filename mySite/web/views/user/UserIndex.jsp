@@ -9,7 +9,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
+    <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/css/style.css" type="text/css" media="all">
     <title>Title</title>
+
 </head>
 <body>
 <a href="${pageContext.servletContext.contextPath}/views/user/UserCreate.jsp">Добавить пользователя</a>
@@ -24,7 +26,7 @@
 
     <c:forEach items="${users}" var="user" varStatus="status">
         <tr valign="top">
-            <td> ${user.fio}</td>
+            <td class = "myclass"> ${user.fio}</td>
             <td>
               ${user.login}
                 <a href="${pageContext.servletContext.contextPath}/user/update?id=${user.id}">Редактировать</a>

@@ -23,6 +23,15 @@ public class UserCreateServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        String hashedPass = getHashedPass(req.getParameter("password"));
+
+
+        this.USER_CACHE.add(new Users(this.ids.getAndIncrement(),req.getParameter("fio"), req.getParameter("login"), hashedPass));
+        req.setAttribute("users", this.USER_CACHE.values());
+        resp.sendRedirect(String.format("%s%s", req.getContextPath(), "/user/view"));
+    }
+
+    private String getHashedPass(String pass) {
         MessageDigest md5 = null;
         try {
             md5 = MessageDigest.getInstance("MD5");
@@ -30,13 +39,9 @@ public class UserCreateServlet extends HttpServlet{
             e.printStackTrace();
         }
         md5.reset();
-        md5.update(req.getParameter("password").getBytes()); // вычисляем hash от cообщения и id
+        md5.update(pass.getBytes()); // вычисляем hash от cообщения и id
         byte[] digest = md5.digest();
         BigInteger h = new BigInteger(1,digest);
-         String hashedPass = h.toString();
-
-        this.USER_CACHE.add(new Users(this.ids.getAndIncrement(),req.getParameter("fio"), req.getParameter("login"), hashedPass));
-        req.setAttribute("users", this.USER_CACHE.values());
-        resp.sendRedirect(String.format("%s%s", req.getContextPath(), "/user/view"));
+        return h.toString();
     }
 }
