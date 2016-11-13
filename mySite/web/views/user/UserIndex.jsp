@@ -27,7 +27,7 @@
             <td> ${user.fio}</td>
             <td>
               ${user.login}
-                <a href="${pageContext.servletContext.contextPath}/user/edit?id=${user.id}">Редактировать</a>
+                <a href="${pageContext.servletContext.contextPath}/user/update?id=${user.id}">Редактировать</a>
                 <a href="${pageContext.servletContext.contextPath}/user/delete?id=${user.id}">Удалить</a>
             </td>
         </tr>

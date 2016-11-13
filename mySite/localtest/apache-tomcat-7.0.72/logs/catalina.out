@@ -1776,3 +1776,107 @@ INFO: Reloading Context with name [] is completed
 INFO: Reloading Context with name [] has started
 ноя 09, 2016 11:14:47 PM org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] is completed
+ноя 09, 2016 11:25:27 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 09, 2016 11:25:28 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 09, 2016 11:26:18 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 09, 2016 11:26:18 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 09, 2016 11:27:38 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 09, 2016 11:27:38 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 09, 2016 11:38:38 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 09, 2016 11:38:38 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 09, 2016 11:39:28 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 09, 2016 11:39:28 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 09, 2016 11:40:48 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 09, 2016 11:40:48 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 09, 2016 11:46:48 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 09, 2016 11:46:48 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 09, 2016 11:47:08 PM org.apache.catalina.loader.WebappClassLoaderBase modified
+SEVERE:     Resource '/WEB-INF/classes//ru/mysite/web/interfaces/Pet.class' is missing
+ноя 09, 2016 11:47:08 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 09, 2016 11:47:08 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 09, 2016 11:50:06 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+ноя 09, 2016 11:50:06 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+ноя 09, 2016 11:50:06 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+ноя 09, 2016 11:50:06 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+ноя 09, 2016 11:50:06 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+ноя 09, 2016 11:50:06 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+ноя 09, 2016 11:50:06 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.72
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 14 2016 12:12:26 UTC
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.72.0
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            3.16.0-77-generic
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /usr/lib/jvm/java-8-oracle/jre
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_101-b13
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72/conf/logging.properties
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72/endorsed
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72
+ноя 13, 2016 5:01:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72/temp
+ноя 13, 2016 5:01:10 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+ноя 13, 2016 5:01:11 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+ноя 13, 2016 5:01:11 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+ноя 13, 2016 5:01:11 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3212 ms
+ноя 13, 2016 5:01:11 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+ноя 13, 2016 5:01:11 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.72
+ноя 13, 2016 5:01:12 PM org.apache.catalina.deploy.WebXml setVersion
+WARNING: Unknown version string [3.1]. Default version will be used.
+ноя 13, 2016 5:01:13 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+ноя 13, 2016 5:01:13 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+ноя 13, 2016 5:01:13 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1904 ms

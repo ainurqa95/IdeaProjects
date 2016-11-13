@@ -47,7 +47,7 @@
         <servlet-class >ru.mysite.web.servlets.UserDeleteServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>UserUpdate</servlet-name>
+        <servlet-name>UserDelete</servlet-name>
         <url-pattern>/user/delete</url-pattern>
     </servlet-mapping>
 
