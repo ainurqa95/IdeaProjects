@@ -12,13 +12,14 @@ import java.io.IOException;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by ainur on 30.10.16.
  */
 public class UserCreateServlet extends HttpServlet{
     private final CacheUser USER_CACHE = CacheUser.getInstance();
-
+     final AtomicInteger ids = new AtomicInteger();
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -34,7 +35,7 @@ public class UserCreateServlet extends HttpServlet{
         BigInteger h = new BigInteger(1,digest);
          String hashedPass = h.toString();
 
-        this.USER_CACHE.add(new Users(USER_CACHE.generateId(),req.getParameter("fio"), req.getParameter("login"), hashedPass));
+        this.USER_CACHE.add(new Users(this.ids.getAndIncrement(),req.getParameter("fio"), req.getParameter("login"), hashedPass));
         req.setAttribute("users", this.USER_CACHE.values());
         resp.sendRedirect(String.format("%s%s", req.getContextPath(), "/user/view"));
     }

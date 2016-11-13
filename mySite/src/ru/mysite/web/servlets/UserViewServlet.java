@@ -25,9 +25,11 @@ public class UserViewServlet extends HttpServlet{
 
         req.setCharacterEncoding("UTF-8");
         resp.setCharacterEncoding("UTF-8");
-        LinkedList <String> users = new LinkedList<>();
-
+        //LinkedList <String> users = new LinkedList<>();
+        int count = this.USER_CACHE.values().size();
         req.setAttribute("users", this.USER_CACHE.values());
+        req.setAttribute("count", count);
+
        RequestDispatcher dispatcher = req.getRequestDispatcher("/views/user/UserIndex.jsp");
        dispatcher.forward(req,resp);
 

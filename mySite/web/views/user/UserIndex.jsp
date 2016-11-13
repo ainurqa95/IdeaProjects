@@ -33,6 +33,6 @@
         </tr>
     </c:forEach>
 </table>
-
+  ${count}
 </body>
 </html>
