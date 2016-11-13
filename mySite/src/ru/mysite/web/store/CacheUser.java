@@ -17,6 +17,7 @@ public class CacheUser implements Storage {
     public static CacheUser getInstance() {
         return INSTANCE;
     }
+
     @Override
     public Collection<Users> values() {
         return this.users.values();

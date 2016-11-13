@@ -8,11 +8,30 @@ public class Users {
     private String fio;
     private String login;
     private String password;
+    private int cityId;
+
+    public int getCityId() {
+        return cityId;
+    }
+
+    public void setCityId(int cityId) {
+        this.cityId = cityId;
+    }
+
+    public Users(int id, String fio, String login, String password, int cityId) {
+        this.id = id;
+        this.fio = fio;
+        this.login = login;
+        this.password = password;
+        this.cityId = cityId;
+    }
+
     public Users(int id, String fio, String login, String password) {
         this.id = id;
         this.fio = fio;
         this.login = login;
         this.password = password;
+
     }
 
     public String getPassword() {

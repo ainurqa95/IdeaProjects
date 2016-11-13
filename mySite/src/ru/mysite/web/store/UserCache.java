@@ -10,7 +10,8 @@ import java.util.Collection;
  */
 public class UserCache implements Storage {
     private static final UserCache INSTANCE = new UserCache();
-    private final Storage storage = new MemoryStorage();
+    private final Storage storage = new MemoryStorage();// здесь мы выбираем какую память хотим использовать
+    // можем использовать вместо нее JDVC  storage
 
     public static UserCache getInstance() {
         return INSTANCE;
@@ -22,28 +23,28 @@ public class UserCache implements Storage {
     }
 
     @Override
-    public int add(Users user) {
+    public int add( final Users user) {
         return this.storage.add(user);
 
     }
 
     @Override
-    public void edit(Users user) {
+    public void edit(final Users user) {
         this.storage.edit(user);
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(final int id) {
         this.storage.delete(id);
     }
 
     @Override
-    public Users get(int id) {
+    public Users get(final int id) {
         return this.storage.get(id);
     }
 
     @Override
-    public Users findByLogin(String login) {
+    public Users findByLogin(final String login) {
         return this.storage.findByLogin(login);
     }
 

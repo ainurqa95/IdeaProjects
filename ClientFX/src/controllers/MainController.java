@@ -165,12 +165,13 @@ public class MainController {
     }
 
     /**
-     * аутентификация клиента
+     *
+     * посылаем на сервер id , m , coded
      * @param actionEvent
      * @throws NoSuchAlgorithmException
      */
     public void decryptMessagID(ActionEvent actionEvent) throws NoSuchAlgorithmException {
-        if(!this.clientAnswer.getText().equals("")){
+        if(!this.clientAnswer.getText().equals("")){ // отправляем на сервер
 
             getPublicKeyRSA();
             Pattern p1 = Pattern.compile("\"[^\"]*\""); // с помощью регулярок парсим слова в кавычках
