@@ -23,7 +23,7 @@ public class UserCreateServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String hashedPass = getHashedPass(req.getParameter("password"));
+        String hashedPass =  getHashedPass(req.getParameter("password"));
 
 
         this.USER_CACHE.add(new Users(this.ids.getAndIncrement(),req.getParameter("fio"), req.getParameter("login"), hashedPass));

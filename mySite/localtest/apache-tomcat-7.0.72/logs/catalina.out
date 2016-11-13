@@ -1990,3 +1990,11 @@ INFO: Reloading Context with name [] is completed
 INFO: Reloading Context with name [] has started
 ноя 13, 2016 8:03:22 PM org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] is completed
+ноя 13, 2016 9:01:12 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 13, 2016 9:01:13 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 13, 2016 9:01:23 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 13, 2016 9:01:23 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
