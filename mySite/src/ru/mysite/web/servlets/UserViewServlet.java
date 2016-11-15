@@ -19,6 +19,7 @@ import java.util.LinkedList;
  */
 public class UserViewServlet extends HttpServlet{
 
+    // private final CacheUser USER_CACHE = CacheUser.getInstance();
     private final CacheUser USER_CACHE = CacheUser.getInstance();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -33,6 +34,12 @@ public class UserViewServlet extends HttpServlet{
        RequestDispatcher dispatcher = req.getRequestDispatcher("/views/user/UserIndex.jsp");
        dispatcher.forward(req,resp);
 
+
+    }
+
+    @Override
+    public void destroy() {
+        super.destroy();
 
     }
 }

@@ -1998,3 +1998,17 @@ INFO: Reloading Context with name [] is completed
 INFO: Reloading Context with name [] has started
 ноя 13, 2016 9:01:23 PM org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] is completed
+ноя 13, 2016 11:35:09 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+ноя 13, 2016 11:35:11 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+ноя 13, 2016 11:35:11 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+ноя 13, 2016 11:35:12 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+ноя 13, 2016 11:35:12 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+ноя 13, 2016 11:35:12 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+ноя 13, 2016 11:35:13 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]

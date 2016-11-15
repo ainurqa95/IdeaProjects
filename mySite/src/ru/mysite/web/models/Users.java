@@ -25,6 +25,13 @@ public class Users {
         this.password = password;
         this.cityId = cityId;
     }
+    public Users( String fio, String login, String password, int cityId) {
+
+        this.fio = fio;
+        this.login = login;
+        this.password = password;
+        this.cityId = cityId;
+    }
 
     public Users(int id, String fio, String login, String password) {
         this.id = id;

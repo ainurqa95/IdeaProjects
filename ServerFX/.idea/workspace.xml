@@ -77,8 +77,8 @@
       <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controllers/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2194">
-              <caret line="153" column="8" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+            <state relative-caret-position="270">
+              <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#stop#0;class#MainController#0" expanded="false" />
@@ -122,6 +122,7 @@
             <state relative-caret-position="1386">
               <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="e#360#367#0" expanded="false" />
                 <element signature="e#444#445#0" expanded="false" />
                 <element signature="e#477#478#0" expanded="false" />
@@ -234,9 +235,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="65" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -268,8 +269,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -923,14 +924,15 @@
       <workItem from="1478627294528" duration="1533000" />
       <workItem from="1478717941900" duration="104000" />
       <workItem from="1479058672395" duration="2068000" />
+      <workItem from="1479126958216" duration="1584000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67548000" />
+    <option name="totallyTimeSpent" value="69132000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1095,6 +1097,7 @@
         <state relative-caret-position="612">
           <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#360#367#0" expanded="false" />
             <element signature="e#444#445#0" expanded="false" />
             <element signature="e#477#478#0" expanded="false" />
@@ -1201,6 +1204,7 @@
         <state relative-caret-position="612">
           <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#360#367#0" expanded="false" />
             <element signature="e#444#445#0" expanded="false" />
             <element signature="e#477#478#0" expanded="false" />
@@ -1307,6 +1311,7 @@
         <state relative-caret-position="612">
           <caret line="43" column="73" selection-start-line="43" selection-start-column="73" selection-end-line="43" selection-end-column="73" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#360#367#0" expanded="false" />
             <element signature="e#444#445#0" expanded="false" />
             <element signature="e#477#478#0" expanded="false" />
@@ -1628,6 +1633,7 @@
         <state relative-caret-position="1386">
           <caret line="86" column="18" selection-start-line="86" selection-start-column="18" selection-end-line="86" selection-end-column="18" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#360#367#0" expanded="false" />
             <element signature="e#444#445#0" expanded="false" />
             <element signature="e#477#478#0" expanded="false" />
@@ -1642,8 +1648,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2194">
-          <caret line="153" column="8" selection-start-line="153" selection-start-column="8" selection-end-line="153" selection-end-column="8" />
+        <state relative-caret-position="270">
+          <caret line="164" column="0" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#stop#0;class#MainController#0" expanded="false" />
