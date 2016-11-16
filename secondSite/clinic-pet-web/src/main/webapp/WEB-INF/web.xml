@@ -65,4 +65,14 @@
 		<servlet-name>CreateUserJsonServlet</servlet-name>
 		<url-pattern>/user/json</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SiteServlet</servlet-name>
+		<servlet-class>ru.parsentev.servlets.SiteServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SiteServlet</servlet-name>
+		<url-pattern>/site</url-pattern>
+	</servlet-mapping>
 </web-app>     
