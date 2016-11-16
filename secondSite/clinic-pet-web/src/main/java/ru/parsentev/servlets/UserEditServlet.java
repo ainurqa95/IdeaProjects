@@ -1,6 +1,7 @@
 package ru.parsentev.servlets;
 
 import ru.parsentev.models.User;
+import ru.parsentev.models.Users;
 import ru.parsentev.store.UserCache;
 
 import javax.servlet.RequestDispatcher;
@@ -24,14 +25,19 @@ public class UserEditServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setAttribute("user", this.USER_CACHE.get(Integer.valueOf(req.getParameter("id"))));
+		Users selectedUser = this.USER_CACHE.get(Integer.valueOf(req.getParameter("id")));
+		req.setAttribute("user", selectedUser);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/user/EditUser.jsp");
 		dispatcher.forward(req, resp);
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-	//	this.USER_CACHE.edit(new User(this.ids.incrementAndGet(), req.getParameter("login"), req.getParameter("email")));
-		resp.sendRedirect(String.format("%s%s", req.getContextPath(), "/user/view"));
+		int id = Integer.parseInt(req.getParameter("id"));
+		Users user = new Users(id, req.getParameter("fio"), req.getParameter("login"), "password", 1);
+		this.USER_CACHE.edit(user);
+		req.setAttribute("users", this.USER_CACHE.values());
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/user/UserView.jsp");
+		dispatcher.forward(req, resp);
 	}
 }

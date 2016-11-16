@@ -18,7 +18,13 @@
 		<tr>
 			<td align="right" >Fio : </td>
 			<td>
-				<input type="text" name="email" value="${user.fio}">
+				<input type="text" name="fio" value="${user.fio}">
+			</td>
+		</tr>
+		<tr>
+			<td align="right" >id : </td>
+			<td>
+				<input type="text" name="fio" value="${user.id}">
 			</td>
 		</tr>
 		<tr>

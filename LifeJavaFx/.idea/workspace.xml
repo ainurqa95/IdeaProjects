@@ -2,31 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/servlets/CreateUserJsonServlet.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/servlets/CreateUserJsonServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/servlets/UserViewServlet.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/servlets/UserViewServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/store/JdbcStorage.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/store/JdbcStorage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/store/UserCache.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/store/UserCache.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/servlets/CreateUserJsonServlet.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/servlets/CreateUserJsonServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/servlets/UserViewServlet.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/servlets/UserViewServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/JdbcStorage.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/JdbcStorage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/UserCache.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/UserCache.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/test-classes/ru/parsentev/servlets/UserCRUDServletTest.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/test-classes/ru/parsentev/servlets/UserCRUDServletTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/test-classes/ru/parsentev/store/JdbcStorageTest.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/test-classes/ru/parsentev/store/JdbcStorageTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/models/User.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/models/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/servlets/UserCreateServlet.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/servlets/UserCreateServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/servlets/UserEditServlet.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/ru/parsentev/servlets/UserEditServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/models/User.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/models/User.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/servlets/UserCreateServlet.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/servlets/UserCreateServlet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/servlets/UserEditServlet.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/servlets/UserEditServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mySite/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../mySite/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/.idea/misc.xml" afterPath="$PROJECT_DIR$/../secondSite/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../jlessons/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../jlessons/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../secondSite/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/cpw.iml" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/cpw.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserViewServlet.java" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserViewServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/store/JdbcStorage.java" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/store/JdbcStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/store/UserCache.java" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/store/UserCache.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/models/User.java" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/models/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserCreateServlet.java" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserCreateServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserEditServlet.java" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserEditServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/resources/parsentev.properties" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/resources/parsentev.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/webapp/views/user/CreateUser.jsp" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/webapp/views/user/CreateUser.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/webapp/views/user/EditUser.jsp" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/webapp/views/user/EditUser.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/parsentev.properties" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/classes/parsentev.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/views/user/CreateUser.jsp" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/views/user/CreateUser.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/views/user/EditUser.jsp" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/views/user/EditUser.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/parsentev.properties" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/parsentev.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/jlessons.iml" afterPath="$PROJECT_DIR$/../secondSite/jlessons.iml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -981,12 +976,12 @@
       <workItem from="1478174054146" duration="1634000" />
       <workItem from="1478258124153" duration="6490000" />
       <workItem from="1479221851777" duration="3189000" />
-      <workItem from="1479286703726" duration="901000" />
+      <workItem from="1479286703726" duration="1886000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55359000" />
+    <option name="totallyTimeSpent" value="56344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />

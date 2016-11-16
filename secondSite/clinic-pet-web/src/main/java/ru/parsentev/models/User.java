@@ -22,7 +22,9 @@ public class User extends Base {
 		this.email = email;
 	}
 
-	public Role getRole() {
+
+
+    public Role getRole() {
 		return role;
 	}
 

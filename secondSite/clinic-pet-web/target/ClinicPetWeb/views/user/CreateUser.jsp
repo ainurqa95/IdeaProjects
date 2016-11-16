@@ -9,15 +9,21 @@
 <form action="${pageContext.servletContext.contextPath}/user/create" method="POST">
 	<table>
 		<tr>
-			<td align="right" >Login : </td>
+			<td align="right" >FIO : </td>
 			<td>
-				<input type="text" name="login">
+				<input type="text" name="fio">
 			</td>
 		</tr>
 		<tr>
-			<td align="right" >Email : </td>
+		<td align="right" >login  : </td>
+		<td>
+			<input type="text" name="login">
+		</td>
+	</tr>
+		<tr>
+			<td align="right" >password  : </td>
 			<td>
-				<input type="text" name="email">
+				<input type="password" name="password">
 			</td>
 		</tr>
 		<tr>

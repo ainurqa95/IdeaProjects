@@ -68,5 +68,6 @@
     <orderEntry type="library" name="apache-tomcat-7.0" level="project" />
     <orderEntry type="library" name="postgresql-9.4.1212" level="project" />
     <orderEntry type="library" name="mysql-connector-java-5_1_39-bin" level="project" />
+    <orderEntry type="library" name="hibernate-c3p0-4.3.9.Final" level="project" />
   </component>
 </module>
