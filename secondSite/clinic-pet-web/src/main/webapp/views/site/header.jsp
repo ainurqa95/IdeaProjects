@@ -35,6 +35,19 @@
 
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
     <!--[if lt IE 10]><script src="${pageContext.servletContext.contextPath}/js/html5shiv-printshiv.js" media="all"></script><![endif]-->
+
+    <script src="${pageContext.servletContext.contextPath}/template/js/jquery-1.9.1.min.js"></script>
+    <script src="${pageContext.servletContext.contextPath}/template/js/jquery-ui.js"></script>
+    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.cycle.all.js"></script>
+    <script src="${pageContext.servletContext.contextPath}/template/js/modernizr.custom.17475.js"></script>
+    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.elastislide.js"></script>
+    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.carouFredSel-6.0.4-packed.js"></script>
+    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.selectBox.js"></script>
+    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.tooltipster.min.js"></script>
+    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.prettyPhoto.js"></script>
+    <script src="${pageContext.servletContext.contextPath}/template/js/custom.js"></script>
+
+
 </head>
 <body>
 <!-- HEADER -->
@@ -75,7 +88,7 @@
 
             <div class="span5">
                 <div class="logo">
-                    <a href="/"><img src="/template/images/logo2.png" alt=""></a>
+                    <a href="/"><img src="${pageContext.servletContext.contextPath}/template/images/logo2.png" alt=""></a>
                     <h1><a href="/"> <span>Садовая техника, бензоинструмент,строительное оборудование </span>  </a></h1>
                 </div>
             </div>
@@ -91,7 +104,7 @@
                 <div class="cart">
                     <ul>
                         <li class="first"><a href="/cart"></a><span></span></li>
-                        <li id="count_of_items" ><?php echo Cart::CountOfItemsInCart();?> товара(ов) <?php echo Cart::SumOfPricesInCart(); ?> руб</li>
+                        <%--<li id="count_of_items" ><?php echo Cart::CountOfItemsInCart();?> товара(ов) <?php echo Cart::SumOfPricesInCart(); ?> руб</li>--%>
 
 
                     </ul>
@@ -128,7 +141,7 @@
                         </li>
 
                         <li>
-                            <a href="/category/"> Категории </a>
+                            <a href="${pageContext.servletContext.contextPath}/views/category/"> Категории </a>
                             <ul class="clearfix sub-menu menu-three">
                                 <li class="clearfix">
                                     <!--
@@ -139,21 +152,20 @@
                                     <div class="links">
                                         <h3>Категории</h3>
                                         <p>
-                                            <?php
+                                            <a href="#">Работа с землей</a>
+                                            <a href="#">Стрижка травы</a>
+                                            <c:forEach items="${mainCategories}" var="category" varStatus="status">
 
-                                                                foreach ($categoryList as $category) {
+                                                <a href="${pageContext.servletContext.contextPath}/category?mainid=${category.idmain_cat}"> ${category.name} </a>
 
-                                                                    ?> <a href='/category/<?php echo $category['idmain_cat']; ?>/1/page-1'><?php echo $category['name'];?></a>
-                                            <?php
-                                                                }
-                                                        ?>
-                                            <!--
-                                               <a href="#">Работа с землей</a>
-                                                <a href="#">Стрижка травы</a>
-                                                <a href="#">Уход за газоном</a>
-                                                <a href="#">Многофункциональные мини-тракторы</a>
-                                                <a href="#">Работа с деревьями и кустарниками</a>
-                                                <a href="#">Техника для резервного энергоснабжения</a> -->
+                                            </c:forEach>
+
+                                               <%--<a href="#">Работа с землей</a>--%>
+                                                <%--<a href="#">Стрижка травы</a>--%>
+                                                <%--<a href="#">Уход за газоном</a>--%>
+                                                <%--<a href="#">Многофункциональные мини-тракторы</a>--%>
+                                                <%--<a href="#">Работа с деревьями и кустарниками</a>--%>
+                                                <%--<a href="#">Техника для резервного энергоснабжения</a> -->--%>
                                         </p>
 
 
@@ -165,30 +177,31 @@
                         </li>
                         <li>
 
+
                             <a href="#">Каталог садовой техники</a>
                             <ul class="clearfix sub-menu menu-four">
                                 <li class="clearfix">
-                                    <?php
-                                                        foreach ($categoryList as $categoryMain){
-                                                             ?>
-                                    <div class="our-product">
-                                        <h3><?php echo $categoryMain['name'];?></h3>
-                                        <?php foreach ($SecondCategoryList as $categorySecond) {
-                                                                        if($categorySecond['main_category_idmain_cat']==$categoryMain['idmain_cat'])
-                                                                        { ?>
-                                        <div class="clearfix">
-                                            <a href="/category/<?php echo $categoryMain['idmain_cat']; ?>/<?php echo $categorySecond['idsecond_cat'];?>"/><img src="/template/images/shopping-img.png" alt=""/></a>
-                                            <h4> <a href="/category/<?php echo $categoryMain['idmain_cat']; ?>/<?php echo $categorySecond['idsecond_cat'];?>/page-1"/> <h4> <?php echo $categorySecond['name'];?> </h4></a></h4>
+                                    <c:forEach items="${mainCategories}" var="mainCategory" varStatus="status">
+                                        <div class="our-product">
+                                            <h3>${mainCategory.name}</h3>
+                                            <c:forEach   items="${secondCategories}" var="secondCategory" varStatus="status"
+                                                >
+                                                <c:if test="${secondCategory.id_main_cat== mainCategory.idmain_cat}" >
+                                                    <div class="clearfix">
+                                                    <%--<a href="/category?mainid=${mainCategory.idmain_cat}&secondid=${secondCategory.id_second_cat}"/><img src="${pageContext.servletContext.contextPath}/template/images/shopping-img.png" alt=""/></a>--%>
+                                                    <h4> <a href="/category/?mainid=${mainCategory.idmain_cat}&secondid=${secondCategory.id_second_cat}"> <h4> ${secondCategory.name} </h4></a></h4>
 
+                                                    </div>
+
+                                            </c:if>
+
+
+
+                                            </c:forEach>
                                         </div>
+                                    </c:forEach>
 
-                                        <?php }
-                                                                 # code...
-                                                             } ?>
 
-                                    </div>
-                                    <?php      }
-                                                ?>
 
                                 </li>
                             </ul>
@@ -214,21 +227,10 @@
                     </ul>
                 </nav>
 
-                <select>
-                    <option>BAGS</option>
-                    <option>Jackets</option>
-                    <option>ACCESORIES </option>
-                    <option>CATEGORIES</option>
-                    <option>Manufacters</option>
-                    <option>Sale </option>
-                    <option>Blog</option>
-                    <option>Dresses</option>
-                    <option>Jewelry</option>
-                    <option>ShOES</option>
-                    <option>Shirts</option>
-                </select>
+
             </div>
         </div>
     </div>
 </header>
+
 <!-- HEADER -->
