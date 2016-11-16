@@ -47,8 +47,8 @@
       <file leaf-file-name="SiteServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/SiteServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+            <state relative-caret-position="139">
+              <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,8 +59,49 @@
       <file leaf-file-name="Index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/Index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+            <state relative-caret-position="2088">
+              <caret line="116" column="0" selection-start-line="116" selection-start-column="4" selection-end-line="137" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Products.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/models/Products.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-487">
+              <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+              <folding>
+                <element signature="e#849#850#0" expanded="true" />
+                <element signature="e#882#883#0" expanded="true" />
+                <element signature="e#913#914#0" expanded="true" />
+                <element signature="e#940#941#0" expanded="true" />
+                <element signature="e#972#973#0" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
+                <element signature="e#1072#1073#0" expanded="true" />
+                <element signature="e#1113#1114#0" expanded="true" />
+                <element signature="e#1150#1151#0" expanded="true" />
+                <element signature="e#1179#1180#0" expanded="true" />
+                <element signature="e#1207#1208#0" expanded="true" />
+                <element signature="e#1244#1245#0" expanded="true" />
+                <element signature="e#1280#1281#0" expanded="true" />
+                <element signature="e#1310#1311#0" expanded="true" />
+                <element signature="e#1339#1340#0" expanded="true" />
+                <element signature="e#1371#1372#0" expanded="true" />
+                <element signature="e#1402#1403#0" expanded="true" />
+                <element signature="e#1432#1433#0" expanded="true" />
+                <element signature="e#1461#1462#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/footer.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="114" column="87" selection-start-line="114" selection-start-column="87" selection-end-line="114" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -69,8 +110,8 @@
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/footer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="104" selection-end-column="64" />
+            <state relative-caret-position="1620">
+              <caret line="90" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -86,11 +127,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/header.jsp">
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="190" column="50" selection-start-line="190" selection-start-column="50" selection-end-line="190" selection-end-column="250" />
+            <state relative-caret-position="180">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -106,39 +147,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CategoryStorage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/CategoryStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="47" column="42" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1479305944995" expanded="true" signature="1163:1190" ph="select * fro... main_category" />
-                <marker date="1479305944995" expanded="true" signature="1716:1745" ph="select * fro... second_category" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="263" column="31" selection-start-line="14" selection-start-column="0" selection-end-line="263" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -167,8 +184,6 @@
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/user/EditUser.jsp" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserEditServlet.java" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/Index.jsp" />
-        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/header.jsp" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/models/Category.java" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/interfaces/Category.java" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/models/MainCategory.java" />
@@ -178,8 +193,12 @@
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/MemoryStorage.java" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/test/java/ru/parsentev/store/CategoryStorageTest.java" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/CategoryStorage.java" />
-        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/SiteServlet.java" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/header.jsp" />
+        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/SiteServlet.java" />
+        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/header.jsp" />
+        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/footer.jsp" />
+        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/Index.jsp" />
+        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/models/Products.java" />
       </list>
     </option>
   </component>
@@ -909,6 +928,7 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout" />
       <recent name="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site" />
     </key>
   </component>
@@ -1638,7 +1658,7 @@
       <workItem from="1479237792921" duration="2394000" />
       <workItem from="1479281827641" duration="1270000" />
       <workItem from="1479283652485" duration="1729000" />
-      <workItem from="1479285975678" duration="22407000" />
+      <workItem from="1479285975678" duration="23615000" />
     </task>
     <servers />
   </component>
@@ -1675,11 +1695,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28213000" />
+    <option name="totallyTimeSpent" value="29421000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="24" width="1291" height="744" extended-state="4" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1696,7 +1716,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32455462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32455462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1732,22 +1752,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/user/CreateUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/service/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/JdbcStorage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -2117,14 +2121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="104" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/ClinicServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -2141,14 +2137,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/Index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/models/SecondCategory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -2159,19 +2147,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/SiteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        <state relative-caret-position="139">
+          <caret line="27" column="82" selection-start-line="27" selection-start-column="82" selection-end-line="27" selection-end-column="82" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/header.jsp">
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="190" column="50" selection-start-line="190" selection-start-column="50" selection-end-line="190" selection-end-column="250" />
+        <state relative-caret-position="1620">
+          <caret line="90" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/layout/footer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="114" column="87" selection-start-line="114" selection-start-column="87" selection-end-line="114" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/Index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2088">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="4" selection-end-line="137" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/models/Products.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-487">
+          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
+          <folding>
+            <element signature="e#849#850#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#972#973#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#1072#1073#0" expanded="true" />
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="e#1310#1311#0" expanded="true" />
+            <element signature="e#1339#1340#0" expanded="true" />
+            <element signature="e#1371#1372#0" expanded="true" />
+            <element signature="e#1402#1403#0" expanded="true" />
+            <element signature="e#1432#1433#0" expanded="true" />
+            <element signature="e#1461#1462#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

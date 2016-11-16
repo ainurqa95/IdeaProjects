@@ -25,7 +25,7 @@ public class SiteServlet extends HttpServlet {
         LinkedList<SecondCategory> secondCategories = storage.getSecondCategory();
         req.setAttribute("secondCategories", secondCategories);
         req.setAttribute("mainCategories", mainCategories);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/views/site/header.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/views/site/Index.jsp");
         dispatcher.forward(req, resp);
     }
 

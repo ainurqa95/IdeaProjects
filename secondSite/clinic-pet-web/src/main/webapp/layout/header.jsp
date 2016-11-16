@@ -33,19 +33,7 @@
     <!-- favicon -->
     <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/template/images/lopatka.jpg">
 
-    <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
-    <!--[if lt IE 10]><script src="${pageContext.servletContext.contextPath}/js/html5shiv-printshiv.js" media="all"></script><![endif]-->
 
-    <script src="${pageContext.servletContext.contextPath}/template/js/jquery-1.9.1.min.js"></script>
-    <script src="${pageContext.servletContext.contextPath}/template/js/jquery-ui.js"></script>
-    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.cycle.all.js"></script>
-    <script src="${pageContext.servletContext.contextPath}/template/js/modernizr.custom.17475.js"></script>
-    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.elastislide.js"></script>
-    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.carouFredSel-6.0.4-packed.js"></script>
-    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.selectBox.js"></script>
-    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.tooltipster.min.js"></script>
-    <script src="${pageContext.servletContext.contextPath}/template/js/jquery.prettyPhoto.js"></script>
-    <script src="${pageContext.servletContext.contextPath}/template/js/custom.js"></script>
 
 
 </head>
