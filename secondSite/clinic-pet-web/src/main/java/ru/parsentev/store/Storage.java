@@ -2,6 +2,7 @@ package ru.parsentev.store;
 
 import ru.parsentev.models.Users;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public interface Storage {
 
-	public List<Users> values();
+	public LinkedList<Users> values();
 
 	public int add(final Users user);
 

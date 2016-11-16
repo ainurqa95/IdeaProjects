@@ -14,7 +14,7 @@ public class SiteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //super.doGet(req, resp);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/views/site/Index.jsp");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/views/site/header.jsp");
         dispatcher.forward(req, resp);
     }
 }

@@ -3,6 +3,7 @@ package ru.parsentev.store;
 import ru.parsentev.models.User;
 import ru.parsentev.models.Users;
 
+import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -20,8 +21,8 @@ public class MemoryStorage implements Storage {
 
 
 	@Override
-	public List<Users> values() {
-		return (List<Users>) this.users.values();
+	public LinkedList<Users> values() {
+		return (LinkedList<Users>) this.users.values();
 	}
 
 	@Override

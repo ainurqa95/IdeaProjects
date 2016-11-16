@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en-US"> <!--<![endif]-->
 <head>
@@ -21,19 +22,19 @@
     <link href='http://fonts.googleapis.com/css?family=Quattrocento:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Style Sheet-->
-    <link rel="stylesheet" href="/template/css/tooltipster.css">
-    <link href="css/ie.css" rel="/template/stylesheet" media="all">
-    <link rel="stylesheet" href="/template/css/bootstrap.css">
+    <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/template/css/tooltipster.css">
+    <link href="css/ie.css" rel="${pageContext.servletContext.contextPath}/template/stylesheet" media="all">
+    <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/template/css/bootstrap.css">
 
-    <link rel="stylesheet" href="/template/css/responsive.css">
-    <link rel="stylesheet" href="/template/css/prettyPhoto.css">
-    <link rel="stylesheet" href="/template/style.css">
+    <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/template/css/responsive.css">
+    <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/template/css/prettyPhoto.css">
+    <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/template/style.css">
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/template/images/lopatka.jpg">
+    <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/template/images/lopatka.jpg">
 
     <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
-    <!--[if lt IE 10]><script src="js/html5shiv-printshiv.js" media="all"></script><![endif]-->
+    <!--[if lt IE 10]><script src="${pageContext.servletContext.contextPath}/js/html5shiv-printshiv.js" media="all"></script><![endif]-->
 </head>
 <body>
 <!-- HEADER -->
@@ -47,20 +48,20 @@
             <div class="span10 right">
                 <div class="social-strip">
                     <ul>
-                        <li><a href="/cart" class="wish">Корзина</a></li>
-                        <?php if(!User::isLogged()): ?>
-                        <li><a href="/user/register" class="account">Зарегистрироваться</a></li>
-                        <li><a href="/user/login" class="check">Войти </a></li>
-                        <?php else :?>
-                        <li><a href="/cabinet" class="check"> Мой профиль </a></li>
-                        <li><a href="/user/logout" class="check">Выйти </a></li>
-                        <?php endif; ?>
+                        <%--<li><a href="/cart" class="wish">Корзина</a></li>--%>
+                        <%--<?php if(!User::isLogged()): ?>--%>
+                        <%--<li><a href="/user/register" class="account">Зарегистрироваться</a></li>--%>
+                        <%--<li><a href="/user/login" class="check">Войти </a></li>--%>
+                        <%--<?php else :?>--%>
+                        <%--<li><a href="/cabinet" class="check"> Мой профиль </a></li>--%>
+                        <%--<li><a href="/user/logout" class="check">Выйти </a></li>--%>
+                        <%--<?php endif; ?>--%>
                     </ul>
                 </div>
 
                 <div class="languages">
-                    <a href="/" class="english active"><img src="/template/images/russia.png" alt=""></a>
-                    <a href="/" class="english active"><img src="/template/images/tatarstan.jpg" alt=""></a>
+                    <a href="/" class="english active"><img src="${pageContext.servletContext.contextPath}/template/images/russia.png" alt=""></a>
+                    <a href="/" class="english active"><img src="${pageContext.servletContext.contextPath}/template/images/tatarstan.jpg" alt=""></a>
 
                 </div>
             </div>
