@@ -62,5 +62,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="postgresql:postgresql:9.1-901.jdbc4" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5_1_39-bin" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-5_1_39-bin1" level="project" />
   </component>
 </module>

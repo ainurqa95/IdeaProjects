@@ -16,7 +16,7 @@ import java.util.Properties;
  * Created by ainur on 04.11.16.
  */
 public class UsersTable {
-    /*
+
     LinkedList<Users> tableUsers = new LinkedList<Users>();
     Connection connection;
 
@@ -26,7 +26,7 @@ public class UsersTable {
 
     public UsersTable(){
         try {
-            // DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", "root", "root");
             Statement command = (Statement) con.createStatement();
             ResultSet res = command.executeQuery("select * from users");
@@ -42,6 +42,8 @@ public class UsersTable {
             e.printStackTrace();
         }
     }
+
+/*
     public Users getUserByLogin (String login){
         try {
             // DriverManager.registerDriver(new com.mysql.jdbc.Driver());

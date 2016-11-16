@@ -10,9 +10,9 @@ import java.util.Collection;
  */
 public class UserCache implements Storage {
     private static final UserCache INSTANCE = new UserCache();
-  //  private final Storage storage = new MemoryStorage();// здесь мы выбираем какую память хотим использовать
+    private final Storage storage = new MemoryStorage();// здесь мы выбираем какую память хотим использовать
     // можем использовать вместо нее JDVC  storage
-  private final Storage storage = new JdbcStorage();
+ // private final Storage storage = new JdbcStorage();
     public static UserCache getInstance() {
         return INSTANCE;
     }

@@ -1,0 +1,314 @@
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/7.0.72
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 14 2016 12:12:26 UTC
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         7.0.72.0
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Linux
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            3.16.0-77-generic
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             /usr/lib/jvm/java-8-oracle/jre
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_101-b13
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         /home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         /home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.config.file=/home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72/conf/logging.properties
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=/home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72/endorsed
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=/home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=/home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.io.tmpdir=/home/ainur/IdeaProjects/mySite/localtest/apache-tomcat-7.0.72/temp
+ноя 15, 2016 7:52:37 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+ноя 15, 2016 7:52:37 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-bio-8080"]
+ноя 15, 2016 7:52:37 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-bio-8009"]
+ноя 15, 2016 7:52:37 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1362 ms
+ноя 15, 2016 7:52:37 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service Catalina
+ноя 15, 2016 7:52:37 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/7.0.72
+ноя 15, 2016 7:52:37 PM org.apache.catalina.deploy.WebXml setVersion
+WARNING: Unknown version string [3.1]. Default version will be used.
+ноя 15, 2016 7:52:38 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-bio-8080"]
+ноя 15, 2016 7:52:38 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-bio-8009"]
+ноя 15, 2016 7:52:38 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1045 ms
+ноя 15, 2016 7:53:48 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 7:53:49 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:05:29 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:05:29 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:06:39 PM org.apache.catalina.loader.WebappClassLoaderBase modified
+SEVERE:     Resource '/WEB-INF/classes//ru/mysite/web/interfaces/Pet.class' is missing
+ноя 15, 2016 8:06:39 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:06:39 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:07:09 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:07:09 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:07:29 PM org.apache.catalina.loader.WebappClassLoaderBase modified
+SEVERE:     Resource '/WEB-INF/classes//ru/mysite/web/interfaces/Pet.class' is missing
+ноя 15, 2016 8:07:29 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:07:29 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:11:00 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:11:00 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:13:10 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:13:10 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:13:20 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:13:20 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:15:20 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:15:20 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:17:10 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:17:10 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:18:20 PM org.apache.catalina.loader.WebappClassLoaderBase modified
+SEVERE:     Resource '/WEB-INF/classes//ru/mysite/web/interfaces/Pet.class' is missing
+ноя 15, 2016 8:18:20 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:18:20 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:20:10 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:20:10 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:21:00 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:21:01 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:21:21 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:21:21 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:21:51 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:21:51 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:23:11 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:23:11 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:24:51 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:24:51 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:25:11 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:25:11 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:26:21 PM org.apache.catalina.loader.WebappClassLoaderBase modified
+SEVERE:     Resource '/WEB-INF/classes//ru/mysite/web/interfaces/Pet.class' is missing
+ноя 15, 2016 8:26:21 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:26:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:34:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:34:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:38:02 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:38:02 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:38:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:38:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:40:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:40:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:42:12 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:42:12 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:42:22 PM org.apache.catalina.loader.WebappClassLoaderBase modified
+SEVERE:     Resource '/WEB-INF/classes//ru/mysite/web/interfaces/Pet.class' is missing
+ноя 15, 2016 8:42:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:42:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:47:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:47:22 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:48:02 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:48:03 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:48:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:48:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:59:13 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:59:13 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 8:59:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 8:59:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:00:13 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:00:13 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:00:23 PM org.apache.catalina.loader.WebappClassLoaderBase modified
+SEVERE:     Resource '/WEB-INF/classes//ru/mysite/web/interfaces/Pet.class' is missing
+ноя 15, 2016 9:00:23 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:00:23 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:00:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:00:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:01:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:01:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:02:33 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:02:33 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:02:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:02:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:03:43 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:03:44 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:05:04 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:05:04 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:05:24 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:05:24 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:07:14 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:07:14 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:07:34 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:07:34 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:10:04 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:10:04 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:15:24 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:15:24 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:15:54 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:15:54 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:18:04 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:18:04 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 9:22:24 PM org.apache.catalina.loader.WebappClassLoaderBase modified
+SEVERE:     Resource '/WEB-INF/classes//ru/mysite/web/interfaces/Pet.class' is missing
+ноя 15, 2016 9:22:24 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 9:22:25 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:15:45 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:15:46 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:17:46 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:17:46 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:18:16 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:18:16 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:18:26 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:18:26 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:18:46 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:18:46 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:19:16 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:19:16 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:20:46 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:20:47 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:22:27 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:22:27 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:23:07 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:23:07 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:28:27 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:28:28 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:28:58 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] has started
+ноя 15, 2016 10:28:58 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [] is completed
+ноя 15, 2016 10:37:33 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+ноя 15, 2016 10:37:34 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-bio-8080"]
+ноя 15, 2016 10:37:34 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-bio-8009"]
+ноя 15, 2016 10:37:34 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service Catalina
+ноя 15, 2016 10:37:34 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-bio-8080"]
+ноя 15, 2016 10:37:34 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-bio-8009"]
+ноя 15, 2016 10:37:34 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-bio-8080"]
+ноя 15, 2016 10:37:34 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-bio-8009"]
