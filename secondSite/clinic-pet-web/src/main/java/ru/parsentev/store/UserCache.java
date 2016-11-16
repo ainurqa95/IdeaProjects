@@ -3,6 +3,7 @@ package ru.parsentev.store;
 import ru.parsentev.models.User;
 import ru.parsentev.models.Users;
 
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -20,8 +21,8 @@ public class UserCache implements Storage {
 	}
 
 	@Override
-	public List<Users> values() {
-		return INSTANCE.values();
+	public LinkedList<Users> values() {
+		return (LinkedList<Users>) this.storage.values();
 	}
 
 	@Override

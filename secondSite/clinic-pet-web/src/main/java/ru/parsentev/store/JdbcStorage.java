@@ -11,6 +11,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -24,15 +26,18 @@ public class JdbcStorage implements Storage {
 	public JdbcStorage() {
 		final Settings settings = Settings.getInstance();
 		try {
+			DriverManager.registerDriver(new org.postgresql.Driver());
 			this.connection = DriverManager.getConnection(settings.value("jdbc.url"), settings.value("jdbc.username"), settings.value("jdbc.password"));
+
+
 		} catch (SQLException e) {
 			throw new IllegalStateException(e);
 		}
 	}
 
 	@Override
-	public List<Users> values() {
-		final List<Users> users = new ArrayList<>();
+	public LinkedList<Users> values() {
+		 LinkedList<Users> users = new LinkedList<>();
 		try (final Statement statement = this.connection.createStatement();
 		     final ResultSet rs = statement.executeQuery("select * from users")) {
 			while (rs.next()) {

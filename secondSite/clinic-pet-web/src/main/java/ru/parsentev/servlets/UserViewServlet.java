@@ -3,6 +3,8 @@ package ru.parsentev.servlets;
 import com.sun.net.httpserver.HttpServer;
 import ru.parsentev.models.User;
 import ru.parsentev.models.Users;
+import ru.parsentev.models.UsersTable;
+import ru.parsentev.store.JdbcStorage;
 import ru.parsentev.store.UserCache;
 
 import javax.servlet.RequestDispatcher;
@@ -25,22 +27,14 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class UserViewServlet extends HttpServlet {
 
-	//private final UserCache USER_CACHE = UserCache.getInstance();
-
+	private final UserCache USER_CACHE = UserCache.getInstance();
+	private JdbcStorage storage;
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		//req.setAttribute("users", this.USER_CACHE.values());
-		LinkedList<Users> users = new LinkedList<Users>();
-		users.add(new Users(1,"ainur","login","passwword",1));
-		//req.setAttribute("users", this.USER_CACHE.values());
+
+        LinkedList<Users> users =  this.USER_CACHE.values();
 		req.setAttribute("users", users);
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/views/user/UserView.jsp");
 		dispatcher.forward(req, resp);
 	}
-
-//	@Override
-//	public void destroy() {
-//		super.destroy();
-//		USER_CACHE.close();
-//	}
 }
