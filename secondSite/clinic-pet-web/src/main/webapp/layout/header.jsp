@@ -38,6 +38,8 @@
 
 </head>
 <body>
+
+
 <!-- HEADER -->
 <div class="header-bar">
     <div class="container">
@@ -140,8 +142,7 @@
                                     <div class="links">
                                         <h3>Категории</h3>
                                         <p>
-                                            <a href="#">Работа с землей</a>
-                                            <a href="#">Стрижка травы</a>
+                                          
                                             <c:forEach items="${mainCategories}" var="category" varStatus="status">
 
                                                 <a href="${pageContext.servletContext.contextPath}/category?mainid=${category.idmain_cat}"> ${category.name} </a>

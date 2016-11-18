@@ -6,8 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="../../layout/header.jsp"/>
-
 
 
 
@@ -15,21 +15,45 @@
     <div class="container">
         <div class="row ">
 
+
+
             <!-- SLIDER -->
             <div class="span9 slider">
                 <div class="slider-slides">
-                    <c:forEach   items="${slider}" var="slide" >
-                        <div class="slides">
-                                <a href="${pageContext.servletContext.contextPath}/products?idproducts=${slide.idproducts}"><img src='' alt="${slide.name}"></a><!-- 870x373 -->
-                                <div class="overlay">
-                                <h1> ${slide.name}</h1>
-                                <p><span><${slide.price}>%</span> Цена <br/> Brand: <span> ${slide.brand}  </span> </p>
+                    <c:forEach   items="${sliderProducts}" var="item" >
+                        <%--<div class="slides">--%>
+                                <%--&lt;%&ndash;<a href="${pageContext.servletContext.contextPath}/products?idproducts=${item.idproducts}"><img src="${pageContext.servletContext.contextPath}${item.imagePathes}" alt="${item.name}"></a><!-- 870x373 -->&ndash;%&gt;--%>
+                                <%--<div class="overlay">--%>
+                                <%--<h1> ${item.name}</h1>--%>
+                                <%--<p><span><${item.price}>%</span> Цена <br/> Brand: <span> ${item.brand}  </span> </p>--%>
 
-                                     </div>
-                                </div>
+                                     <%--</div>--%>
+                                <%--</div>--%>
+                        <div class="slides">
+                            <a href="${pageContext.servletContext.contextPath}/products?idproducts=${item.idproducts}"><img src="${pageContext.servletContext.contextPath}${item.imagePathes}" alt="${item.name}"></a>
+                            <div class="overlay">
+                            <h1> ${item.name}</h1>
+                            <p><span> Цена ${item.price} </span> скидка ${item.skidka}%<br/> Brand: <span> ${item.brand}</span> </p>
+                            </div>
+                        </div>
 
                     </c:forEach>
-
+                    </div>
+                    <%--<div class="slides">--%>
+                        <%--<a href="#"><img src="http://placehold.it/870x373" alt=""></a>--%>
+                        <%--<div class="overlay">--%>
+                            <%--<h1>AWESOME FURNITUR</h1>--%>
+                            <%--<p><span>50%</span> OFF <br/> TRENDY <span>DESIGNS</span> </p>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                    <%--<div class="slides">--%>
+                        <%--<a href="#"><img src="http://placehold.it/870x373" alt=""></a>--%>
+                        <%--<div class="overlay">--%>
+                            <%--<h1>LATEST FASHION</h1>--%>
+                            <%--<p><span>30%</span> OFF <br/> TRENDY <span>DESIGNS</span> </p>--%>
+                        <%--</div>--%>
+                    <%--</div>--%>
+                <%--</div>--%>
 
 
 
@@ -46,7 +70,7 @@
 
                     <%--<?php endforeach;?>--%>
 
-                </div>
+
                 <a href="#" class="next"></a>
                 <a href="#" class="prev"></a>
                 <div class="slider-btn"></div>
@@ -195,6 +219,8 @@
 </div>
 <!-- CATEGORIES -->
 <jsp:include page="../../layout/footer.jsp"/>
+
+
 
 
 </body>

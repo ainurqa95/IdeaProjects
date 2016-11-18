@@ -27,17 +27,21 @@ public class SiteServlet extends HttpServlet {
         LinkedList<MainCategory> mainCategories = storageCategory.getMainCategory();
         LinkedList<SecondCategory> secondCategories = storageCategory.getSecondCategory();
         LinkedList<Products> latestProducts = storageProducts.getlatestProducts();
-        LinkedList<Products> sliderProducts = storageProducts.getlatestProducts();
+        LinkedList<Products> sliderProducts = storageProducts.getProductForSlider();
+        setPathesProductsImages(sliderProducts,storageProducts,1);
         req.setAttribute("secondCategories", secondCategories);
         req.setAttribute("mainCategories", mainCategories);
         req.setAttribute("products", latestProducts);
-        req.setAttribute("slider", sliderProducts);
+        req.setAttribute("sliderProducts", sliderProducts);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/site/Index.jsp");
         dispatcher.forward(req, resp);
     }
 
-    private void setPathesProductsImages (){
-
+    private void setPathesProductsImages (LinkedList<Products> products, ProductsStorage storage, int size){
+        for (Products prod: products
+             ) {
+            prod.setImagePathes(storage.getImageById(prod.getIdproducts(),size));// берем пути для каждого продукта для картинов
+        }
 
 
 

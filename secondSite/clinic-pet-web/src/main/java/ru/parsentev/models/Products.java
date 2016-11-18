@@ -15,9 +15,11 @@ public class Products {
     int status;
     int idSecond;
     int idMain;
+    String brand;
     String imagePathes;
+    int skidka;
 
-    public Products(int idproducts, String name, double price, String description, String characteristic, int isNew, int isRecommended, int status, int idSecond, int idMain) {
+    public Products(int idproducts, String name, double price, String description, String characteristic, int isNew, int isRecommended, int status, int idSecond, int idMain, String brand, int skidka ) {
         this.idproducts = idproducts;
         this.name = name;
         this.price = price;
@@ -28,6 +30,24 @@ public class Products {
         this.status = status;
         this.idSecond = idSecond;
         this.idMain = idMain;
+        this.brand = brand;
+        this.skidka = skidka;
+    }
+
+    public int getSkidka() {
+        return skidka;
+    }
+
+    public void setSkidka(int skidka) {
+        this.skidka = skidka;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
     public String getImagePathes() {

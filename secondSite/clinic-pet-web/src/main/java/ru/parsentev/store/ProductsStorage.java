@@ -7,6 +7,7 @@ import ru.parsentev.models.SecondCategory;
 import ru.parsentev.models.Users;
 import ru.parsentev.service.Settings;
 
+import java.io.File;
 import java.sql.*;
 import java.util.LinkedList;
 
@@ -54,7 +55,8 @@ public class ProductsStorage implements ProductsInterface {
 
                     products.add(new Products(rs.getInt("idproducts"), rs.getString("name"),
                             rs.getDouble("price"), rs.getString("description"), rs.getString("characteristic"),
-                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat")));
+                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,
+                            rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat"), rs.getString("brand"), rs.getInt("skidka")));
                 }
             }
         } catch (SQLException e) {
@@ -79,7 +81,9 @@ public class ProductsStorage implements ProductsInterface {
 
                     products.add(new Products(rs.getInt("idproducts"), rs.getString("name"),
                             rs.getDouble("price"), rs.getString("description"), rs.getString("characteristic"),
-                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat")));
+                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,
+                            rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat"),
+                            rs.getString("brand"), rs.getInt("skidka")));
                 }
             }
         } catch (SQLException e) {
@@ -101,7 +105,9 @@ public class ProductsStorage implements ProductsInterface {
                 while (rs.next()) {
                     products.add(new Products(rs.getInt("idproducts"), rs.getString("name"),
                             rs.getDouble("price"), rs.getString("description"), rs.getString("characteristic"),
-                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat")));
+                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,
+                            rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat"),
+                            rs.getString("brand"), rs.getInt("skidka")));
                 }
 
             }
@@ -122,7 +128,7 @@ public class ProductsStorage implements ProductsInterface {
                 while (rs.next()) {
                     products.add(new Products(rs.getInt("idproducts"), rs.getString("name"),
                             rs.getDouble("price"), rs.getString("description"), rs.getString("characteristic"),
-                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat")));
+                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat"), rs.getString("brand"),rs.getInt("skidka")));
                 }
 
             }
@@ -222,13 +228,51 @@ public class ProductsStorage implements ProductsInterface {
                 while (rs.next()) {
                     return  new Products(rs.getInt("idproducts"), rs.getString("name"),
                             rs.getDouble("price"), rs.getString("description"), rs.getString("characteristic"),
-                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat"));
+                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,
+                            rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat"),
+                            rs.getString("brand"),rs.getInt("skidka"));
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         throw new IllegalStateException(String.format("Product %s does not exists", id));
+
+
+    }
+
+    @Override
+    public String getImageById(int idproducts, int size) {
+
+           String noImage = "no-image.jpg";
+         String path = "/uploads/images/products";
+            // Путь к изображению товара
+            switch (size) {
+                case 1:
+                    path = path+"/big/";
+                    break;
+                case 2:
+                    path = path+"/middle/";
+                    break;
+                case 3:
+                    path = path+"/small/";
+                    break;
+
+                default:
+                    path = path+"/middle/";
+                    break;
+            }
+        String path_to_image = path + String.valueOf(idproducts+ ".jpg");
+                File f = new File("/home/ainur/IdeaProjects/secondSite/clinic-pet-web/src/main/webapp/"+path_to_image);
+            if (f.exists()) {
+                // Если изображение для товара существует
+                // Возвращаем путь изображения товара
+
+                return path_to_image;
+            }
+
+            // иначе Возвращаем путь изображения-пустышки
+            return path+noImage;
 
 
     }
