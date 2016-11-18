@@ -15,6 +15,7 @@ public class Products {
     int status;
     int idSecond;
     int idMain;
+    String imagePathes;
 
     public Products(int idproducts, String name, double price, String description, String characteristic, int isNew, int isRecommended, int status, int idSecond, int idMain) {
         this.idproducts = idproducts;
@@ -27,6 +28,14 @@ public class Products {
         this.status = status;
         this.idSecond = idSecond;
         this.idMain = idMain;
+    }
+
+    public String getImagePathes() {
+        return imagePathes;
+    }
+
+    public void setImagePathes(String imagePathes) {
+        this.imagePathes = imagePathes;
     }
 
     public int getIdproducts() {

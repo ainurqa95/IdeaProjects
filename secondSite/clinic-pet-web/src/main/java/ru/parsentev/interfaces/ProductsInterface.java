@@ -19,6 +19,7 @@ public interface ProductsInterface {
     public int   AddProduct (Products product);
     int getCountOfProducts (int idSecondCat);
     Products getProductById (int id);
+    public String getImageById (int idproducts);
 
 
 }

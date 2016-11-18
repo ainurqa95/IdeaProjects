@@ -11,13 +11,27 @@
 
 
 
-<%--<div class="wrapper">--%>
-    <%--<div class="container">--%>
-        <%--<div class="row ">--%>
+<div class="wrapper">
+    <div class="container">
+        <div class="row ">
 
-            <%--<!-- SLIDER -->--%>
-            <%--<div class="span9 slider">--%>
-                <%--<div class="slider-slides">--%>
+            <!-- SLIDER -->
+            <div class="span9 slider">
+                <div class="slider-slides">
+                    <c:forEach   items="${slider}" var="slide" >
+                        <div class="slides">
+                                <a href="${pageContext.servletContext.contextPath}/products?idproducts=${slide.idproducts}"><img src='' alt="${slide.name}"></a><!-- 870x373 -->
+                                <div class="overlay">
+                                <h1> ${slide.name}</h1>
+                                <p><span><${slide.price}>%</span> Цена <br/> Brand: <span> ${slide.brand}  </span> </p>
+
+                                     </div>
+                                </div>
+
+                    </c:forEach>
+
+
+
 
                     <%--<?php foreach ($sliderProducts as $slider) : ?>--%>
                     <%--<div class="slides">--%>
@@ -32,38 +46,38 @@
 
                     <%--<?php endforeach;?>--%>
 
-                <%--</div>--%>
-                <%--<a href="#" class="next"></a>--%>
-                <%--<a href="#" class="prev"></a>--%>
-                <%--<div class="slider-btn"></div>--%>
-            <%--</div>--%>
-            <%--<!-- SLIDER -->--%>
+                </div>
+                <a href="#" class="next"></a>
+                <a href="#" class="prev"></a>
+                <div class="slider-btn"></div>
+            </div>
+            <!-- SLIDER -->
 
-            <%--<!-- SPECIAL-OFFER -->--%>
-            <%--<div class="span3">--%>
-                <%--<div class="offers">--%>
-                    <%--<figure>--%>
-                        <%--<a href="/products/19"><img src="/uploads/images/products/big/19.jpg" alt="Культиватор Caiman ELITE 60S D2"></a>--%>
-                        <%--<div class="overlay">--%>
-                            <%--<h1> Культиватор Caiman ELITE 60S D2<span> Скидка 10% </span> <small>  Ограниченное предложение </small></h1>--%>
-                        <%--</div>--%>
-                    <%--</figure>--%>
-                <%--</div>--%>
+            <!-- SPECIAL-OFFER -->
+            <div class="span3">
+                <div class="offers">
+                    <figure>
+                        <a href="${pageContext.servletContext.contextPath}/products?idproducts=19"><img src="${pageContext.servletContext.contextPath}/uploads/images/products/big/19.jpg" alt="Культиватор Caiman ELITE 60S D2"></a>
+                        <div class="overlay">
+                            <h1> Культиватор Caiman ELITE 60S D2<span> Скидка 10% </span> <small>  Ограниченное предложение </small></h1>
+                        </div>
+                    </figure>
+                </div>
 
-                <%--<div class="offers">--%>
-                    <%--<figure>--%>
-                        <%--<a href="/products/18"><img src="/uploads/images/products/big/18.jpg" alt="Культиватор Caiman ELITE 60S D2"></a>--%>
-                        <%--<div class="overlay">--%>
-                            <%--<h1> Культиватор Craftsman 29932<span> Скидка 10% </span> <small>  Ограниченное предложение </small></h1>--%>
-                        <%--</div>--%>
-                    <%--</figure>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-            <%--<!-- SPECIAL-OFFER -->--%>
+                <div class="offers">
+                    <figure>
+                        <a href="${pageContext.servletContext.contextPath}/products/18"><img src="${pageContext.servletContext.contextPath}/uploads/images/products/big/18.jpg" alt="Культиватор Caiman ELITE 60S D2"></a>
+                        <div class="overlay">
+                            <h1> Культиватор Craftsman 29932<span> Скидка 10% </span> <small>  Ограниченное предложение </small></h1>
+                        </div>
+                    </figure>
+                </div>
+            </div>
+            <!-- SPECIAL-OFFER -->
 
-        <%--</div>--%>
-    <%--</div>--%>
-<%--</div>--%>
+        </div>
+    </div>
+</div>
 
 <%--<!-- PRODUCT-OFFER -->--%>
 <%--<div class="product_wrap">--%>
@@ -136,49 +150,49 @@
         <%--</div>--%>
     <%--</div>--%>
 <%--</div>--%>
-<%--<!-- CLIENTS -->--%>
+<!-- CLIENTS -->
 
-<%--<!-- CATEGORIES -->--%>
-<%--<div class="categories-wrap">--%>
-    <%--<div class="container">--%>
-        <%--<div class="row">--%>
+<!-- CATEGORIES -->
+<div class="categories-wrap">
+    <div class="container">
+        <div class="row">
 
-            <%--<div class="span4">--%>
-                <%--<div class="categories">--%>
-                    <%--<figure>--%>
-                        <%--<img src="http://placehold.it/370x133" alt="">--%>
-                        <%--<div class="cate-overlay">--%>
-                            <%--<a href="#">Single Seat</a>--%>
-                        <%--</div>--%>
-                    <%--</figure>--%>
-                <%--</div>--%>
-            <%--</div>--%>
+            <div class="span4">
+                <div class="categories">
+                    <figure>
+                        <img src="http://placehold.it/370x133" alt="">
+                        <div class="cate-overlay">
+                            <a href="#">Single Seat</a>
+                        </div>
+                    </figure>
+                </div>
+            </div>
 
-            <%--<div class="span4">--%>
-                <%--<div class="categories">--%>
-                    <%--<figure>--%>
-                        <%--<img src="http://placehold.it/370x133png" alt="">--%>
-                        <%--<div class="cate-overlay">--%>
-                            <%--<a href="#">Surfaces</a>--%>
-                        <%--</div>--%>
-                    <%--</figure>--%>
-                <%--</div>--%>
-            <%--</div>--%>
+            <div class="span4">
+                <div class="categories">
+                    <figure>
+                        <img src="http://placehold.it/370x133png" alt="">
+                        <div class="cate-overlay">
+                            <a href="#">Surfaces</a>
+                        </div>
+                    </figure>
+                </div>
+            </div>
 
-            <%--<div class="span4">--%>
-                <%--<div class="categories">--%>
-                    <%--<figure>--%>
-                        <%--<img src="http://placehold.it/370x133" alt="">--%>
-                        <%--<div class="cate-overlay">--%>
-                            <%--<a href="#">Storage</a>--%>
-                        <%--</div>--%>
-                    <%--</figure>--%>
-                <%--</div>--%>
-            <%--</div>--%>
+            <div class="span4">
+                <div class="categories">
+                    <figure>
+                        <img src="http://placehold.it/370x133" alt="">
+                        <div class="cate-overlay">
+                            <a href="#">Storage</a>
+                        </div>
+                    </figure>
+                </div>
+            </div>
 
-        <%--</div>--%>
-    <%--</div>--%>
-<%--</div>--%>
+        </div>
+    </div>
+</div>
 <!-- CATEGORIES -->
 <jsp:include page="../../layout/footer.jsp"/>
 
