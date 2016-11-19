@@ -10,6 +10,7 @@ import java.util.LinkedList;
  */
 public interface ProductsInterface {
 
+
     public LinkedList<Products>  getlatestProducts ();
     public LinkedList<Brands>  getBrands ();
     public LinkedList<Products>  getAllProducts ();
