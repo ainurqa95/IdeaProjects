@@ -24,11 +24,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Index.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/Index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="90">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserView.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/user/UserView.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/WEB-INF/web.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="75" column="26" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -37,8 +57,8 @@
       <file leaf-file-name="ProductsServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/ProductsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
+            <state relative-caret-position="186">
+              <caret line="33" column="71" selection-start-line="32" selection-start-column="7" selection-end-line="33" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,73 +66,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductsStorageTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductsStorageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/test/java/ru/parsentev/store/ProductsStorageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserEditServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserEditServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserViewServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserViewServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDeleteServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserDeleteServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/template/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="638" column="32" selection-start-line="609" selection-start-column="16" selection-end-line="638" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductsStorage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/ProductsStorage.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="289" column="29" selection-start-line="289" selection-start-column="29" selection-end-line="289" selection-end-column="29" />
-              <folding>
-                <marker date="1479573342568" expanded="true" signature="1318:1389" ph="select * fro... products" />
-                <marker date="1479573342568" expanded="true" signature="2376:2403" ph="select * fro... brands" />
-                <marker date="1479573342568" expanded="true" signature="2977:2999" ph="select * fro... products" />
-                <marker date="1479573342568" expanded="true" signature="3973:4026" ph="select * fro... products" />
-                <marker date="1479573342568" expanded="true" signature="5038:5106" ph="select * fro... products" />
-                <marker date="1479573342568" expanded="true" signature="6014:6055" ph="delete from " />
-                <marker date="1479573342568" expanded="true" signature="6432:6662" ph="UPDATE produ... " />
-                <marker date="1479573342568" expanded="true" signature="7673:7868" ph="insert into products... " />
-                <marker date="1479573342568" expanded="true" signature="9190:9278" ph="select count... products" />
-                <marker date="1479573342568" expanded="true" signature="9761:9804" ph="select * fro... products" />
-              </folding>
+              <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,8 +79,8 @@
       <file leaf-file-name="SiteServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/SiteServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="37" selection-end-column="59" />
+            <state relative-caret-position="128">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -130,8 +89,8 @@
       <file leaf-file-name="OneProduct.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/products/OneProduct.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="-1458">
+              <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -193,13 +152,13 @@
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/garbage/Role.java" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/models/Brands.java" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/interfaces/ProductsInterface.java" />
-        <option value="$PROJECT_DIR$/clinic-pet-web/src/test/java/ru/parsentev/store/ProductsStorageTest.java" />
-        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/Index.jsp" />
-        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/ProductsStorage.java" />
+        <option value="$PROJECT_DIR$/clinic-pet-web/src/test/java/ru/parsentev/store/ProductsStorageTest.java" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/SiteServlet.java" />
+        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/Index.jsp" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/products/OneProduct.jsp" />
         <option value="$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/ProductsServlet.java" />
+        <option value="$PROJECT_DIR$/clinic-pet-web/src/main/webapp/WEB-INF/web.xml" />
       </list>
     </option>
   </component>
@@ -461,6 +420,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -910,32 +873,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat">
-    <configuration default="false" name="CategoryStorageTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="ru.parsentev.store.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="cpw" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="ru.parsentev.store" />
-      <option name="MAIN_CLASS_NAME" value="ru.parsentev.store.CategoryStorageTest" />
-      <option name="METHOD_NAME" value="test2" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="ProductsStorageTest.testLatestProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1027,6 +964,32 @@
       <option name="PACKAGE_NAME" value="ru.parsentev.store" />
       <option name="MAIN_CLASS_NAME" value="ru.parsentev.store.ProductsStorageTest" />
       <option name="METHOD_NAME" value="testBrands" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ProductsStorageTest.testgetOneProduct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ru.parsentev.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="cpw" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ru.parsentev.store" />
+      <option name="MAIN_CLASS_NAME" value="ru.parsentev.store.ProductsStorageTest" />
+      <option name="METHOD_NAME" value="testgetOneProduct" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1600,19 +1563,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.CategoryStorageTest.test2" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testLatestProducts" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testSliderProducts" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testPathes" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testBrands" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testLatestProducts" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testSliderProducts" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testPathes" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testBrands" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testgetOneProduct" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testBrands" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testLatestProducts" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testPathes" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testSliderProducts" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CategoryStorageTest.test2" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testgetOneProduct" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testBrands" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testLatestProducts" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testPathes" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ProductsStorageTest.testSliderProducts" />
       </list>
     </recent_temporary>
   </component>
@@ -1644,7 +1607,7 @@
       <workItem from="1479539468958" duration="3389000" />
       <workItem from="1479543178262" duration="39000" />
       <workItem from="1479543258313" duration="1858000" />
-      <workItem from="1479571028694" duration="2930000" />
+      <workItem from="1479571028694" duration="4159000" />
     </task>
     <servers />
   </component>
@@ -1657,9 +1620,6 @@
     </history-entry>
     <history-entry file="ProductsStorageTest_testBrands - 2016.11.19 at 20h 18m 14s.xml">
       <configuration name="ProductsStorageTest.testBrands" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProductsStorageTest_testLatestProducts - 2016.11.19 at 11h 17m 25s.xml">
-      <configuration name="ProductsStorageTest.testLatestProducts" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ProductsStorageTest_testLatestProducts - 2016.11.19 at 11h 18m 59s.xml">
       <configuration name="ProductsStorageTest.testLatestProducts" configurationId="JUnit" />
@@ -1679,9 +1639,12 @@
     <history-entry file="ProductsStorageTest_testSliderProducts - 2016.11.19 at 00h 10m 01s.xml">
       <configuration name="ProductsStorageTest.testSliderProducts" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ProductsStorageTest_testgetOneProduct - 2016.11.19 at 20h 52m 33s.xml">
+      <configuration name="ProductsStorageTest.testgetOneProduct" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58668000" />
+    <option name="totallyTimeSpent" value="59897000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
@@ -1697,7 +1660,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3233979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3233979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1846,13 +1809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/UserCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/models/UsersTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1881,13 +1837,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/user/UserView.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/CreateUserJsonServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -1899,13 +1848,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="9" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/CategoryStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -2108,49 +2050,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="80" column="14" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/Index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/products/OneProduct.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/ProductsStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="289" column="29" selection-start-line="289" selection-start-column="29" selection-end-line="289" selection-end-column="29" />
-          <folding>
-            <marker date="1479573342568" expanded="true" signature="1318:1389" ph="select * fro... products" />
-            <marker date="1479573342568" expanded="true" signature="2376:2403" ph="select * fro... brands" />
-            <marker date="1479573342568" expanded="true" signature="2977:2999" ph="select * fro... products" />
-            <marker date="1479573342568" expanded="true" signature="3973:4026" ph="select * fro... products" />
-            <marker date="1479573342568" expanded="true" signature="5038:5106" ph="select * fro... products" />
-            <marker date="1479573342568" expanded="true" signature="6014:6055" ph="delete from " />
-            <marker date="1479573342568" expanded="true" signature="6432:6662" ph="UPDATE produ... " />
-            <marker date="1479573342568" expanded="true" signature="7673:7868" ph="insert into products... " />
-            <marker date="1479573342568" expanded="true" signature="9190:9278" ph="select count... products" />
-            <marker date="1479573342568" expanded="true" signature="9761:9804" ph="select * fro... products" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/UserDeleteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -2175,28 +2074,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/SiteServlet.java">
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/UserCache.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="37" selection-end-column="59" />
+        <state relative-caret-position="169">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/ProductsServlet.java">
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/CategoryStorage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="30" column="69" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="69" />
+        <state relative-caret-position="321">
+          <caret line="61" column="4" selection-start-line="61" selection-start-column="4" selection-end-line="67" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/SiteServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="34" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/store/ProductsStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="289" column="29" selection-start-line="289" selection-start-column="29" selection-end-line="289" selection-end-column="29" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <marker date="1479573342568" expanded="true" signature="1318:1389" ph="select * fro... products" />
+            <marker date="1479573342568" expanded="true" signature="2376:2403" ph="select * fro... brands" />
+            <marker date="1479573342568" expanded="true" signature="2977:2999" ph="select * fro... products" />
+            <marker date="1479573342568" expanded="true" signature="3973:4026" ph="select * fro... products" />
+            <marker date="1479573342568" expanded="true" signature="5038:5106" ph="select * fro... products" />
+            <marker date="1479573342568" expanded="true" signature="6014:6055" ph="delete from " />
+            <marker date="1479573342568" expanded="true" signature="6432:6662" ph="UPDATE produ... " />
+            <marker date="1479573342568" expanded="true" signature="7673:7868" ph="insert into products... " />
+            <marker date="1479573342568" expanded="true" signature="9190:9278" ph="select count... products" />
+            <marker date="1479573342568" expanded="true" signature="9761:9804" ph="select * fro... products" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/test/java/ru/parsentev/store/ProductsStorageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
+        <state relative-caret-position="380">
+          <caret line="71" column="31" selection-start-line="71" selection-start-column="31" selection-end-line="71" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/user/UserView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/java/ru/parsentev/servlets/ProductsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="33" column="71" selection-start-line="32" selection-start-column="7" selection-end-line="33" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/products/OneProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1458">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="75" column="26" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clinic-pet-web/src/main/webapp/views/site/Index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

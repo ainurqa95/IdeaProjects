@@ -82,19 +82,19 @@
 
                      <div>
                             <figure> <?
-                                 <a href="/products/?idproducts=${product.idproducts}"><img src="${pageContext.servletContext.contextPath}${product.imagePathes}" alt="${product.name}"></a>
+                                 <a href="/products?idproducts=${product.idproducts}"><img src="${pageContext.servletContext.contextPath}${product.imagePathes}" alt="${product.name}"></a>
                                  <div class="overlay">
 
-                                  <a href="/products/?idproducts=?${product.idproducts}" class="link"></a>
+                                  <a href="/products?idproducts=${product.idproducts}" class="link"></a>
                              </div>
                              </figure>
                         <div class="detail">
                              <span>${product.price}</span>
                                 <h4>${product.name}</h4>
                              <div class="icon">
-                                 <a href="/cart/add/?idproducts=${product.idproducts}" data-id="${product.idproducts}"  class="one_tooltip" title="Add to wish list" id="add-to-cart"></a>
+                                 <a href="/cart/add?idproducts=${product.idproducts}" data-id="${product.idproducts}"  class="one_tooltip" title="Add to wish list" id="add-to-cart"></a>
 
-                                  <a href="/products/?idproducts=${product.idproducts}" class="three tooltip" title="Add to compare"></a>
+                                  <a href="/products?idproducts=${product.idproducts}" class="three tooltip" title="Add to compare"></a>
 
                              </div>
 
@@ -124,7 +124,7 @@
         <div class="row">
             <div class="span12 clients">
                 <ul class="elastislide-list clearfix" id="carousel">
-                    <li> Husqvarna<a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
                     <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
                     <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
                     <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>

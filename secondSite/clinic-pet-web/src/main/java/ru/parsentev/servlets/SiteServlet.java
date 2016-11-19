@@ -30,7 +30,7 @@ public class SiteServlet extends HttpServlet {
         LinkedList<Products> latestProducts = storageProducts.getlatestProducts();
         LinkedList<Products> sliderProducts = storageProducts.getProductForSlider();
         storageProducts.setPathesProductsImages(sliderProducts,1);
-        storageProducts.setPathesProductsImages(latestProducts,1);
+        storageProducts.setPathesProductsImages(latestProducts,2);
 //        setPathesProductsImages(sliderProducts,storageProducts,1);
 //        setPathesProductsImages(latestProducts,storageProducts,2);
         LinkedList<Brands> brands = storageProducts.getBrands();
@@ -50,8 +50,8 @@ public class SiteServlet extends HttpServlet {
 
     @Override
     public void destroy() {
-        super.destroy();
         storageCategory.close();
         storageProducts.close();
+        super.destroy();
     }
 }
