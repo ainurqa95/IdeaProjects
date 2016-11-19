@@ -84,4 +84,14 @@
 		<servlet-name>ProductsServlet</servlet-name>
 		<url-pattern>/products</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UserRegisterServlet</servlet-name>
+		<servlet-class>ru.parsentev.servlets.UserRegisterServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserRegisterServlet</servlet-name>
+		<url-pattern>/user/register</url-pattern>
+	</servlet-mapping>
 </web-app>     
