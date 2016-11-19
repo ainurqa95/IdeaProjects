@@ -1,6 +1,5 @@
 package ru.parsentev.servlets;
 
-import ru.parsentev.models.User;
 import ru.parsentev.models.Users;
 import ru.parsentev.store.UserCache;
 

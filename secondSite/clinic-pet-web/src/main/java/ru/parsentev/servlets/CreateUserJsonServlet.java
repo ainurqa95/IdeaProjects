@@ -3,7 +3,6 @@ package ru.parsentev.servlets;
 
 import org.codehaus.jackson.map.ObjectMapper;
 import ru.parsentev.form.UserForm;
-import ru.parsentev.models.User;
 import ru.parsentev.store.UserCache;
 
 import javax.servlet.ServletException;

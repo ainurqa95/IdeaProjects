@@ -21,14 +21,7 @@
             <div class="span9 slider">
                 <div class="slider-slides">
                     <c:forEach   items="${sliderProducts}" var="item" >
-                        <%--<div class="slides">--%>
-                                <%--&lt;%&ndash;<a href="${pageContext.servletContext.contextPath}/products?idproducts=${item.idproducts}"><img src="${pageContext.servletContext.contextPath}${item.imagePathes}" alt="${item.name}"></a><!-- 870x373 -->&ndash;%&gt;--%>
-                                <%--<div class="overlay">--%>
-                                <%--<h1> ${item.name}</h1>--%>
-                                <%--<p><span><${item.price}>%</span> Цена <br/> Brand: <span> ${item.brand}  </span> </p>--%>
 
-                                     <%--</div>--%>
-                                <%--</div>--%>
                         <div class="slides">
                             <a href="${pageContext.servletContext.contextPath}/products?idproducts=${item.idproducts}"><img src="${pageContext.servletContext.contextPath}${item.imagePathes}" alt="${item.name}"></a>
                             <div class="overlay">
@@ -39,36 +32,6 @@
 
                     </c:forEach>
                     </div>
-                    <%--<div class="slides">--%>
-                        <%--<a href="#"><img src="http://placehold.it/870x373" alt=""></a>--%>
-                        <%--<div class="overlay">--%>
-                            <%--<h1>AWESOME FURNITUR</h1>--%>
-                            <%--<p><span>50%</span> OFF <br/> TRENDY <span>DESIGNS</span> </p>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                    <%--<div class="slides">--%>
-                        <%--<a href="#"><img src="http://placehold.it/870x373" alt=""></a>--%>
-                        <%--<div class="overlay">--%>
-                            <%--<h1>LATEST FASHION</h1>--%>
-                            <%--<p><span>30%</span> OFF <br/> TRENDY <span>DESIGNS</span> </p>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-
-
-
-                    <%--<?php foreach ($sliderProducts as $slider) : ?>--%>
-                    <%--<div class="slides">--%>
-                        <%--<? $path = Products::getImageByID($slider->idproducts,1); ?>--%>
-                        <%--<a href="/products/<?php echo $slider->idproducts;?>"><img src='<?php echo $path;?>' alt="<?php echo $slider->name; ?>"></a><!-- 870x373 -->--%>
-                        <%--<div class="overlay">--%>
-                            <%--<h1> <?php echo $slider->name; ?></h1>--%>
-                            <%--<p><span><?php echo $slider->price; ?>%</span> Цена <br/> Brand: <span> <?php echo $slider->brand; ?>  </span> </p>--%>
-                        <%--</div>--%>
-                    <%--</div>--%>
-
-
-                    <%--<?php endforeach;?>--%>
 
 
                 <a href="#" class="next"></a>
@@ -90,7 +53,7 @@
 
                 <div class="offers">
                     <figure>
-                        <a href="${pageContext.servletContext.contextPath}/products/18"><img src="${pageContext.servletContext.contextPath}/uploads/images/products/big/18.jpg" alt="Культиватор Caiman ELITE 60S D2"></a>
+                        <a href="${pageContext.servletContext.contextPath}/products?idproducts=18"><img src="${pageContext.servletContext.contextPath}/uploads/images/products/big/18.jpg" alt="Культиватор Caiman ELITE 60S D2"></a>
                         <div class="overlay">
                             <h1> Культиватор Craftsman 29932<span> Скидка 10% </span> <small>  Ограниченное предложение </small></h1>
                         </div>
@@ -103,77 +66,81 @@
     </div>
 </div>
 
-<%--<!-- PRODUCT-OFFER -->--%>
-<%--<div class="product_wrap">--%>
-    <%--<div class="container">--%>
-        <%--<div class="row heading-wrap">--%>
-            <%--<div class="span12 heading">--%>
-                <%--<h2> Рекомендуемые товары <span></span></h2>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-        <%--<div class="row">--%>
-            <%--<?php--%>
-                                <%--foreach ($latestProducts as $lastProd) { ?>--%>
+<!-- PRODUCT-OFFER -->
+<div class="product_wrap">
+    <div class="container">
+        <div class="row heading-wrap">
+            <div class="span12 heading">
+                <h2> Рекомендуемые товары <span></span></h2>
+            </div>
+        </div>
+        <div class="row">
+
+            <c:forEach items="${latestProducts}" var="product"
+            >
+                <div class="span3 product">
+
+                     <div>
+                            <figure> <?
+                                 <a href="/products/?idproducts=${product.idproducts}"><img src="${pageContext.servletContext.contextPath}${product.imagePathes}" alt="${product.name}"></a>
+                                 <div class="overlay">
+
+                                  <a href="/products/?idproducts=?${product.idproducts}" class="link"></a>
+                             </div>
+                             </figure>
+                        <div class="detail">
+                             <span>${product.price}</span>
+                                <h4>${product.name}</h4>
+                             <div class="icon">
+                                 <a href="/cart/add/?idproducts=${product.idproducts}" data-id="${product.idproducts}"  class="one_tooltip" title="Add to wish list" id="add-to-cart"></a>
+
+                                  <a href="/products/?idproducts=${product.idproducts}" class="three tooltip" title="Add to compare"></a>
+
+                             </div>
+
+                        </div>
+                     </div>
+
+                </div>
 
 
-            <%--<div class="span3 product">--%>
 
-                <%--<div>--%>
-                    <%--<figure> <?   $path = Products::getImageByID($lastProd['idproducts'],1); ?>--%>
-                        <%--<a href="/products/<?php echo $lastProd['second_category_main_category_idmain_cat'];?>"><img src="<? echo $path; ?>" alt="<?echo  $lastProd['name'];?>"></a>--%>
-                        <%--<div class="overlay">--%>
+            </c:forEach>
 
-                            <%--<a href="/products/<?php echo $lastProd['second_category_main_category_idmain_cat'];?>" class="link"></a>--%>
-                        <%--</div>--%>
-                    <%--</figure>--%>
-                    <%--<div class="detail">--%>
-                        <%--<span><?php echo $lastProd['price']; ?></span>--%>
-                        <%--<h4><?php echo $lastProd['name']; ?></h4>--%>
-                        <%--<div class="icon">--%>
-                            <%--<a href="/cart/add/<?php echo $lastProd['idproducts']; ?>" data-id="<?php echo $lastProd['idproducts'];?>"  class="one_tooltip" title="Add to wish list" id="add-to-cart"></a>--%>
+    </div>
+</div>
+</div>
+<!-- PRODUCT-OFFER -->
 
-                            <%--<a href="/products/<?php echo $lastProd['idproducts'];?>" class="three tooltip" title="Add to compare"></a>--%>
+<!-- CLIENTS -->
+<div class="clients-wrap">
+    <div class="container">
+        <div class="row heading-wrap">
+            <div class="span12 heading">
+                <h2>Our Brands <span></span></h2>
+            </div>
+        </div>
 
-
-
-                        <%--</div>--%>
-                    <%--</div>--%>
-                <%--</div>--%>
-
-            <%--</div>--%>
-
-            <%--<?php }?>--%>
-
-
-        <%--</div>--%>
-
-    <%--</div>--%>
-<%--</div>--%>
-<%--</div>--%>
-<%--<!-- PRODUCT-OFFER -->--%>
-
-<%--<!-- CLIENTS -->--%>
-<%--<div class="clients-wrap">--%>
-    <%--<div class="container">--%>
-        <%--<div class="row heading-wrap">--%>
-            <%--<div class="span12 heading">--%>
-                <%--<h2>Производители <span></span></h2>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-
-        <%--<div class="row">--%>
-            <%--<div class="span12 clients">--%>
-                <%--<ul class="elastislide-list clearfix" id="carousel">--%>
-                    <%--<li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>--%>
-                    <%--<?foreach ($brandsList as $brand) { ?>--%>
-                    <%--<li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>--%>
-                    <%--<h1><? echo $brand['name'];?> <span></span></h1>--%>
-                    <%--<?} ?>--%>
-                <%--</ul>--%>
-            <%--</div>--%>
-        <%--</div>--%>
-    <%--</div>--%>
-<%--</div>--%>
+        <div class="row">
+            <div class="span12 clients">
+                <ul class="elastislide-list clearfix" id="carousel">
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                    <li><a href="#"><img src="http://placehold.it/141x28" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- CLIENTS -->
 
 <!-- CATEGORIES -->

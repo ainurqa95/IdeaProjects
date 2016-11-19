@@ -4,7 +4,7 @@
 		"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-	<class name="ru.parsentev.models.User" table="client">
+	<class name="ru.parsentev.garbage.User" table="client">
 		<meta attribute="class-description">
 			This class contains the user detail.
 		</meta>

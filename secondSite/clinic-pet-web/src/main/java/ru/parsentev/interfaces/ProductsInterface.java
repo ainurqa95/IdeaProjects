@@ -1,5 +1,6 @@
 package ru.parsentev.interfaces;
 
+import ru.parsentev.models.Brands;
 import ru.parsentev.models.Products;
 
 import java.util.LinkedList;
@@ -10,7 +11,7 @@ import java.util.LinkedList;
 public interface ProductsInterface {
 
     public LinkedList<Products>  getlatestProducts ();
-    public LinkedList<Products>  getBrands ();
+    public LinkedList<Brands>  getBrands ();
     public LinkedList<Products>  getAllProducts ();
     public LinkedList<Products>  getProductForSlider ();
     public LinkedList<Products>  getSecondCatProducts (int idSecondCat);

@@ -1,7 +1,6 @@
 package ru.parsentev.store;
 
 import org.junit.Test;
-import ru.parsentev.models.User;
 import ru.parsentev.models.Users;
 
 import java.util.Collection;

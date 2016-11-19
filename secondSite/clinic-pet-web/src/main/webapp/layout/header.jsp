@@ -28,13 +28,15 @@
 
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/template/css/responsive.css">
     <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/template/css/prettyPhoto.css">
-    <link rel="stylesheet" href="${pageContext.servletContext.contextPath}/template/style.css">
+    <%--<link rel="stylesheet" href="${pageContext.servletContext.contextPath}/template/style.css">--%>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="${pageContext.servletContext.contextPath}/template/images/lopatka.jpg">
 
+    <!-- Include the HTML5 shiv print polyfill for Internet Explorer browsers 8 and below -->
+    <!--[if lt IE 10]><script src="${pageContext.servletContext.contextPath}/template/js/html5shiv-printshiv.js" media="all"></script><![endif]-->
 
-
+    <link type="text/css" rel="stylesheet" href="<c:url value="/template/style.css" />" />
 
 </head>
 <body>

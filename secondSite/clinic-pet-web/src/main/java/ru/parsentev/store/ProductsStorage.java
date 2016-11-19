@@ -1,10 +1,7 @@
 package ru.parsentev.store;
 
 import ru.parsentev.interfaces.ProductsInterface;
-import ru.parsentev.models.MainCategory;
-import ru.parsentev.models.Products;
-import ru.parsentev.models.SecondCategory;
-import ru.parsentev.models.Users;
+import ru.parsentev.models.*;
 import ru.parsentev.service.Settings;
 
 import java.io.File;
@@ -47,7 +44,7 @@ public class ProductsStorage implements ProductsInterface {
 
     public LinkedList<Products> getlatestProducts() {
         LinkedList<Products> products = new LinkedList<>();
-        try (final PreparedStatement statement = this.connection.prepareStatement("select * from products WHERE status = 1 LIMIT "+Show_By_Default+"")) {
+        try (final PreparedStatement statement = this.connection.prepareStatement("select * from products WHERE status = 1 ORDER BY idproducts DESC LIMIT "+Show_By_Default+"")) {
             // statement.setInt(1, count);
             try (final ResultSet rs = statement.executeQuery()) {
                 while (rs.next()) {
@@ -66,14 +63,28 @@ public class ProductsStorage implements ProductsInterface {
     }
 
     @Override
-    public LinkedList<Products> getBrands() {
-        return null;
+    public LinkedList<Brands> getBrands() {
+        LinkedList<Brands> brands = new LinkedList<>();
+        try (final PreparedStatement statement = this.connection.prepareStatement("select * from brands limit "+ this.Show_By_Default +"")) {
+
+
+            try (final ResultSet rs = statement.executeQuery()) {
+                while (rs.next()) {
+                    brands.add(new Brands(rs.getInt("idbrands"),rs.getString("name")));
+                }
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return brands;
+
     }
 
     @Override
     public LinkedList<Products> getAllProducts() {
         LinkedList<Products> products = new LinkedList<>();
-        try (final PreparedStatement statement = this.connection.prepareStatement("select * from products")) {
+        try (final PreparedStatement statement = this.connection.prepareStatement("select * from products ")) {
 
             try (final ResultSet rs = statement.executeQuery()) {
                 while (rs.next()) {
@@ -275,5 +286,11 @@ public class ProductsStorage implements ProductsInterface {
             return path+noImage;
 
 
+    }
+    public void setPathesProductsImages (LinkedList<Products> products, int size) {
+        for (Products prod : products
+                ) {
+            prod.setImagePathes(this.getImageById(prod.getIdproducts(), size));// берем пути для каждого продукта для картинов
+        }
     }
 }

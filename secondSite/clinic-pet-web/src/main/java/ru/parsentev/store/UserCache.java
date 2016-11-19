@@ -1,10 +1,8 @@
 package ru.parsentev.store;
 
-import ru.parsentev.models.User;
 import ru.parsentev.models.Users;
 
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * TODO: comment

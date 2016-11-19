@@ -1,6 +1,7 @@
 package ru.parsentev.servlets;
 
 import ru.parsentev.interfaces.Category;
+import ru.parsentev.models.Brands;
 import ru.parsentev.models.MainCategory;
 import ru.parsentev.models.Products;
 import ru.parsentev.models.SecondCategory;
@@ -28,24 +29,24 @@ public class SiteServlet extends HttpServlet {
         LinkedList<SecondCategory> secondCategories = storageCategory.getSecondCategory();
         LinkedList<Products> latestProducts = storageProducts.getlatestProducts();
         LinkedList<Products> sliderProducts = storageProducts.getProductForSlider();
-        setPathesProductsImages(sliderProducts,storageProducts,1);
+        storageProducts.setPathesProductsImages(sliderProducts,1);
+        storageProducts.setPathesProductsImages(latestProducts,1);
+//        setPathesProductsImages(sliderProducts,storageProducts,1);
+//        setPathesProductsImages(latestProducts,storageProducts,2);
+        LinkedList<Brands> brands = storageProducts.getBrands();
         req.setAttribute("secondCategories", secondCategories);
         req.setAttribute("mainCategories", mainCategories);
-        req.setAttribute("products", latestProducts);
+        req.setAttribute("latestProducts", latestProducts);
         req.setAttribute("sliderProducts", sliderProducts);
+        req.setAttribute("brands", brands);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/site/Index.jsp");
         dispatcher.forward(req, resp);
     }
 
-    private void setPathesProductsImages (LinkedList<Products> products, ProductsStorage storage, int size){
-        for (Products prod: products
-             ) {
-            prod.setImagePathes(storage.getImageById(prod.getIdproducts(),size));// берем пути для каждого продукта для картинов
-        }
 
 
 
-    }
+
 
     @Override
     public void destroy() {
