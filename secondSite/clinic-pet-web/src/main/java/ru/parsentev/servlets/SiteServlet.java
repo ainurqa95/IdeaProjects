@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.LinkedList;
 
 /**
@@ -22,9 +23,35 @@ import java.util.LinkedList;
 public class SiteServlet extends HttpServlet {
     CategoryStorage storageCategory = new CategoryStorage();
     ProductsStorage storageProducts = new ProductsStorage();
+//    LinkedList<String> users = new LinkedList<>();
+//    int count = 0;
+
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //super.doGet(req, resp);
+//        if(req.getParameter("name")!="") {
+//            String name = req.getParameter("name");
+//            String reply = "Всего посещений: " + count + "в системе работали ";
+//            boolean flag = false;
+//            for (String str : users) {
+//                if (!str.equals(name)) {
+//                    reply = reply + "  " + str + ";";
+//
+//                } else
+//                    flag = true;
+//
+//            }
+//            if (flag)
+//                reply = reply + "вы вошли в систему";
+//            else {
+//                users.add(name);
+//                reply = reply + "вы не вошли";
+//            }
+//            PrintWriter pw = resp.getWriter();
+//            pw.append(reply);
+//            pw.flush();
+//        }
+
         LinkedList<MainCategory> mainCategories = storageCategory.getMainCategory();
         LinkedList<SecondCategory> secondCategories = storageCategory.getSecondCategory();
         LinkedList<Products> latestProducts = storageProducts.getlatestProducts();
@@ -41,6 +68,7 @@ public class SiteServlet extends HttpServlet {
         req.setAttribute("brands", brands);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/site/Index.jsp");
         dispatcher.forward(req, resp);
+
     }
 
 
