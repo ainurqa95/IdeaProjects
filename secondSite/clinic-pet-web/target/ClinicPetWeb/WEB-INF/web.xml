@@ -73,7 +73,7 @@
 
 	<servlet-mapping>
 		<servlet-name>SiteServlet</servlet-name>
-		<url-pattern>/site</url-pattern>
+		<url-pattern>/main</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>ProductsServlet</servlet-name>
@@ -94,4 +94,15 @@
 		<servlet-name>UserRegisterServlet</servlet-name>
 		<url-pattern>/user/register</url-pattern>
 	</servlet-mapping>
-</web-app>     
+
+	<servlet>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<servlet-class>ru.parsentev.servlets.UserLoginServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<url-pattern>/user/login</url-pattern>
+	</servlet-mapping>
+
+</web-app>
