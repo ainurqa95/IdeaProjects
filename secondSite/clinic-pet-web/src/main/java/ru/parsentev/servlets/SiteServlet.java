@@ -1,10 +1,7 @@
 package ru.parsentev.servlets;
 
 import ru.parsentev.interfaces.Category;
-import ru.parsentev.models.Brands;
-import ru.parsentev.models.MainCategory;
-import ru.parsentev.models.Products;
-import ru.parsentev.models.SecondCategory;
+import ru.parsentev.models.*;
 import ru.parsentev.store.CategoryStorage;
 import ru.parsentev.store.ProductsStorage;
 
@@ -69,6 +66,8 @@ public class SiteServlet extends HttpServlet {
         req.setAttribute("latestProducts", latestProducts);
         req.setAttribute("sliderProducts", sliderProducts);
         req.setAttribute("brands", brands);
+        int countOfCartProducts = Cart.CountOfItemsInCart(session);
+        req.setAttribute("countOfCartProducts", countOfCartProducts);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/site/Index.jsp");
         dispatcher.forward(req, resp);
 

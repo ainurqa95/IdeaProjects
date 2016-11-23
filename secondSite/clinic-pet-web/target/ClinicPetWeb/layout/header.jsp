@@ -56,10 +56,7 @@
                     <ul>
                         <li><a href="${pageContext.servletContext.contextPath}/cart" class="wish">Корзина</a></li>
 
-                        <%--<c:if test="${  session.getAttribute('idusers') == null }">--%>
-                        <%--<li><a href="/user/register" class="account">Зарегистрироваться</a></li>--%>
-                        <%--<li><a href="/user/login" class="check">Войти </a></li>--%>
-                        <%--</c:if>--%>
+
                         <c:choose>
                             <c:when test="${  session.getAttribute('idusers') == null }">
                                 <li><a href="${pageContext.servletContext.contextPath}/user/register" class="account">Зарегистрироваться</a></li>
@@ -73,10 +70,6 @@
                         </c:choose>
 
 
-                        <%--<?php else :?>--%>
-                        <%--<li><a href="/cabinet" class="check"> Мой профиль </a></li>--%>
-                        <%--<li><a href="/user/logout" class="check">Выйти </a></li>--%>
-                        <%--<?php endif; ?>--%>
                     </ul>
                 </div>
 
@@ -96,8 +89,8 @@
 
             <div class="span5">
                 <div class="logo">
-                    <a href="/"><img src="${pageContext.servletContext.contextPath}/template/images/logo2.png" alt=""></a>
-                    <h1><a href="/"> <span>Садовая техника, бензоинструмент,строительное оборудование </span>  </a></h1>
+                    <a href="${pageContext.servletContext.contextPath}/main"><img src="${pageContext.servletContext.contextPath}/template/images/logo2.png" alt=""></a>
+                    <h1><a href="${pageContext.servletContext.contextPath}/main"> <span>Садовая техника, бензоинструмент,строительное оборудование </span>  </a></h1>
                 </div>
             </div>
 
@@ -111,9 +104,9 @@
             <div class="span2">
                 <div class="cart">
                     <ul>
-                        <li class="first"><a href="/cart"></a><span></span></li>
+                        <li class="first"><a href="${pageContext.servletContext.contextPath}/cart"></a><span></span></li>
                         <%--<li id="count_of_items" ><?php echo Cart::CountOfItemsInCart();?> товара(ов) <?php echo Cart::SumOfPricesInCart(); ?> руб</li>--%>
-
+                        <li id="count_of_items" >${countOfCartProducts} товара(ов)  руб</li>
 
                     </ul>
                 </div>

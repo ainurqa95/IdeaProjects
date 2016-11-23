@@ -92,7 +92,7 @@
                              <span>${product.price}</span>
                                 <h4>${product.name}</h4>
                              <div class="icon">
-                                 <a href="${pageContext.servletContext.contextPath}/cart/add?idproducts=${product.idproducts}" data-id="${product.idproducts}"  class="one_tooltip" title="Add to wish list" id="add-to-cart"></a>
+                                 <a href="${pageContext.servletContext.contextPath}/cart?add=yes&idproducts=${product.idproducts}"   class="one_tooltip" title="Add to wish list" id="add-to-cart"></a>
 
                                   <a href="${pageContext.servletContext.contextPath}/products?idproducts=${product.idproducts}" class="three tooltip" title="Add to compare"></a>
 

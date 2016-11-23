@@ -116,18 +116,18 @@
 <script src="${pageContext.servletContext.contextPath}/template/js/custom.js"></script>
 <!--    <script src="/template/js/js_forajax.js"></script>      -->
 
-<script >
-    $(document).ready(function(){ // код ниже срабатывает при загрузки документа
+<%--<script >--%>
+    <%--$(document).ready(function(){ // код ниже срабатывает при загрузки документа--%>
 
-        $(".one_tooltip").click(function () { // при нажатии на корзинку на нкопку
+        <%--$(".one_tooltip").click(function () { // при нажатии на корзинку на нкопку--%>
 
-            var id = $(this).attr("data-id"); // находим id кнопки
-            $.post("/cart/addAjax/"+id, {}, function (data) { // певрый параметр это где искать запрос ты срабатывает метож  actionAddAjax и эхом выводит количестов товара
-                $("#count_of_items").html(data); //
-            });
-            return false;
-        });
-    });
+            <%--var id = $(this).attr("data-id"); // находим id кнопки--%>
+            <%--$.post("/cart/addAjax/"+id, {}, function (data) { // певрый параметр это где искать запрос ты срабатывает метож  actionAddAjax и эхом выводит количестов товара--%>
+                <%--$("#count_of_items").html(data); //--%>
+            <%--});--%>
+            <%--return false;--%>
+        <%--});--%>
+    <%--});--%>
 
-</script>
+<%--</script>--%>
 

@@ -89,8 +89,8 @@
 
             <div class="span5">
                 <div class="logo">
-                    <a href="/"><img src="${pageContext.servletContext.contextPath}/template/images/logo2.png" alt=""></a>
-                    <h1><a href="/"> <span>Садовая техника, бензоинструмент,строительное оборудование </span>  </a></h1>
+                    <a href="${pageContext.servletContext.contextPath}/main"><img src="${pageContext.servletContext.contextPath}/template/images/logo2.png" alt=""></a>
+                    <h1><a href="${pageContext.servletContext.contextPath}/main"> <span>Садовая техника, бензоинструмент,строительное оборудование </span>  </a></h1>
                 </div>
             </div>
 
@@ -104,9 +104,9 @@
             <div class="span2">
                 <div class="cart">
                     <ul>
-                        <li class="first"><a href="/cart"></a><span></span></li>
+                        <li class="first"><a href="${pageContext.servletContext.contextPath}/cart"></a><span></span></li>
                         <%--<li id="count_of_items" ><?php echo Cart::CountOfItemsInCart();?> товара(ов) <?php echo Cart::SumOfPricesInCart(); ?> руб</li>--%>
-
+                        <li id="count_of_items" >${countOfCartProducts} товара(ов)  руб</li>
 
                     </ul>
                 </div>
