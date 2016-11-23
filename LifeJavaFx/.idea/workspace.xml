@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/JdbcStorage.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/JdbcStorage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/MemoryStorage.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/MemoryStorage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/Storage.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/Storage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/UserCache.class" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/ru/parsentev/store/UserCache.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../mySite/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../mySite/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../secondSite/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/store/CategoryStorage.java" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/store/CategoryStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/store/MemoryStorage.java" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/store/MemoryStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/store/Storage.java" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/java/ru/parsentev/store/Storage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/resources/parsentev.properties" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/resources/parsentev.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/parsentev.properties" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/classes/parsentev.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../secondSite/clinic-pet-web/target/ClinicPetWeb/WEB-INF/web.xml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,11 +69,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="342">
               <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1178#1179#0" expanded="false" />
-                <element signature="e#1206#1207#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -119,18 +107,7 @@
             <state relative-caret-position="954">
               <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
               <folding>
-                <element signature="e#204#205#0" expanded="false" />
-                <element signature="e#229#230#0" expanded="false" />
-                <element signature="e#1259#1260#0" expanded="false" />
-                <element signature="e#1288#1289#0" expanded="false" />
-                <element signature="e#1381#1382#0" expanded="false" />
-                <element signature="e#1414#1415#0" expanded="false" />
-                <element signature="e#1455#1456#0" expanded="false" />
-                <element signature="e#1491#1492#0" expanded="false" />
-                <element signature="e#1532#1533#0" expanded="false" />
-                <element signature="e#1568#1569#0" expanded="false" />
-                <element signature="e#1617#1618#0" expanded="false" />
-                <element signature="e#1661#1662#0" expanded="false" />
+                <element signature="e#1347#1348#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -152,13 +129,9 @@
       <file leaf-file-name="LifeController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controllers/LifeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2160">
+            <state relative-caret-position="2214">
               <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2365#3443#0" expanded="false" />
-                <element signature="e#3442#3443#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -166,7 +139,7 @@
       <file leaf-file-name="LifeTableDriver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/models/LifeTableDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
+            <state relative-caret-position="580">
               <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -276,8 +249,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -396,7 +370,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,7 +384,7 @@
     <property name="dynamic.classpath" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mySite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mysqlProject" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -968,15 +941,16 @@
       <workItem from="1478258124153" duration="6490000" />
       <workItem from="1479221851777" duration="3189000" />
       <workItem from="1479286703726" duration="1886000" />
+      <workItem from="1479900890715" duration="33000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56344000" />
+    <option name="totallyTimeSpent" value="56377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -989,7 +963,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2605688" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2605688" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1099,11 +1073,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2365#3443#0" expanded="false" />
-            <element signature="e#3442#3443#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1111,11 +1081,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1206#1207#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1150,11 +1116,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="25" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2365#3443#0" expanded="false" />
-            <element signature="e#3442#3443#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1185,11 +1147,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1206#1207#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1247,11 +1205,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1206#1207#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1305,11 +1259,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1206#1207#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1363,11 +1313,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1206#1207#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1474,11 +1420,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1178#1179#0" expanded="false" />
-            <element signature="e#1206#1207#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1496,13 +1438,9 @@
     <entry file="file://$PROJECT_DIR$/src/models/UsersTable.java" />
     <entry file="file://$PROJECT_DIR$/src/controllers/LifeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
+        <state relative-caret-position="2214">
           <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2365#3443#0" expanded="false" />
-            <element signature="e#3442#3443#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1511,18 +1449,7 @@
         <state relative-caret-position="954">
           <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
           <folding>
-            <element signature="e#204#205#0" expanded="false" />
-            <element signature="e#229#230#0" expanded="false" />
-            <element signature="e#1259#1260#0" expanded="false" />
-            <element signature="e#1288#1289#0" expanded="false" />
-            <element signature="e#1381#1382#0" expanded="false" />
-            <element signature="e#1414#1415#0" expanded="false" />
-            <element signature="e#1455#1456#0" expanded="false" />
-            <element signature="e#1491#1492#0" expanded="false" />
-            <element signature="e#1532#1533#0" expanded="false" />
-            <element signature="e#1568#1569#0" expanded="false" />
-            <element signature="e#1617#1618#0" expanded="false" />
-            <element signature="e#1661#1662#0" expanded="false" />
+            <element signature="e#1347#1348#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1541,7 +1468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/models/LifeTableDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="580">
           <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />

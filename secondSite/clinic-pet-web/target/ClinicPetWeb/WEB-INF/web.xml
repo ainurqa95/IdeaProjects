@@ -105,4 +105,14 @@
 		<url-pattern>/user/login</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>CabinetServlet</servlet-name>
+		<servlet-class>ru.parsentev.servlets.CabinetServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CabinetServlet</servlet-name>
+		<url-pattern>/cabinet</url-pattern>
+	</servlet-mapping>
+
 </web-app>

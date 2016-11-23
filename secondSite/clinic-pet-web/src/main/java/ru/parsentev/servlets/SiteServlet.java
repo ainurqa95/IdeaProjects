@@ -13,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.LinkedList;
@@ -52,6 +53,8 @@ public class SiteServlet extends HttpServlet {
 //            pw.flush();
 //        }
 
+        HttpSession session = req.getSession(true);
+        req.setAttribute("session", session);
         LinkedList<MainCategory> mainCategories = storageCategory.getMainCategory();
         LinkedList<SecondCategory> secondCategories = storageCategory.getSecondCategory();
         LinkedList<Products> latestProducts = storageProducts.getlatestProducts();

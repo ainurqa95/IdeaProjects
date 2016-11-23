@@ -54,14 +54,22 @@
             <div class="span10 right">
                 <div class="social-strip">
                     <ul>
-                        <%--<li><a href="/cart" class="wish">Корзина</a></li>--%>
-                        <%--<?php if(!User::isLogged()): ?>--%>
-                        <%--<li><a href="/user/register" class="account">Зарегистрироваться</a></li>--%>
-                        <%--<li><a href="/user/login" class="check">Войти </a></li>--%>
-                        <%--<?php else :?>--%>
-                        <%--<li><a href="/cabinet" class="check"> Мой профиль </a></li>--%>
-                        <%--<li><a href="/user/logout" class="check">Выйти </a></li>--%>
-                        <%--<?php endif; ?>--%>
+                        <li><a href="${pageContext.servletContext.contextPath}/cart" class="wish">Корзина</a></li>
+
+
+                        <c:choose>
+                            <c:when test="${  session.getAttribute('idusers') == null }">
+                                <li><a href="${pageContext.servletContext.contextPath}/user/register" class="account">Зарегистрироваться</a></li>
+                                <li><a href="${pageContext.servletContext.contextPath}/user/login" class="check">Войти </a></li>
+                            </c:when>
+                            <c:otherwise>
+                                <li><a href="${pageContext.servletContext.contextPath}/cabinet" class="check"> Мой профиль </a></li>
+                                <li><a href="${pageContext.servletContext.contextPath}/user/logout" class="check">Выйти </a></li>
+
+                            </c:otherwise>
+                        </c:choose>
+
+
                     </ul>
                 </div>
 
