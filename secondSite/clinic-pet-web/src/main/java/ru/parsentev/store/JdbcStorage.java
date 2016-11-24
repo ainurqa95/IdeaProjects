@@ -1,7 +1,7 @@
 package ru.parsentev.store;
 
 
-import ru.parsentev.models.Users;
+import ru.parsentev.garbage.Users;
 import ru.parsentev.service.Settings;
 
 import java.sql.Connection;
@@ -10,10 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * TODO: comment

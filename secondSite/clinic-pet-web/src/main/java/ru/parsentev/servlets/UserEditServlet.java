@@ -1,6 +1,6 @@
 package ru.parsentev.servlets;
 
-import ru.parsentev.models.Users;
+import ru.parsentev.garbage.Users;
 import ru.parsentev.store.UserCache;
 
 import javax.servlet.RequestDispatcher;

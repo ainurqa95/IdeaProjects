@@ -1,9 +1,8 @@
 package ru.parsentev.store;
 
-import ru.parsentev.models.Users;
+import ru.parsentev.garbage.Users;
 
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * TODO: comment

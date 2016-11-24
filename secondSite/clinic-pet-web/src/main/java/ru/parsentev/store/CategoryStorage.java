@@ -2,7 +2,6 @@ package ru.parsentev.store;
 
 import ru.parsentev.models.MainCategory;
 import ru.parsentev.models.SecondCategory;
-import ru.parsentev.models.Users;
 import ru.parsentev.service.Settings;
 
 import java.sql.*;

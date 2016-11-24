@@ -1,8 +1,8 @@
 package ru.parsentev.models;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
+import ru.parsentev.garbage.Users;
+import ru.parsentev.garbage.UsersTable;
 
 /**
  * Created by ainur on 16.11.16.
