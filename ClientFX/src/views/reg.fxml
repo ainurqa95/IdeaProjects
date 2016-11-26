@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -7,9 +10,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="205.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegController">
    <children>
-      <AnchorPane prefHeight="227.0" prefWidth="600.0">
+      <AnchorPane prefHeight="407.0" prefWidth="600.0">
          <children>
             <TextField fx:id="txtFIO" layoutX="72.0" layoutY="46.0" prefHeight="26.0" prefWidth="251.0" />
             <TextField fx:id="txtLogin" layoutX="72.0" layoutY="90.0" prefHeight="26.0" prefWidth="251.0" />
@@ -19,6 +22,12 @@
             <Label fx:id="idLabel" layoutX="153.0" layoutY="20.0" text="id" />
             <PasswordField fx:id="password" layoutX="72.0" layoutY="127.0" prefHeight="26.0" prefWidth="251.0" />
             <Label fx:id="labelPass" layoutX="8.0" layoutY="132.0" text="Пароль" />
+            <TextField fx:id="privateKeyTxt" layoutX="98.0" layoutY="222.0" prefHeight="25.0" prefWidth="251.0" />
+            <TextField fx:id="publicKeyNTxt" layoutX="98.0" layoutY="270.0" prefHeight="25.0" prefWidth="251.0" />
+            <Label fx:id="privateKeyLabel" layoutX="22.0" layoutY="228.0" text="privateKEy:" />
+            <Label fx:id="publicKeyNLabel" layoutX="12.0" layoutY="275.0" text="publicKeyN" />
+            <Label fx:id="publicKeyELabel" layoutX="13.0" layoutY="313.0" text="publicKeyE" />
+            <TextField fx:id="publicKeyETxt" layoutX="98.0" layoutY="308.0" prefHeight="25.0" prefWidth="251.0" />
          </children>
       </AnchorPane>
    </children>

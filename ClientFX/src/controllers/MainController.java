@@ -67,6 +67,9 @@ public class MainController {
     private BigInteger B;
     private BigInteger commonKey;
     private String login;
+    private BigInteger privateKey;
+    private BigInteger publicKeyN;
+    private BigInteger publicKeyE;
 
     public void setMainStage(Stage mainStage) {
         this.mainStage = mainStage;
@@ -134,7 +137,7 @@ public class MainController {
         if( this.regStage==null){ //
             this.regStage = new Stage();
             this.regStage.setTitle("Поле");
-            this.regStage.setMinHeight(300);
+            this.regStage.setMinHeight(500);
             this.regStage.setMinWidth(500);
             this.regStage.setResizable(true);
             this.regStage.setScene(new Scene(fxmlReg));// берем из fxml
@@ -171,35 +174,58 @@ public class MainController {
      * @throws NoSuchAlgorithmException
      */
     public void decryptMessagID(ActionEvent actionEvent) throws NoSuchAlgorithmException {
-        if(!this.clientAnswer.getText().equals("")){ // отправляем на сервер
+        if(!this.clientAnswer.getText().equals("")) { // отправляем на сервер
 
-            getPublicKeyRSA();
             Pattern p1 = Pattern.compile("\"[^\"]*\""); // с помощью регулярок парсим слова в кавычках
             String testStr = this.clientAnswer.getText(); // имеем id m coded
 
-            String message ="";
+            String message = "";
             Matcher m = p1.matcher(testStr);
-            while(m.find()) {
-                message += testStr.substring(m.start()+1, m.end()-1); // +1 -1 чтобы убрать кавычки
+            while (m.find()) {
+                message += testStr.substring(m.start() + 1, m.end() - 1); // +1 -1 чтобы убрать кавычки
 
             }
+            this.login = message;
 
+            UsersTable usersTable = new UsersTable();
+            Users user = usersTable.getUserByLogin(this.login);
+            if(user == null){
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle("Information");
+                alert.setHeaderText(null);
+                alert.setContentText("Нет такого logina ");
+
+
+                alert.showAndWait();
+                this.serverAnswer.appendText(" Сервер : вы не прошли аутентификацию \n");
+
+                try {
+                    this.connection.send(" Сервер : вы не прошли аутентификацию \n");
+
+                } catch (IOException e) {
+                    this.serverAnswer.appendText("ERROR");
+                    e.printStackTrace();
+                }
+                return;
+            }
+
+
+            message = user.getLogin()+user.getPassword(); // берем login + pass
             MessageDigest md5 = MessageDigest.getInstance("MD5");
             md5.reset();
             md5.update(message.getBytes()); // вычисляем hash от cообщения и id
             byte[] digest = md5.digest();
-            BigInteger h = new BigInteger(1,digest);
+            BigInteger h1 = new BigInteger(1,digest); // // берем hash от login + pass
+            System.out.println("hash = "+h1.toString());
+            this.publicKeyN = new BigInteger(user.getPublicN());
+            this.privateKey = new BigInteger(user.getPrivateKey());
+            BigInteger sign = h1.modPow(this.privateKey ,this.publicKeyN);
 
-
-
-            BigInteger exp = new BigInteger(publicKeys.get(0));
-            BigInteger n = new BigInteger(publicKeys.get(1));
-            BigInteger coded = h.modPow(exp,n);
-            String codedString = coded.toString();
-            this.clientAnswer.appendText(" Клиент : coded = \"" +codedString+"\"\n");
+            this.clientAnswer.appendText(" Клиент : sign = \"" +sign.toString()+"\"\n");
 
             try {
-                this.connection.send(" Клиент : coded = \"" +codedString+"\"");
+                this.connection.send(" Клиент : sign = \"" +sign.toString()+"\"");
 
             } catch (IOException e) {
                 this.clientAnswer.appendText("ERROR");
@@ -218,6 +244,7 @@ public class MainController {
 
             alert.showAndWait();
         }
+
     }
 
     public void getPublicKeyDH(){

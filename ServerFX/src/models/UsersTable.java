@@ -48,7 +48,7 @@ public class UsersTable {
             Users user;
             while (res.next()) { // берем все элементы из таблицы
 
-                user = new Users(res.getInt("id"), res.getString("fio"),res.getString("login"), res.getString("password"));
+                user = new Users(res.getInt("id"), res.getString("fio"),res.getString("login"), res.getString("password"), res.getString("publicN"), res.getString("publicE"),res.getString("privateKey"));
 
                 return user;
                 //  tableUsers.add(user);
@@ -61,7 +61,7 @@ public class UsersTable {
         }
         return null;
     }
-    public void insert (String fio, String login, String password){
+    public void insert (String fio, String login, String password, String publicN, String publicE, String privateKey){
         Users st = new Users(fio, login , password);
         tableUsers.add(st);
         try {
@@ -72,34 +72,11 @@ public class UsersTable {
             properties.setProperty("characterEncoding","UTF-8");
             com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", properties);
             com.mysql.jdbc.Statement command = (com.mysql.jdbc.Statement) con.createStatement();
-            command.execute("insert into users (fio, login, password)  values ('"+fio+"','"+login+"','"+password+"')");
+            command.execute("insert into users (fio, login, password, publicN, publicE, privateKey)  values ('"+fio+"','"+login+"','"+password+"','"+publicN+"','"+publicE+"','"+privateKey+"')");
             con.close();
         } catch (SQLException e) {
             e.printStackTrace();
 
         }
-    }
-
-    public Users getUserByID (String ID){
-        try {
-            // DriverManager.registerDriver(new com.mysql.jdbc.Driver());
-            com.mysql.jdbc.Connection con = (com.mysql.jdbc.Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/Life", "root", "root");
-            Statement command = (Statement) con.createStatement();
-            ResultSet res = command.executeQuery("select * from users where id ='"+ID+"'");
-            Users user;
-            while (res.next()) { // берем все элементы из таблицы
-
-                user = new Users(res.getInt("id"), res.getString("fio"),res.getString("login"), res.getString("password"));
-
-                return user;
-                //  tableUsers.add(user);
-            }
-            res.close();
-            con.close();
-            //return user;
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-        return null;
     }
 }

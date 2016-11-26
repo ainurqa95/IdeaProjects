@@ -198,7 +198,7 @@ public class MainController {
 
             }
             UsersTable users = new UsersTable();
-            Users user = users.getUserByID(clientMessage.get(0));
+            Users user = users.getUserByLogin(clientMessage.get(0));
             if(user == null){
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -208,10 +208,10 @@ public class MainController {
 
 
                 alert.showAndWait();
-                this.serverAnswer.appendText(" Сервер : вы не прошли аутентификацию \n");
+                this.serverAnswer.appendText(" Сервер : такого логина нет \n");
 
                 try {
-                    this.connection.send(" Сервер : вы не прошли аутентификацию \n");
+                    this.connection.send(" Сервер : такого логина нет \n");
 
                 } catch (IOException e) {
                     this.serverAnswer.appendText("ERROR");
@@ -219,7 +219,8 @@ public class MainController {
                 }
                 return;
             }
-            message=clientMessage.get(0)+clientMessage.get(1);  // id+ message
+
+            message=user.getLogin()+user.getPassword();  // id+ message
             System.out.println(message);
 
             MessageDigest md5 = MessageDigest.getInstance("MD5");
@@ -229,10 +230,10 @@ public class MainController {
             BigInteger h1 = new BigInteger(1,digest);
             // нашли хэш h1 = hash(id,m+ts)
 
-            System.out.println(h1);
-            BigInteger coded = new BigInteger(clientMessage.get(2)); // третий параметр это щашифрованное сообщение
-            BigInteger h2 = coded.modPow(this.d,this.n);
-            // h2 = coded^d mod n
+
+            BigInteger sign = new BigInteger(clientMessage.get(1)); // второй параметр это подпись
+            BigInteger h2 = sign.modPow(new BigInteger(user.getPublicE()), new BigInteger(user.getPublicN()));
+            System.out.println("h2 = " + h2.toString() );
             if (h1.equals(h2)){ //если h1 == h2 все нормаьно
                 this.serverAnswer.appendText(" Сервер : вы успешно прошли аутентификацию \n");
 
@@ -247,10 +248,10 @@ public class MainController {
 
             }
             else {
-                this.serverAnswer.appendText(" Сервер : вы не прошли аутентификацию \n");
+                this.serverAnswer.appendText(" Сервер : вы не прошли аутентификацию, подпись не верна \n");
 
                 try {
-                    this.connection.send(" Сервер : вы не прошли аутентификацию \n");
+                    this.connection.send(" Сервер : вы не прошли аутентификацию подпись не верна \n");
 
                 } catch (IOException e) {
                     this.serverAnswer.appendText("ERROR");
