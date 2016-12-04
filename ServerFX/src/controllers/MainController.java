@@ -11,6 +11,9 @@ import models.NetworкConnection;
 import models.Server;
 import models.Users;
 import models.UsersTable;
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.crypto.spec.DHParameterSpec;
 import javax.crypto.spec.DHPublicKeySpec;
@@ -186,30 +189,24 @@ public class MainController {
     }
 
     public void authentification(ActionEvent actionEvent) throws NoSuchAlgorithmException {
-        if(this.clientAnswer.getText()!=""){
+        if(this.clientAnswer.getText()!=""){ // аутентификация на основе подписи
 
             LinkedList<String> clientMessage = new LinkedList<>();
-
             String testStr = this.clientAnswer.getText();
                String message ="";
             Matcher m = p1.matcher(testStr);
-            while(m.find()) {
+            while(m.find()) { // обработка логина и подписи принятой в виде сообщения от клиента
                 clientMessage.add(testStr.substring(m.start()+1, m.end()-1));
-
             }
             UsersTable users = new UsersTable();
-            Users user = users.getUserByLogin(clientMessage.get(0));
+            Users user = users.getUserByLogin(clientMessage.get(0)); // ищем клиента по логину
             if(user == null){
-
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("Information");
                 alert.setHeaderText(null);
-                alert.setContentText("Нет такого id в базе ");
-
-
+                alert.setContentText("Нет такого logina в базе ");
                 alert.showAndWait();
                 this.serverAnswer.appendText(" Сервер : такого логина нет \n");
-
                 try {
                     this.connection.send(" Сервер : такого логина нет \n");
 
@@ -219,20 +216,16 @@ public class MainController {
                 }
                 return;
             }
-
-            message=user.getLogin()+user.getPassword();  // id+ message
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            message=user.getLogin()+user.getPassword();//imestamp;  // id+ message
             System.out.println(message);
-
             MessageDigest md5 = MessageDigest.getInstance("MD5");
             md5.reset();
             md5.update(message.getBytes());
             byte[] digest = md5.digest();
-            BigInteger h1 = new BigInteger(1,digest);
-            // нашли хэш h1 = hash(id,m+ts)
-
-
+            BigInteger h1 = new BigInteger(1,digest);  // нашли хэш h1 = hash(id,m+ts)
             BigInteger sign = new BigInteger(clientMessage.get(1)); // второй параметр это подпись
-            BigInteger h2 = sign.modPow(new BigInteger(user.getPublicE()), new BigInteger(user.getPublicN()));
+            BigInteger h2 = sign.modPow(new BigInteger(user.getPublicE()), new BigInteger(user.getPublicN()));// h2 = sign^e mod n
             System.out.println("h2 = " + h2.toString() );
             if (h1.equals(h2)){ //если h1 == h2 все нормаьно
                 this.serverAnswer.appendText(" Сервер : вы успешно прошли аутентификацию \n");
@@ -244,8 +237,6 @@ public class MainController {
                     this.serverAnswer.appendText("ERROR");
                     e.printStackTrace();
                 }
-
-
             }
             else {
                 this.serverAnswer.appendText(" Сервер : вы не прошли аутентификацию, подпись не верна \n");
@@ -257,43 +248,31 @@ public class MainController {
                     this.serverAnswer.appendText("ERROR");
                     e.printStackTrace();
                 }
-
-
             }
-
-
         }
     }
 
 
     public void generateDifHel(ActionEvent actionEvent) throws NoSuchAlgorithmException, InvalidKeySpecException {
-
         KeyPairGenerator kpg = KeyPairGenerator.getInstance("DiffieHellman");
         kpg.initialize(512);
         KeyPair kp = kpg.generateKeyPair();
         KeyFactory kfactory = KeyFactory.getInstance("DiffieHellman");
-
         DHPublicKeySpec kspec = (DHPublicKeySpec) kfactory.getKeySpec(kp.getPublic(),
                 DHPublicKeySpec.class);
+        // генерация параметров g,p,a
         this.g = (BigInteger)kspec.getG();
         this.p = (BigInteger)kspec.getP();
         this.a = (BigInteger)kspec.getY();
-        this.A = this.g.modPow(this.a, this.p);
+        this.A = this.g.modPow(this.a, this.p); // вычисляем A = g^a mod(p)
         SecureRandom rnd = new SecureRandom();
         BigInteger b = BigInteger.probablePrime(512, rnd);
         BigInteger B = this.g.modPow(b,this.p);
         String message="";
         message+= "Сервер : g = \""+ this.g+"\"\n";
         message+= "Сервер : p = \""+ this.p+"\"\n";
-     //   message+= "Сервер : a = \""+ this.a+"\"\n";
         message+= "Сервер : A = \""+ this.A+"\"\n";
-       // message+= "Сервер : b = \""+ b+"\"\n";
-       // message+= "Сервер : B = \""+ B+"\"\n";
-      //  message+= "Сервер : B^a mod p = \""+ B.modPow(a,p)+"\"\n";
-      //  message+= "Сервер : A^b mod p = \""+ A.modPow(b,p)+"\"\n";
-        // сформировали публичные ключи е и n и отправили их клиенту
-        serverAnswer.appendText(message+"\n");
-
+        serverAnswer.appendText(message+"\n"); // отправляем серверу параметры g,p, A
         try {
             connection.send(message);
 
@@ -302,22 +281,18 @@ public class MainController {
             e.printStackTrace();
         }
 
-
     }
 
     public void createKey(ActionEvent actionEvent) { // берем B переданный клиентом
-
         String testStr = this.clientAnswer.getText(); //
         Matcher m = p1.matcher(testStr);
         String strB="";
-        while(m.find()) {
+        while(m.find()) { // обрабатываем сообщение клиента (параметр B)
             strB = testStr.substring(m.start()+1, m.end()-1);
-
         }
         BigInteger B = new BigInteger(strB);
-        this.commonKey = B.modPow(a,p);
-        // выведет в консоль общий ключ
-        System.out.println("common key = "+ this.commonKey );
+        this.commonKey = B.modPow(a,p); // вычисляем общий ключ B^a mod(p)
+        System.out.println("common key = "+ this.commonKey ); // выведет в консоль общий ключ
     }
 
     public void clearAnswers(ActionEvent actionEvent) {

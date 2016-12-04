@@ -15,14 +15,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.LinkedList;
 
-/**
- * Created by ainur on 16.11.16.
- */
-public class SiteServlet extends HttpServlet {
-    CategoryStorage storageCategory = new CategoryStorage();
-    ProductsStorage storageProducts = new ProductsStorage();
-//    LinkedList<String> users = new LinkedList<>();
-//    int count = 0;
+
+public class SiteServlet extends HttpServlet { // обработка главной страницы
+    CategoryStorage storageCategory = new CategoryStorage(); // class Driver для категорий (работа с бд и тд)
+
+    ProductsStorage storageProducts = new ProductsStorage();// class Driver для товаров (работа с бд и тд)
+
 
 
     @Override
@@ -50,23 +48,21 @@ public class SiteServlet extends HttpServlet {
 //            pw.flush();
 //        }
 
-        HttpSession session = req.getSession(true);
+        HttpSession session = req.getSession(true); // запуск сессии
         req.setAttribute("session", session);
-        LinkedList<MainCategory> mainCategories = storageCategory.getMainCategory();
-        LinkedList<SecondCategory> secondCategories = storageCategory.getSecondCategory();
-        LinkedList<Products> latestProducts = storageProducts.getlatestProducts();
-        LinkedList<Products> sliderProducts = storageProducts.getProductForSlider();
-        storageProducts.setPathesProductsImages(sliderProducts,1);
-        storageProducts.setPathesProductsImages(latestProducts,2);
-//        setPathesProductsImages(sliderProducts,storageProducts,1);
-//        setPathesProductsImages(latestProducts,storageProducts,2);
+        LinkedList<MainCategory> mainCategories = storageCategory.getMainCategory(); //  // списки категорий для headera
+        LinkedList<SecondCategory> secondCategories = storageCategory.getSecondCategory(); // списки категорий для headera
+        LinkedList<Products> latestProducts = storageProducts.getlatestProducts();  // списки товаров для главной страницы
+        LinkedList<Products> sliderProducts = storageProducts.getProductForSlider();// списки товаров для главной slidera
+        storageProducts.setPathesProductsImages(sliderProducts,1); // берем пути для картинок
+        storageProducts.setPathesProductsImages(latestProducts,2); // берем пути для картинок
         LinkedList<Brands> brands = storageProducts.getBrands();
-        req.setAttribute("secondCategories", secondCategories);
-        req.setAttribute("mainCategories", mainCategories);
-        req.setAttribute("latestProducts", latestProducts);
-        req.setAttribute("sliderProducts", sliderProducts);
-        req.setAttribute("brands", brands);
-        int countOfCartProducts = Cart.CountOfItemsInCart(session);
+        req.setAttribute("secondCategories", secondCategories); // закидываем во view данные
+        req.setAttribute("mainCategories", mainCategories);// закидываем во view данные
+        req.setAttribute("latestProducts", latestProducts);// закидываем во view данные
+        req.setAttribute("sliderProducts", sliderProducts);// закидываем во view данные
+        req.setAttribute("brands", brands);// закидываем во view данные
+        int countOfCartProducts = Cart.CountOfItemsInCart(session); // количество товаров в корзине
         req.setAttribute("countOfCartProducts", countOfCartProducts);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/views/site/Index.jsp");
         dispatcher.forward(req, resp);

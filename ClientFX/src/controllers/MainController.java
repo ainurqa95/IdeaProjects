@@ -75,12 +75,12 @@ public class MainController {
         this.mainStage = mainStage;
     }
 
-    public void connect(ActionEvent actionEvent) {
+    public void connect(ActionEvent actionEvent) { // кнопка подключиться на клиенте
 
         if(txtIP.getText()!="" && txtPort.getText() !="") {
-            connection = createClient(txtIP.getText(), Integer.parseInt(txtPort.getText()));
+            connection = createClient(txtIP.getText(), Integer.parseInt(txtPort.getText())); // передаем в контсруктор IP и Port
             labelStatus.setText(  "Клиент" );
-            connection.startConnection();
+            connection.startConnection();// стартуем подключение
         }
     }
 
@@ -115,11 +115,13 @@ public class MainController {
         });
     }
 
-    public void sendMessage(ActionEvent actionEvent) { // закидывает сообщения клиента на сервер
+    // обработка кнопки отправить
+    public void sendMessage(ActionEvent actionEvent) { // закидывает сообщения клиента  серверу
         String message = " Клиент : ";
         message+=  txtFdMessage.getText();
         txtFdMessage.clear();
-        clientAnswer.appendText(message+"\n");
+        clientAnswer.appendText(message+"\n"); // в textarea клиента добавляем сообщение,
+        // записанное в textfield с именем txtFdMessage
 
         try {
             connection.send(message);

@@ -8,7 +8,7 @@
 
 	<servlet>
 		<servlet-name>ClinicServlet</servlet-name>
-		<servlet-class>ru.parsentev.servlets.ClinicServlet</servlet-class>
+		<servlet-class>ru.parsentev.garbage.ClinicServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -18,7 +18,7 @@
 
 	<servlet>
 		<servlet-name>UserViewServlet</servlet-name>
-		<servlet-class>ru.parsentev.servlets.UserViewServlet</servlet-class>
+		<servlet-class>ru.parsentev.garbage.UserViewServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -38,7 +38,7 @@
 
 	<servlet>
 		<servlet-name>UserEditServlet</servlet-name>
-		<servlet-class>ru.parsentev.servlets.UserEditServlet</servlet-class>
+		<servlet-class>ru.parsentev.garbage.UserEditServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -48,7 +48,7 @@
 
 	<servlet>
 		<servlet-name>UserDeleteServlet</servlet-name>
-		<servlet-class>ru.parsentev.servlets.UserDeleteServlet</servlet-class>
+		<servlet-class>ru.parsentev.garbage.UserDeleteServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -58,7 +58,7 @@
 
 	<servlet>
 		<servlet-name>CreateUserJsonServlet</servlet-name>
-		<servlet-class>ru.parsentev.servlets.CreateUserJsonServlet</servlet-class>
+		<servlet-class>ru.parsentev.garbage.CreateUserJsonServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -153,6 +153,15 @@
 	<servlet-mapping>
 		<servlet-name>CartOrderServlet</servlet-name>
 		<url-pattern>/cart/order</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UserUpdateServlet</servlet-name>
+		<servlet-class>ru.parsentev.servlets.UserUpdateServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>UserUpdateServlet</servlet-name>
+		<url-pattern>/cabinet/update</url-pattern>
 	</servlet-mapping>
 
 </web-app>

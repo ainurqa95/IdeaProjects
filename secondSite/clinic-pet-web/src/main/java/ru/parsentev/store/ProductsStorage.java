@@ -150,6 +150,26 @@ public class ProductsStorage implements ProductsInterface {
 
     }
 
+    public LinkedList<Products> getMainMCatProducts(int idmain) {
+        LinkedList<Products> products = new LinkedList<>();
+        try (final PreparedStatement statement = this.connection.prepareStatement("select * from products where second_category_main_category_idmain_cat=(?) limit "+ this.Show_By_Default +"")) {
+            statement.setInt(1, idmain);
+
+            try (final ResultSet rs = statement.executeQuery()) {
+                while (rs.next()) {
+                    products.add(new Products(rs.getInt("idproducts"), rs.getString("name"),
+                            rs.getDouble("price"), rs.getString("description"), rs.getString("characteristic"),
+                            rs.getInt("is_new") ,rs.getInt("is_recommended"), rs.getInt("status") ,rs.getInt("second_category_idsecond_cat"),rs.getInt("second_category_main_category_idmain_cat"), rs.getString("brand"),rs.getInt("skidka")));
+                }
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+
+    }
+
     @Override
     public void deleteProduct(int id) {
         try (final PreparedStatement statement = this.connection.prepareStatement("delete from products where idproducts=(?)")) {

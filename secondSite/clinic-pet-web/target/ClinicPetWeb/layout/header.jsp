@@ -189,7 +189,7 @@
                                                 <c:if test="${secondCategory.id_main_cat== mainCategory.idmain_cat}" >
                                                     <div class="clearfix">
                                                     <%--<a href="/category?mainid=${mainCategory.idmain_cat}&secondid=${secondCategory.id_second_cat}"/><img src="${pageContext.servletContext.contextPath}/template/images/shopping-img.png" alt=""/></a>--%>
-                                                    <h4> <a href="${pageContext.servletContext.contextPath}/category?idsecond=${secondCategory.id_second_cat}"> <h4> ${secondCategory.name} </h4></a></h4>
+                                                    <h4> <a href="${pageContext.servletContext.contextPath}/category?idsecond=${secondCategory.id_second_cat}&mainid=${secondCategory.id_main_cat}"> <h4> ${secondCategory.name} </h4></a></h4>
 
                                                     </div>
 
